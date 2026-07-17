@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="JPG in PDF und PDF in JPG kostenlos umwandeln. Mehrere Bilder oder PDF-Seiten direkt im Browser konvertieren – ohne Upload und Wasserzeichen.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="JPG und PDF kostenlos umwandeln">
+    <meta property="og:description" content="Bilder zu einer PDF verbinden oder PDF-Seiten als JPG speichern. Lokal im Browser und ohne Datei-Upload.">
+    <meta property="og:url" content="__SITE_URL__/jpg-pdf-umwandeln/">
+    <link rel="canonical" href="__SITE_URL__/jpg-pdf-umwandeln/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>JPG in PDF und PDF in JPG umwandeln – kostenlos</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "JPG und PDF umwandeln",
+            "url": "__SITE_URL__/jpg-pdf-umwandeln/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "JPG-, PNG- und WebP-Bilder lokal zu PDF umwandeln oder PDF-Seiten als JPG ausgeben."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Kann ich mehrere JPG-Dateien in eine PDF umwandeln?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Bis zu 30 Bilder lassen sich sortieren und als mehrseitige PDF ausgeben." } },
+              { "@type": "Question", "name": "Kann jede PDF-Seite als eigenes JPG gespeichert werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Jede Seite wird als eigene JPG-Datei erzeugt; mehrere Seiten stehen zusätzlich als ZIP bereit." } },
+              { "@type": "Question", "name": "Werden Dateien hochgeladen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Beide Umwandlungsrichtungen laufen vollständig im Browser auf dem eigenen Gerät." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header"><div class="container site-header__inner"><a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button><nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav></div></header>
+
+    <main id="main">
+      <section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>JPG und PDF umwandeln</span></nav><div class="tool-hero__layout"><div class="tool-hero__copy"><h1>JPG und PDF umwandeln</h1><p>Verbinde Bilder zu einer PDF oder speichere jede PDF-Seite als eigenes JPG. Ohne Wasserzeichen, Konto oder Datei-Upload.</p></div><div class="privacy-proof"><i data-lucide="lock-keyhole"></i><div><strong>Beide Richtungen bleiben lokal</strong><span>Die Dateien verlassen deinen Browser nicht.</span></div></div></div></div></section>
+
+      <section class="tool-stage" aria-labelledby="converter-heading"><div class="container">
+        <div class="workbench">
+          <div class="workbench__header"><h2 id="converter-heading">Dokument-Konverter</h2><div class="segmented-control segmented-control--two" role="tablist" aria-label="Umwandlungsrichtung"><button type="button" role="tab" data-convert-mode="images-to-pdf" aria-selected="true">Bilder → PDF</button><button type="button" role="tab" data-convert-mode="pdf-to-images" aria-selected="false">PDF → JPG</button></div></div>
+
+          <div class="mode-panel" data-convert-panel="images-to-pdf">
+            <div class="workbench__body">
+              <div class="workbench__main">
+                <div class="dropzone" data-to-pdf-dropzone><div class="dropzone__content"><i data-lucide="image-plus"></i><strong>Bilder hier ablegen</strong><p>Bis zu 30 JPG-, PNG- oder WebP-Dateien · Reihenfolge frei ändern</p><label for="to-pdf-files"><i data-lucide="upload"></i> Bilder auswählen</label><input id="to-pdf-files" type="file" multiple accept="image/jpeg,image/png,image/webp" data-to-pdf-input></div></div>
+                <div class="file-list" data-to-pdf-list></div>
+                <div class="status-message status-message--error" data-to-pdf-error hidden><i data-lucide="circle-x"></i><span></span></div>
+              </div>
+              <aside class="workbench__aside" aria-label="PDF-Einstellungen"><h3>PDF einstellen</h3><div class="form-grid form-grid--single"><div class="form-field"><label for="to-pdf-page-size">Seitengröße</label><select class="select-input" id="to-pdf-page-size" data-to-pdf-page-size><option value="a4">DIN A4, automatisch Hoch- oder Querformat</option><option value="original">Passend zum Bild</option></select></div><div class="form-field"><label for="to-pdf-margin">Rand</label><select class="select-input" id="to-pdf-margin" data-to-pdf-margin><option value="0">Ohne Rand</option><option value="10" selected>10 mm</option><option value="20">20 mm</option></select></div><div class="summary-strip"><div class="summary-item"><span>Bilder</span><strong data-to-pdf-count>0</strong></div><div class="summary-item"><span>Originale</span><strong data-to-pdf-size>0 B</strong></div><div class="summary-item"><span>Upload</span><strong>Keiner</strong></div></div></div></aside>
+            </div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-to-pdf-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-to-pdf-process disabled><i data-lucide="file-down"></i> PDF erstellen</button></div>
+          </div>
+
+          <div class="mode-panel" data-convert-panel="pdf-to-images" hidden>
+            <div class="workbench__body">
+              <div class="workbench__main">
+                <div class="dropzone" data-to-image-dropzone><div class="dropzone__content"><i data-lucide="file-up"></i><strong>PDF hier ablegen</strong><p>Eine Datei bis 60 MB und 80 Seiten</p><label for="to-image-file"><i data-lucide="upload"></i> PDF auswählen</label><input id="to-image-file" type="file" accept="application/pdf,.pdf" data-to-image-input></div></div>
+                <div class="file-row" data-to-image-file hidden><div class="file-row__icon"><i data-lucide="file-text"></i></div><div class="file-row__meta"><strong data-to-image-file-name></strong><span data-to-image-file-meta></span></div></div>
+                <div class="status-message status-message--error" data-to-image-error hidden><i data-lucide="circle-x"></i><span></span></div>
+              </div>
+              <aside class="workbench__aside" aria-label="JPG-Einstellungen"><h3>JPG einstellen</h3><div class="form-grid form-grid--single"><div class="form-field"><label for="to-image-dpi">Auflösung</label><select class="select-input" id="to-image-dpi" data-to-image-dpi><option value="108">Klein – 108 dpi</option><option value="144" selected>Standard – 144 dpi</option><option value="192">Fein – 192 dpi</option></select></div><div class="form-field"><label for="to-image-quality">JPG-Qualität <span class="counter" data-to-image-quality-value>84 %</span></label><div class="range-row"><input id="to-image-quality" type="range" min="55" max="95" value="84" data-to-image-quality><span class="range-value">JPG</span></div></div><div class="summary-strip"><div class="summary-item"><span>Seiten</span><strong data-to-image-pages>0</strong></div><div class="summary-item"><span>Format</span><strong>JPG</strong></div><div class="summary-item"><span>Upload</span><strong>Keiner</strong></div></div></div></aside>
+            </div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-to-image-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-to-image-process disabled><i data-lucide="image-down"></i> Seiten umwandeln</button></div>
+          </div>
+        </div>
+
+        <div class="workbench result-panel" data-to-pdf-result hidden><div class="workbench__header"><h2>PDF ist fertig</h2><span class="local-note"><i data-lucide="circle-check"></i> Ohne Wasserzeichen</span></div><div class="workbench__main"><div class="result-row"><div class="file-row__icon"><i data-lucide="file-text"></i></div><div class="file-row__meta"><strong data-to-pdf-result-name></strong><span data-to-pdf-result-meta></span></div><div class="file-row__actions"><button class="button" type="button" data-to-pdf-download><i data-lucide="download"></i> PDF</button></div></div></div></div>
+        <div class="workbench result-panel" data-to-image-result hidden><div class="workbench__header"><h2>JPG-Seiten sind fertig</h2><button class="button button--secondary" type="button" data-to-image-download-all hidden><i data-lucide="file-archive"></i> Alle als ZIP</button></div><div class="workbench__main"><div class="result-list" data-to-image-results></div></div></div>
+        <noscript><p class="status-message status-message--error">Dieses Werkzeug benötigt JavaScript. Ohne JavaScript können Dateien nicht lokal umgewandelt werden.</p></noscript>
+      </div></section>
+
+      <section class="content-band" aria-labelledby="converter-how"><div class="container content-layout"><h2 id="converter-how">Vom Foto zum Dokument und wieder zurück</h2><div class="prose"><p>Fotos von Belegen, Arbeitsproben oder unterschriebenen Seiten lassen sich als eine geordnete PDF leichter verschicken. Umgekehrt sind einzelne JPG-Seiten praktisch, wenn eine PDF in ein Formular, eine Präsentation oder eine Bildbearbeitung übernommen werden soll.</p><h3>Bilder zu PDF</h3><p>Du legst Reihenfolge, Seitengröße und Rand fest. Hochformatige Bilder erhalten automatisch eine Hochformatseite, breite Bilder eine Querformatseite. PNG-Transparenz wird auf Weiß gesetzt, damit die PDF in jedem Programm verlässlich aussieht.</p><h3>PDF zu JPG</h3><p>Jede Seite wird mit der gewählten Auflösung neu gerendert. Die JPG-Dateien enthalten das sichtbare Seitenbild, aber keinen auswählbaren Text und keine Formularfelder.</p></div></div></section>
+      <section class="content-band content-band--soft" aria-labelledby="converter-faq"><div class="container content-layout"><h2 id="converter-faq">Häufige Fragen</h2><div class="faq-list"><details><summary>Kann ich die Bildreihenfolge ändern?</summary><div>Ja. Mit den Pfeiltasten neben jeder Datei bringst du die Seiten vor dem PDF-Export in die richtige Reihenfolge.</div></details><details><summary>Werden Bilder oder PDFs auf einem Server gespeichert?</summary><div>Nein. Auswahl, Umwandlung und Download geschehen im Browser. Das Werkzeug legt kein Dateiverzeichnis auf dem Server an.</div></details><details><summary>Welche Auflösung brauche ich für PDF-Seiten?</summary><div>144 dpi reichen für Bildschirm, E-Mail und viele Formulare. Für feine Schrift oder spätere Bearbeitung ist 192 dpi sinnvoller.</div></details></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge ohne Datei-Upload. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/document-converter-tool.js"></script>
+  </body>
+</html>

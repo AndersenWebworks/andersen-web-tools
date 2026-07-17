@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bilder kostenlos im Browser komprimieren, verkleinern und in JPG, PNG, WebP oder AVIF umwandeln. Ohne Upload und ohne Anmeldung.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="Bilder kostenlos komprimieren und umwandeln">
+    <meta property="og:description" content="JPG, PNG, WebP und AVIF direkt im Browser verkleinern. Deine Bilder werden nicht hochgeladen.">
+    <meta property="og:url" content="__SITE_URL__/bilder-komprimieren/">
+    <link rel="canonical" href="__SITE_URL__/bilder-komprimieren/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Bilder komprimieren und umwandeln – kostenlos ohne Upload</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Bilder komprimieren und umwandeln",
+            "url": "__SITE_URL__/bilder-komprimieren/",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "Bilder lokal im Browser komprimieren, skalieren und in JPG, PNG, WebP oder AVIF umwandeln."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Werden meine Bilder hochgeladen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Bilder werden durch den Browser auf dem eigenen Gerät verarbeitet." } },
+              { "@type": "Question", "name": "Welches Format eignet sich für Websites?", "acceptedAnswer": { "@type": "Answer", "text": "WebP ist für die meisten Websites eine gute Wahl. AVIF kann kleinere Dateien liefern, wird aber nicht von jedem älteren Browser erzeugt." } },
+              { "@type": "Question", "name": "Werden EXIF- und Standortdaten entfernt?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Das Bild wird neu gezeichnet und gespeichert; eingebettete Metadaten werden dabei nicht übernommen." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button>
+        <nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="tool-hero">
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>Bilder komprimieren</span></nav>
+          <div class="tool-hero__layout">
+            <div class="tool-hero__copy"><h1>Bilder komprimieren und umwandeln</h1><p>Verkleinere JPG-, PNG-, WebP- und AVIF-Bilder, ändere das Format und entferne eingebettete Metadaten. Auch mehrere Bilder auf einmal.</p></div>
+            <div class="privacy-proof"><i data-lucide="lock-keyhole"></i><div><strong>Kein Datei-Upload</strong><span>Die Verarbeitung geschieht vollständig auf deinem Gerät.</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tool-stage" aria-labelledby="image-tool-heading">
+        <div class="container">
+          <div class="workbench">
+            <div class="workbench__header"><h2 id="image-tool-heading">Bildwerkstatt</h2><span class="local-note"><i data-lucide="shield-check"></i> Lokal im Browser</span></div>
+            <div class="workbench__body">
+              <div class="workbench__main">
+                <div class="dropzone" data-image-dropzone>
+                  <div class="dropzone__content">
+                    <i data-lucide="image-down"></i>
+                    <strong>Bilder hier ablegen</strong>
+                    <p>Bis zu 12 Bilder · 40 MB und 32 Megapixel je Bild · insgesamt 160 MB</p>
+                    <label for="image-files"><i data-lucide="upload"></i> Bilder auswählen</label>
+                    <input id="image-files" type="file" multiple accept="image/jpeg,image/png,image/webp,image/avif" data-image-input>
+                  </div>
+                </div>
+                <div class="file-list" data-image-list></div>
+                <div class="status-message status-message--error" data-image-error hidden><i data-lucide="circle-x"></i><span></span></div>
+              </div>
+              <aside class="workbench__aside" aria-label="Bildeinstellungen">
+                <h3>Ausgabe einstellen</h3>
+                <div class="form-grid form-grid--single">
+                  <div class="form-field"><label for="image-format">Format</label><select class="select-input" id="image-format" data-image-format><option value="original">Wie Original</option><option value="image/webp">WebP</option><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/avif" data-avif-option>AVIF</option></select></div>
+                  <div class="form-field"><label for="image-quality">Qualität <span class="counter" data-quality-value>82 %</span></label><div class="range-row"><input id="image-quality" type="range" min="40" max="95" step="1" value="82" data-image-quality><span class="range-value" aria-hidden="true">kleiner</span></div><span class="field-hint">Gilt für JPG, WebP und AVIF.</span></div>
+                  <div class="form-grid">
+                    <div class="form-field"><label for="image-max-width">Max. Breite</label><div class="input-with-unit"><input class="text-input" id="image-max-width" type="number" min="1" max="12000" value="2000" inputmode="numeric" data-image-width><span>px</span></div></div>
+                    <div class="form-field"><label for="image-max-height">Max. Höhe</label><div class="input-with-unit"><input class="text-input" id="image-max-height" type="number" min="1" max="12000" value="2000" inputmode="numeric" data-image-height><span>px</span></div></div>
+                  </div>
+                  <label class="checkbox-row"><input type="checkbox" checked disabled><span>Metadaten wie Kamera- und Standortdaten entfernen</span></label>
+                </div>
+              </aside>
+            </div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-image-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-image-process disabled><i data-lucide="image-down"></i> Bilder verarbeiten</button></div>
+          </div>
+
+          <div class="workbench result-panel" data-image-results-panel hidden>
+            <div class="workbench__header"><h2>Fertige Bilder</h2><button class="button button--secondary" type="button" data-image-download-all hidden><i data-lucide="file-archive"></i> Alle als ZIP</button></div>
+            <div class="workbench__main"><div class="result-list" data-image-results></div><div class="summary-strip" data-image-summary></div></div>
+          </div>
+          <noscript><p class="status-message status-message--error">Dieses Werkzeug benötigt JavaScript. Ohne JavaScript bleibt die Verarbeitung im Browser technisch nicht möglich.</p></noscript>
+        </div>
+      </section>
+
+      <section class="content-band" aria-labelledby="image-how-heading">
+        <div class="container content-layout">
+          <h2 id="image-how-heading">Kleinere Bilder, ohne sie wegzuschicken</h2>
+          <div class="prose">
+            <p>Große Bilddateien bremsen Websites, füllen Postfächer und kosten auf dem Handy unnötig Datenvolumen. Die Bildwerkstatt setzt deshalb an zwei Stellen an: Sie reduziert die Pixelmaße und speichert das Ergebnis mit einer passenden Kompression neu.</p>
+            <h3>WebP, JPG, PNG oder AVIF?</h3>
+            <ul><li><strong>WebP</strong> ist eine gute Standardwahl für Fotos und Grafiken im Web.</li><li><strong>JPG</strong> eignet sich für Fotos, wenn möglichst viele Programme das Ergebnis öffnen sollen.</li><li><strong>PNG</strong> bewahrt transparente Flächen und scharfe Grafiken, erzeugt aber oft größere Dateien.</li><li><strong>AVIF</strong> kann besonders kleine Dateien liefern. Die Ausgabe erscheint nur, wenn dein Browser AVIF selbst erzeugen kann.</li></ul>
+            <h3>Was mit Metadaten passiert</h3>
+            <p>Das Bild wird auf einer neuen Browser-Zeichenfläche aufgebaut. EXIF-Daten, Kameramodell, Aufnahmezeit und gespeicherte GPS-Koordinaten werden nicht in die neue Datei übernommen.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-band content-band--soft" aria-labelledby="image-faq-heading">
+        <div class="container content-layout"><h2 id="image-faq-heading">Häufige Fragen</h2><div class="faq-list"><details><summary>Werden meine Bilder hochgeladen?</summary><div>Nein. Die Website lädt nur den Programmcode. Deine Bilder werden danach im Browser auf deinem Gerät gelesen, verarbeitet und wieder zum Herunterladen bereitgestellt.</div></details><details><summary>Warum wird ein Bild manchmal größer?</summary><div>PNG und sehr hohe Qualitätsstufen können größere Dateien erzeugen als das Original. Wähle für Fotos WebP oder JPG und reduziere die Qualität schrittweise.</div></details><details><summary>Funktioniert das auch auf dem Handy?</summary><div>Ja. Bei sehr großen oder vielen Bildern kann ein Handy jedoch schneller an seine Speichergrenze kommen. Dann ist eine kleinere Auswahl pro Durchgang sinnvoll.</div></details></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge ohne Datei-Upload. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/image-tool.js"></script>
+  </body>
+</html>

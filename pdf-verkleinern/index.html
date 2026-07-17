@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PDF kostenlos im Browser verkleinern. Mit wählbarer Qualität, ohne Upload, Anmeldung oder Wasserzeichen. Deine Datei bleibt auf deinem Gerät.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="PDF kostenlos verkleinern – ohne Upload">
+    <meta property="og:description" content="PDF-Dateien direkt auf deinem Gerät komprimieren. Qualität selbst wählen und Ergebnis sofort herunterladen.">
+    <meta property="og:url" content="__SITE_URL__/pdf-verkleinern/">
+    <link rel="canonical" href="__SITE_URL__/pdf-verkleinern/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>PDF verkleinern – kostenlos und ohne Upload</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "PDF verkleinern",
+            "url": "__SITE_URL__/pdf-verkleinern/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "PDF-Dateien lokal im Browser komprimieren und mit wählbarer Qualität neu speichern."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Wird meine PDF hochgeladen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Datei wird im Browser auf dem eigenen Gerät verarbeitet und nicht an einen Server übertragen." } },
+              { "@type": "Question", "name": "Warum ist eine PDF nach dem Verkleinern manchmal größer?", "acceptedAnswer": { "@type": "Answer", "text": "Bereits gut komprimierte PDFs lassen sich nicht immer weiter verkleinern. Das Ergebnis zeigt deshalb immer den direkten Größenvergleich." } },
+              { "@type": "Question", "name": "Bleibt Text auswählbar?", "acceptedAnswer": { "@type": "Answer", "text": "Im Modus Struktur erhalten bleibt der Dokumentinhalt erhalten. Die drei stärkeren Kompressionsmodi bauen jede Seite als Bild neu auf." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header"><div class="container site-header__inner"><a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button><nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav></div></header>
+
+    <main id="main">
+      <section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>PDF verkleinern</span></nav><div class="tool-hero__layout"><div class="tool-hero__copy"><h1>PDF verkleinern</h1><p>Reduziere die Dateigröße deiner PDF für E-Mail, Bewerbung oder Upload. Du bestimmst selbst, wie stark komprimiert wird.</p></div><div class="privacy-proof"><i data-lucide="lock-keyhole"></i><div><strong>Kein Datei-Upload</strong><span>Auch vertrauliche Dokumente bleiben vollständig auf deinem Gerät.</span></div></div></div></div></section>
+
+      <section class="tool-stage" aria-labelledby="compress-heading">
+        <div class="container">
+          <div class="workbench">
+            <div class="workbench__header"><h2 id="compress-heading">PDF-Kompressor</h2><span class="local-note"><i data-lucide="shield-check"></i> Lokal im Browser</span></div>
+            <div class="workbench__body">
+              <div class="workbench__main">
+                <div class="dropzone" data-compress-dropzone><div class="dropzone__content"><i data-lucide="file-down"></i><strong>PDF hier ablegen</strong><p>Eine Datei bis 60 MB und 80 Seiten</p><label for="compress-file"><i data-lucide="upload"></i> PDF auswählen</label><input id="compress-file" type="file" accept="application/pdf,.pdf" data-compress-input></div></div>
+                <div class="file-row" data-compress-file hidden><div class="file-row__icon"><i data-lucide="file-text"></i></div><div class="file-row__meta"><strong data-compress-file-name></strong><span data-compress-file-meta></span></div></div>
+                <div class="document-preview document-preview--small"><canvas data-compress-preview hidden></canvas><div class="empty-state" data-compress-preview-empty><div><i data-lucide="file-text"></i><strong>Vorschau der ersten Seite</strong><span>Sie erscheint, sobald du eine PDF auswählst.</span></div></div></div>
+                <div class="status-message status-message--error" data-compress-error hidden><i data-lucide="circle-x"></i><span></span></div>
+              </div>
+              <aside class="workbench__aside" aria-label="Kompressionsstärke">
+                <h3>Qualität wählen</h3>
+                <div class="segmented-control" aria-label="Kompressionsstärke">
+                  <button type="button" data-compress-mode="compact" aria-pressed="false">Klein</button>
+                  <button type="button" data-compress-mode="balanced" aria-pressed="true">Ausgewogen</button>
+                  <button type="button" data-compress-mode="print" aria-pressed="false">Qualität</button>
+                  <button type="button" data-compress-mode="structure" aria-pressed="false">Struktur</button>
+                </div>
+                <div class="summary-strip"><div class="summary-item"><span>Seiten</span><strong data-compress-pages>0</strong></div><div class="summary-item"><span>Original</span><strong data-compress-input-size>0 B</strong></div><div class="summary-item"><span>Upload</span><strong>Keiner</strong></div></div>
+                <div class="status-message" data-compress-notice hidden><i data-lucide="info"></i><span></span></div>
+                <p class="progress-text" data-compress-progress aria-live="polite"></p>
+              </aside>
+            </div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-compress-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-compress-process disabled><i data-lucide="file-down"></i> PDF verkleinern</button></div>
+          </div>
+
+          <div class="workbench result-panel" data-compress-result-panel hidden><div class="workbench__header"><h2>PDF ist fertig</h2><span class="local-note"><i data-lucide="circle-check"></i> Größenvergleich geprüft</span></div><div class="workbench__main"><div class="result-row"><div class="file-row__icon"><i data-lucide="file-down"></i></div><div class="file-row__meta"><strong data-compress-result-name></strong><span data-compress-result-meta></span></div><div class="file-row__actions"><button class="button" type="button" data-compress-download><i data-lucide="download"></i> Herunterladen</button></div></div><p class="result-note" data-compress-result-status></p></div></div>
+          <noscript><p class="status-message status-message--error">Dieses Werkzeug benötigt JavaScript. Ohne JavaScript kann die PDF nicht lokal verarbeitet werden.</p></noscript>
+        </div>
+      </section>
+
+      <section class="content-band" aria-labelledby="compress-how"><div class="container content-layout"><h2 id="compress-how">Die passende Größe statt blinder Kompression</h2><div class="prose"><p>Eine PDF kann aus Text, Scans, Fotos, Formularen und eingebetteten Schriften bestehen. Deshalb gibt es nicht die eine Einstellung für jedes Dokument. Für E-Mail und Portale reicht meist „Ausgewogen“. „Möglichst klein“ hilft bei harten Upload-Grenzen, während „Bessere Qualität“ feine Schrift und Grafiken stärker schont.</p><h3>Was „Struktur erhalten“ bedeutet</h3><p>Dieser Modus speichert die vorhandene PDF technisch neu, ohne Seiten in Bilder zu verwandeln. Textauswahl, Links und Formularfelder bleiben erhalten. Der Gewinn kann klein sein, wenn die Quelldatei bereits sauber optimiert wurde.</p><h3>Wann die Bildmodi sinnvoll sind</h3><p>Scans und fotolastige Dokumente werden oft deutlich kleiner, wenn jede Seite mit einer passenden Auflösung neu aufgebaut wird. Dabei entsteht ein visuell gleiches, aber flaches Dokument. Für Archivierung, barrierefreie PDFs, Formulare oder digital signierte Dokumente ist dieser Weg nicht geeignet.</p></div></div></section>
+      <section class="content-band content-band--soft" aria-labelledby="compress-faq"><div class="container content-layout"><h2 id="compress-faq">Häufige Fragen</h2><div class="faq-list"><details><summary>Wird die Originaldatei verändert?</summary><div>Nein. Das Werkzeug liest das Original nur im Browser und erzeugt eine neue PDF zum Herunterladen.</div></details><details><summary>Warum kann ich Text nach starker Kompression nicht mehr markieren?</summary><div>Die drei Bildmodi setzen jede Seite als Bild neu zusammen. Nutze „Struktur erhalten“, wenn Text, Links oder Formulare erhalten bleiben müssen.</div></details><details><summary>Funktioniert das auf dem Handy?</summary><div>Ja. Viele Seiten und hohe Qualitätsstufen benötigen jedoch viel Arbeitsspeicher. Für große Dokumente ist ein Computer verlässlicher.</div></details></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge ohne Datei-Upload. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/pdf-compress-tool.js"></script>
+  </body>
+</html>

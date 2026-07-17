@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wörter, Zeichen, Sätze, Absätze und Zeilen kostenlos online zählen. Mit Lese- und Sprechzeit, ohne Anmeldung, Tracking oder Textübertragung.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="Wörter und Zeichen kostenlos zählen">
+    <meta property="og:description" content="Text einfügen und sofort Wörter, Zeichen, Sätze, Absätze sowie Lesezeit sehen. Der Text bleibt im Browser.">
+    <meta property="og:url" content="__SITE_URL__/woerter-zeichen-zaehlen/">
+    <link rel="canonical" href="__SITE_URL__/woerter-zeichen-zaehlen/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Wörter und Zeichen zählen – kostenloser Textzähler</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Wörter und Zeichen zählen",
+            "url": "__SITE_URL__/woerter-zeichen-zaehlen/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "Wörter, Zeichen, Sätze, Absätze, Zeilen sowie Lese- und Sprechzeit lokal im Browser zählen."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Wird mein Text übertragen oder gespeichert?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Der Text wird ausschließlich im Browser ausgewertet und nicht an einen Server gesendet." } },
+              { "@type": "Question", "name": "Zählt das Werkzeug auch deutsche Wörter korrekt?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Moderne Browser verwenden dafür eine sprachbewusste Segmentierung, die Satzzeichen und zusammengesetzte Schreibweisen berücksichtigt." } },
+              { "@type": "Question", "name": "Wie wird die Lesezeit berechnet?", "acceptedAnswer": { "@type": "Answer", "text": "Die Schätzung geht von ungefähr 200 gelesenen Wörtern pro Minute und 130 gesprochenen Wörtern pro Minute aus." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header"><div class="container site-header__inner"><a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button><nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav></div></header>
+
+    <main id="main">
+      <section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>Wörter und Zeichen zählen</span></nav><div class="tool-hero__layout"><div class="tool-hero__copy"><h1>Wörter und Zeichen zählen</h1><p>Füge deinen Text ein und sieh sofort Wörter, Zeichen, Sätze, Absätze, Zeilen sowie die ungefähre Lese- und Sprechzeit.</p></div><div class="privacy-proof"><i data-lucide="lock-keyhole"></i><div><strong>Dein Text bleibt bei dir</strong><span>Die Auswertung geschieht nur im Browser und wird nicht gespeichert.</span></div></div></div></div></section>
+
+      <section class="tool-stage" aria-labelledby="counter-heading"><div class="container">
+        <div class="workbench">
+          <div class="workbench__header"><h2 id="counter-heading">Textzähler</h2><span class="local-note"><i data-lucide="shield-check"></i> Sofort und lokal</span></div>
+          <div class="workbench__body workbench__body--counter">
+            <div class="workbench__main"><label class="field-label" for="counter-text">Text</label><textarea class="textarea-input counter-textarea" id="counter-text" placeholder="Hier schreiben oder Text einfügen …" spellcheck="true" data-counter-text></textarea></div>
+            <aside class="workbench__aside" aria-label="Textauswertung"><h3>Auswertung</h3><div class="metric-grid"><div class="metric"><span>Wörter</span><strong data-counter-words>0</strong></div><div class="metric"><span>Zeichen</span><strong data-counter-characters>0</strong></div><div class="metric"><span>Ohne Leerzeichen</span><strong data-counter-characters-no-spaces>0</strong></div><div class="metric"><span>Sätze</span><strong data-counter-sentences>0</strong></div><div class="metric"><span>Absätze</span><strong data-counter-paragraphs>0</strong></div><div class="metric"><span>Zeilen</span><strong data-counter-lines>0</strong></div></div><div class="time-estimates"><div><i data-lucide="clock-3"></i><span>Lesezeit</span><strong data-counter-reading-time>0 Min.</strong></div><div><i data-lucide="type"></i><span>Sprechzeit</span><strong data-counter-speaking-time>0 Min.</strong></div></div></aside>
+          </div>
+          <div class="workbench__footer"><button class="button button--danger" type="button" data-counter-clear><i data-lucide="trash-2"></i> Leeren</button><button class="button button--secondary" type="button" data-counter-copy disabled><i data-lucide="copy"></i> Text kopieren</button><button class="button" type="button" data-counter-download disabled><i data-lucide="download"></i> Als TXT</button></div>
+        </div>
+        <noscript><p class="status-message status-message--error">Dieses Werkzeug benötigt JavaScript. Ohne JavaScript kann der Text nicht lokal ausgewertet werden.</p></noscript>
+      </div></section>
+
+      <section class="content-band" aria-labelledby="counter-how"><div class="container content-layout"><h2 id="counter-how">Für Texte mit klaren Grenzen</h2><div class="prose"><p>Ob Bewerbung, Social-Media-Post, Hausarbeit, Produktbeschreibung oder Manuskript: Oft zählt nicht nur der Inhalt, sondern auch die erlaubte Länge. Der Zähler aktualisiert sich während des Schreibens und behandelt deutsche Wörter sprachbewusst.</p><h3>Zeichen mit und ohne Leerzeichen</h3><p>„Zeichen“ umfasst Buchstaben, Zahlen, Satzzeichen und Leerzeichen. Die zweite Angabe lässt alle Leerzeichen, Tabulatoren und Zeilenumbrüche weg. Umlaute und zusammengesetzte Zeichen werden als sichtbare Zeichen gezählt.</p><h3>Lese- und Sprechzeit</h3><p>Die Zeitangaben sind praktische Schätzungen. Schwierige Fachtexte werden langsamer gelesen; Vorträge mit Pausen und Betonung dauern meist länger als der reine Wortwert vermuten lässt.</p></div></div></section>
+      <section class="content-band content-band--soft" aria-labelledby="counter-faq"><div class="container content-layout"><h2 id="counter-faq">Häufige Fragen</h2><div class="faq-list"><details><summary>Bleibt der Text erhalten, wenn ich die Seite schließe?</summary><div>Nein. Andersen Web Tools speichert den Text nicht. Lade ihn vorher als TXT herunter oder übernimm ihn in dein eigenes Dokument.</div></details><details><summary>Zählen Bindestrichwörter als ein oder zwei Wörter?</summary><div>Der Browser verwendet eine sprachbewusste Wortsegmentierung. Übliche Bindestrichschreibungen werden dadurch passender behandelt als durch ein einfaches Trennen an Leerzeichen.</div></details><details><summary>Kann ich vertrauliche Texte einsetzen?</summary><div>Technisch bleibt der Text auf deinem Gerät. Wie bei jeder Browserarbeit solltest du trotzdem darauf achten, dass niemand deinen Bildschirm oder die Zwischenablage mitliest.</div></details></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge ohne Textübertragung. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/text-counter-tool.js"></script>
+  </body>
+</html>

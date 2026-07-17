@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Andersen Web Tools">
+  <rect width="64" height="64" rx="8" fill="#0b725f"/>
+  <path d="M27.3 15h9.4L48 48h-8.1l-2.1-6.6H26.2L24.1 48H16zm1.1 19.5h7.2L32 23.2z" fill="#fff"/>
+  <rect x="13" y="48" width="38" height="5" fill="#f2b134"/>
+</svg>

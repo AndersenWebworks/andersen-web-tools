@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Meta-Tags kostenlos erstellen: Seitentitel, Description, Canonical, Robots, Open Graph und Twitter Card mit Google- und Social-Vorschau.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="Meta-Tags kostenlos erstellen">
+    <meta property="og:description" content="SEO-, Open-Graph- und Social-Meta-Tags mit direkter Vorschau erzeugen.">
+    <meta property="og:url" content="__SITE_URL__/meta-tags-erstellen/">
+    <link rel="canonical" href="__SITE_URL__/meta-tags-erstellen/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Meta-Tags erstellen – SEO- und Social-Vorschau</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Meta-Tags erstellen",
+            "url": "__SITE_URL__/meta-tags-erstellen/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "Title, Description, Canonical, Robots, Open Graph und Twitter Card mit Vorschau erzeugen."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Wie lang sollte ein Meta-Titel sein?", "acceptedAnswer": { "@type": "Answer", "text": "Es gibt keine feste Zeichengrenze für Suchmaschinen. Als praktische Orientierung sind etwa 50 bis 60 Zeichen oft gut lesbar; entscheidend ist die tatsächlich dargestellte Breite." } },
+              { "@type": "Question", "name": "Ist die Meta-Description ein Rankingfaktor?", "acceptedAnswer": { "@type": "Answer", "text": "Die Description ist kein direkter Rankingfaktor, kann aber beeinflussen, ob ein Suchergebnis verständlich und klickwürdig wirkt." } },
+              { "@type": "Question", "name": "Was macht ein Canonical-Link?", "acceptedAnswer": { "@type": "Answer", "text": "Er nennt Suchmaschinen die bevorzugte URL einer Seite, wenn gleiche oder sehr ähnliche Inhalte unter mehreren Adressen erreichbar sind." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header"><div class="container site-header__inner"><a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button><nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav></div></header>
+
+    <main id="main">
+      <section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>Meta-Tags erstellen</span></nav><div class="tool-hero__layout"><div class="tool-hero__copy"><h1>Meta-Tags mit Vorschau erstellen</h1><p>Formuliere Titel und Beschreibung, prüfe die Wirkung als Suchergebnis und Social Card und erzeuge anschließend den vollständigen HTML-Block.</p></div><div class="privacy-proof"><i data-lucide="code-2"></i><div><strong>Sauberer Quellcode</strong><span>Canonical, Robots, Open Graph und Twitter Card in einem Block.</span></div></div></div></div></section>
+
+      <section class="tool-stage" aria-labelledby="meta-tool-heading">
+        <div class="container">
+          <div class="workbench">
+            <div class="workbench__header"><h2 id="meta-tool-heading">Meta-Tag-Generator</h2><span class="local-note"><i data-lucide="shield-check"></i> Keine URL wird aufgerufen</span></div>
+            <div class="workbench__body">
+              <div class="workbench__main">
+                <div class="form-grid">
+                  <div class="form-field form-field--wide"><label for="meta-url">Seitenadresse</label><input class="text-input" id="meta-url" type="url" inputmode="url" value="https://beispiel.de/leistung/" data-meta-url></div>
+                  <div class="form-field form-field--wide"><label for="meta-title">Seitentitel <span class="counter" data-title-counter>0 Zeichen</span></label><input class="text-input" id="meta-title" type="text" maxlength="100" value="Webdesign für kleine Unternehmen | Beispiel" data-meta-title></div>
+                  <div class="form-field form-field--wide"><label for="meta-description">Meta-Description <span class="counter" data-description-counter>0 Zeichen</span></label><textarea class="textarea-input" id="meta-description" maxlength="220" data-meta-description>Klare, schnelle Websites für kleine Unternehmen. Persönlich geplant, sauber umgesetzt und verständlich betreut.</textarea></div>
+                  <div class="form-field"><label for="meta-site-name">Name der Website</label><input class="text-input" id="meta-site-name" type="text" maxlength="80" value="Beispiel" data-meta-site-name></div>
+                  <div class="form-field"><label for="meta-type">Inhaltstyp</label><select class="select-input" id="meta-type" data-meta-type><option value="website">Website oder Seite</option><option value="article">Artikel</option><option value="product">Produkt</option><option value="profile">Profil</option></select></div>
+                  <div class="form-field form-field--wide"><label for="meta-image">Vorschaubild-URL</label><input class="text-input" id="meta-image" type="url" inputmode="url" placeholder="https://beispiel.de/bild.jpg" data-meta-image><span class="field-hint">Empfehlung für Social Cards: 1200 × 630 Pixel. Das Bild wird hier nicht geladen.</span></div>
+                  <label class="checkbox-row"><input type="checkbox" checked data-meta-index><span>Suchmaschinen dürfen die Seite indexieren</span></label>
+                  <label class="checkbox-row"><input type="checkbox" checked data-meta-follow><span>Suchmaschinen dürfen Links folgen</span></label>
+                </div>
+                <div class="status-message status-message--error" data-meta-error hidden><i data-lucide="circle-x"></i><span></span></div>
+              </div>
+
+              <aside class="workbench__aside" aria-label="Vorschau">
+                <h3>Vorschau</h3>
+                <div class="meta-preview-stack">
+                  <div>
+                    <span class="field-label">Suchergebnis</span>
+                    <div class="search-preview"><div class="search-preview__url" data-preview-url>beispiel.de › leistung</div><div class="search-preview__title" data-preview-title>Webdesign für kleine Unternehmen | Beispiel</div><div class="search-preview__description" data-preview-description>Klare, schnelle Websites für kleine Unternehmen. Persönlich geplant, sauber umgesetzt und verständlich betreut.</div></div>
+                  </div>
+                  <div>
+                    <span class="field-label">Social Card</span>
+                    <div class="social-preview"><div class="social-preview__image" data-social-image><i data-lucide="file-image"></i><span class="sr-only">Kein Vorschaubild angegeben</span></div><div class="social-preview__body"><div class="social-preview__domain" data-social-domain>BEISPIEL.DE</div><div class="social-preview__title" data-social-title>Webdesign für kleine Unternehmen | Beispiel</div><div class="social-preview__description" data-social-description>Klare, schnelle Websites für kleine Unternehmen. Persönlich geplant, sauber umgesetzt und verständlich betreut.</div></div></div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-meta-reset><i data-lucide="rotate-ccw"></i> Beispiel zurücksetzen</button><button class="button" type="button" data-meta-generate><i data-lucide="code-2"></i> Meta-Tags erzeugen</button></div>
+          </div>
+
+          <div class="workbench result-panel" data-meta-result-panel hidden><div class="workbench__header"><h2>HTML für den Seitenkopf</h2><span class="local-note"><i data-lucide="circle-check"></i> Bereit zum Einfügen</span></div><div class="workbench__main"><div class="code-output"><pre><code data-meta-code></code></pre><button class="icon-button" type="button" title="Code kopieren" aria-label="Meta-Tag-Code kopieren" data-meta-copy><i data-lucide="copy"></i></button></div><p class="field-hint">Füge den Block in den <code>&lt;head&gt;</code>-Bereich der betreffenden HTML-Seite ein. In WordPress oder einem Baukastensystem gehört er in die dafür vorgesehene SEO-Einstellung.</p></div></div>
+        </div>
+      </section>
+
+      <section class="content-band" aria-labelledby="meta-how-heading"><div class="container content-layout"><h2 id="meta-how-heading">Was gute Meta-Tags leisten</h2><div class="prose"><p>Der Seitentitel sagt Suchmaschinen und Menschen, worum es auf einer Seite geht. Die Description ergänzt den Gedanken und kann im Suchergebnis als Beschreibung erscheinen. Beides sollte die konkrete Seite treffen, nicht die ganze Website in allgemeine Werbesätze pressen.</p><h3>Canonical und Robots</h3><p>Der Canonical-Link benennt die bevorzugte URL. Das ist wichtig, wenn derselbe Inhalt über mehrere Adressen erreichbar ist. Die Robots-Angabe steuert, ob eine Seite indexiert werden soll und ob Crawler ihren Links folgen dürfen. Eine versehentliche <code>noindex</code>-Angabe kann eine Seite aus Suchergebnissen entfernen.</p><h3>Open Graph und Twitter Card</h3><p>Diese Angaben prägen die Vorschau, wenn ein Link in sozialen Netzwerken oder Messengern geteilt wird. Die Plattform kann trotzdem eine eigene Darstellung wählen oder bereits gespeicherte Daten zeigen.</p></div></div></section>
+      <section class="content-band content-band--soft" aria-labelledby="meta-faq-heading"><div class="container content-layout"><h2 id="meta-faq-heading">Häufige Fragen</h2><div class="faq-list"><details><summary>Wie lang sollte ein Seitentitel sein?</summary><div>Eine feste Zeichengrenze gibt es nicht, weil Suchmaschinen nach verfügbarer Breite kürzen. Etwa 50 bis 60 Zeichen sind oft eine brauchbare Orientierung, aber kein Qualitätsbeweis.</div></details><details><summary>Garantieren gute Meta-Tags bessere Platzierungen?</summary><div>Nein. Sie machen Inhalt und Vorschau verständlicher, ersetzen aber weder nützliche Seiteninhalte noch Technik, interne Verlinkung, Autorität oder eine klare Suchabsicht.</div></details><details><summary>Warum wird meine Vorschau später anders dargestellt?</summary><div>Suchmaschinen und soziale Plattformen dürfen Texte kürzen, andere Seitenausschnitte wählen oder alte Angaben aus ihrem Cache zeigen. Der Generator bildet eine realistische Orientierung ab, keine verbindliche Plattformausgabe.</div></details></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge von Andersen Webworks. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/meta-tool.js"></script>
+  </body>
+</html>

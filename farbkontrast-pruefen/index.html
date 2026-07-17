@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Farbkontrast kostenlos nach WCAG 2.2 prüfen. Kontrastverhältnis für normalen und großen Text sowie Bedienelemente direkt berechnen.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="Farbkontrast nach WCAG prüfen">
+    <meta property="og:description" content="Zwei Farben vergleichen, Kontrastverhältnis berechnen und AA-/AAA-Grenzen prüfen.">
+    <meta property="og:url" content="__SITE_URL__/farbkontrast-pruefen/">
+    <link rel="canonical" href="__SITE_URL__/farbkontrast-pruefen/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Farbkontrast prüfen – WCAG 2.2 Kontrast-Checker</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Farbkontrast prüfen",
+            "url": "__SITE_URL__/farbkontrast-pruefen/",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "Kontrastverhältnis zweier Farben berechnen und mit WCAG-2.2-Grenzwerten vergleichen."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Welcher Kontrast gilt für normalen Text?", "acceptedAnswer": { "@type": "Answer", "text": "Für WCAG AA benötigt normaler Text mindestens 4,5 zu 1. Für AAA sind mindestens 7 zu 1 erforderlich." } },
+              { "@type": "Question", "name": "Was gilt als großer Text?", "acceptedAnswer": { "@type": "Answer", "text": "Als groß gilt Text ab 24 CSS-Pixeln oder ab etwa 18,66 CSS-Pixeln bei Fettschrift." } },
+              { "@type": "Question", "name": "Reicht ein guter Farbkontrast für eine barrierefreie Website?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Farbkontrast ist nur ein Teil der Barrierefreiheit; Struktur, Bedienung, Alternativtexte, Fokusführung und weitere Anforderungen müssen ebenfalls geprüft werden." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header"><div class="container site-header__inner"><a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button><nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav></div></header>
+
+    <main id="main">
+      <section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>Farbkontrast prüfen</span></nav><div class="tool-hero__layout"><div class="tool-hero__copy"><h1>Farbkontrast nach WCAG prüfen</h1><p>Vergleiche Text- und Hintergrundfarbe, lies das genaue Kontrastverhältnis ab und prüfe die Grenzwerte für normalen, großen und besonders gut lesbaren Text.</p></div><div class="privacy-proof"><i data-lucide="contrast"></i><div><strong>Direktes Ergebnis</strong><span>Die Berechnung folgt dem Kontrastverfahren der WCAG 2.2.</span></div></div></div></div></section>
+
+      <section class="tool-stage" aria-labelledby="contrast-tool-heading">
+        <div class="container">
+          <div class="workbench">
+            <div class="workbench__header"><h2 id="contrast-tool-heading">Kontrast-Checker</h2><span class="local-note"><i data-lucide="circle-check"></i> Live berechnet</span></div>
+            <div class="workbench__body">
+              <div class="workbench__main">
+                <div class="color-pair">
+                  <div class="form-field"><label for="foreground-text">Textfarbe</label><div class="color-control"><input id="foreground-color" type="color" value="#17201d" data-foreground-color aria-label="Textfarbe wählen"><input class="text-input" id="foreground-text" type="text" value="#17201D" maxlength="7" spellcheck="false" data-foreground-text></div></div>
+                  <button class="icon-button" type="button" title="Farben tauschen" aria-label="Text- und Hintergrundfarbe tauschen" data-swap-colors><i data-lucide="arrow-left-right"></i></button>
+                  <div class="form-field"><label for="background-text">Hintergrundfarbe</label><div class="color-control"><input id="background-color" type="color" value="#ffffff" data-background-color aria-label="Hintergrundfarbe wählen"><input class="text-input" id="background-text" type="text" value="#FFFFFF" maxlength="7" spellcheck="false" data-background-text></div></div>
+                </div>
+
+                <div class="contrast-result" data-contrast-preview>
+                  <div class="contrast-ratio" data-contrast-ratio>16,5:1</div>
+                  <p data-contrast-summary>Sehr hoher Kontrast. Die Kombination erfüllt AA und AAA für alle Textgrößen.</p>
+                </div>
+                <div class="status-message status-message--error" data-contrast-error hidden><i data-lucide="circle-x"></i><span></span></div>
+              </div>
+
+              <aside class="workbench__aside" aria-label="WCAG-Ergebnisse">
+                <h3>WCAG 2.2</h3>
+                <div class="pass-grid">
+                  <div class="pass-item" data-pass-item="normal-aa"><i data-lucide="circle-check"></i><span><strong>AA</strong><br>Normaler Text · 4,5:1</span></div>
+                  <div class="pass-item" data-pass-item="large-aa"><i data-lucide="circle-check"></i><span><strong>AA</strong><br>Großer Text · 3:1</span></div>
+                  <div class="pass-item" data-pass-item="normal-aaa"><i data-lucide="circle-check"></i><span><strong>AAA</strong><br>Normaler Text · 7:1</span></div>
+                  <div class="pass-item" data-pass-item="large-aaa"><i data-lucide="circle-check"></i><span><strong>AAA</strong><br>Großer Text · 4,5:1</span></div>
+                  <div class="pass-item" data-pass-item="ui"><i data-lucide="circle-check"></i><span><strong>Bedienung</strong><br>Grafiken und Rahmen · 3:1</span></div>
+                </div>
+                <div class="form-grid form-grid--single contrast-helper"><button class="button button--secondary" type="button" data-optimize-color><i data-lucide="refresh-cw"></i> Textfarbe auf AA anpassen</button><p class="field-hint">Die Anpassung sucht eine möglichst nahe hellere oder dunklere Textfarbe mit mindestens 4,5:1.</p></div>
+              </aside>
+            </div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-contrast-reset><i data-lucide="rotate-ccw"></i> Ausgangsfarben</button><button class="button" type="button" data-copy-colors><i data-lucide="copy"></i> Farben kopieren</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-band" aria-labelledby="contrast-how-heading"><div class="container content-layout"><h2 id="contrast-how-heading">Was das Verhältnis bedeutet</h2><div class="prose"><p>Das Kontrastverhältnis reicht von 1:1 bei zwei gleichen Farben bis 21:1 bei Schwarz auf Weiß. Für normalen Fließtext fordert WCAG 2.2 auf Stufe AA mindestens 4,5:1. Großer oder ausreichend fetter Text darf bei 3:1 liegen, weil seine Zeichenformen leichter zu erkennen sind.</p><h3>Großer Text ist klar definiert</h3><p>Als großer Text gilt eine Schrift ab 24 CSS-Pixeln oder eine fette Schrift ab etwa 18,66 CSS-Pixeln. Ein Text wirkt nicht allein deshalb groß, weil er in Versalien gesetzt oder weit auseinandergezogen wurde.</p><h3>Kontrast ist notwendig, aber nicht alles</h3><p>Ein bestandenes Ergebnis belegt nur diese Farbkombination. Eine vollständige Prüfung betrachtet zusätzlich Tastaturbedienung, Fokus, Überschriftenstruktur, Formulare, Alternativtexte, Zoom, Fehlermeldungen und weitere Anforderungen.</p></div></div></section>
+      <section class="content-band content-band--soft" aria-labelledby="contrast-faq-heading"><div class="container content-layout"><h2 id="contrast-faq-heading">Häufige Fragen</h2><div class="faq-list"><details><summary>Welcher Kontrast gilt für normalen Text?</summary><div>Für WCAG AA sind mindestens 4,5:1 nötig. Für die strengere Stufe AAA braucht normaler Text 7:1.</div></details><details><summary>Gelten die Werte auch für Logos?</summary><div>Für Text in Logos besteht keine allgemeine Mindestkontrastanforderung. Sobald eine Beschriftung aber der Bedienung oder Information dient, sollte sie nicht wie reine Markenform behandelt werden.</div></details><details><summary>Prüft dieses Werkzeug Transparenz und Hintergrundbilder?</summary><div>Nein. Es vergleicht zwei vollständig deckende Farben. Bei Transparenz, Verläufen oder Bildern muss die tatsächlich sichtbare Farbkombination an allen relevanten Stellen geprüft werden.</div></details></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge von Andersen Webworks. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/contrast-tool.js"></script>
+  </body>
+</html>

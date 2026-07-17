@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HEIC kostenlos in JPG umwandeln. Mehrere iPhone-Fotos direkt im Browser konvertieren, ohne Upload, Anmeldung oder Wasserzeichen.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="HEIC kostenlos in JPG umwandeln">
+    <meta property="og:description" content="iPhone-Fotos lokal im Browser in kompatible JPG-Dateien verwandeln. Keine Datei wird hochgeladen.">
+    <meta property="og:url" content="__SITE_URL__/heic-in-jpg/">
+    <link rel="canonical" href="__SITE_URL__/heic-in-jpg/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>HEIC in JPG umwandeln – kostenlos ohne Upload</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "HEIC in JPG umwandeln",
+            "url": "__SITE_URL__/heic-in-jpg/",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "HEIC- und HEIF-Fotos lokal im Browser in JPG-Dateien umwandeln."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Werden meine HEIC-Fotos hochgeladen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Konvertierung läuft vollständig im Browser auf dem eigenen Gerät." } },
+              { "@type": "Question", "name": "Warum nutzt das iPhone HEIC?", "acceptedAnswer": { "@type": "Answer", "text": "HEIC kann Fotos platzsparend speichern. Manche Programme und Websites unterstützen das Format jedoch noch nicht zuverlässig." } },
+              { "@type": "Question", "name": "Bleiben Standortdaten im JPG?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Bild wird neu aufgebaut; eingebettete Kamera-, Aufnahme- und Standortdaten werden nicht in die JPG-Datei übernommen." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header"><div class="container site-header__inner"><a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button><nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav></div></header>
+
+    <main id="main">
+      <section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>HEIC in JPG</span></nav><div class="tool-hero__layout"><div class="tool-hero__copy"><h1>HEIC in JPG umwandeln</h1><p>Verwandle iPhone-Fotos in JPG-Dateien, die sich fast überall öffnen, verschicken und hochladen lassen. Auch mehrere Bilder auf einmal.</p></div><div class="privacy-proof"><i data-lucide="lock-keyhole"></i><div><strong>Fotos bleiben privat</strong><span>Die Umwandlung geschieht vollständig in deinem Browser.</span></div></div></div></div></section>
+
+      <section class="tool-stage" aria-labelledby="heic-heading"><div class="container">
+        <div class="workbench">
+          <div class="workbench__header"><h2 id="heic-heading">HEIC-Konverter</h2><span class="local-note"><i data-lucide="shield-check"></i> Lokal im Browser</span></div>
+          <div class="workbench__body">
+            <div class="workbench__main">
+              <div class="dropzone" data-heic-dropzone><div class="dropzone__content"><i data-lucide="image-plus"></i><strong>HEIC-Fotos hier ablegen</strong><p>Bis zu 12 Bilder · HEIC und HEIF · insgesamt 140 MB</p><label for="heic-files"><i data-lucide="upload"></i> Fotos auswählen</label><input id="heic-files" type="file" multiple accept=".heic,.heif,image/heic,image/heif" data-heic-input></div></div>
+              <div class="file-list" data-heic-list></div>
+              <div class="status-message status-message--error" data-heic-error hidden><i data-lucide="circle-x"></i><span></span></div>
+            </div>
+            <aside class="workbench__aside" aria-label="JPG-Einstellungen">
+              <h3>JPG einstellen</h3>
+              <div class="form-grid form-grid--single">
+                <div class="form-field"><label for="heic-quality">Qualität <span class="counter" data-heic-quality-value>88 %</span></label><div class="range-row"><input id="heic-quality" type="range" min="55" max="95" step="1" value="88" data-heic-quality><span class="range-value">JPG</span></div></div>
+                <div class="form-field"><label for="heic-width">Maximale Breite</label><select class="select-input" id="heic-width" data-heic-width><option value="0">Originalgröße</option><option value="3000">3.000 px</option><option value="2000">2.000 px</option><option value="1200">1.200 px</option></select><span class="field-hint">Hochformatbilder werden entsprechend proportional verkleinert.</span></div>
+                <div class="summary-strip"><div class="summary-item"><span>Fotos</span><strong data-heic-file-count>0</strong></div><div class="summary-item"><span>Originale</span><strong data-heic-input-size>0 B</strong></div><div class="summary-item"><span>Metadaten</span><strong>Entfernt</strong></div></div>
+              </div>
+            </aside>
+          </div>
+          <div class="workbench__footer"><button class="button button--quiet" type="button" data-heic-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-heic-process disabled><i data-lucide="image-down"></i> In JPG umwandeln</button></div>
+        </div>
+
+        <div class="workbench result-panel" data-heic-result-panel hidden><div class="workbench__header"><h2>JPG-Dateien sind fertig</h2><button class="button button--secondary" type="button" data-heic-download-all hidden><i data-lucide="file-archive"></i> Alle als ZIP</button></div><div class="workbench__main"><div class="result-list" data-heic-results></div><div class="summary-strip" data-heic-summary></div></div></div>
+        <noscript><p class="status-message status-message--error">Dieses Werkzeug benötigt JavaScript. Ohne JavaScript kann HEIC nicht lokal dekodiert werden.</p></noscript>
+      </div></section>
+
+      <section class="content-band" aria-labelledby="heic-how"><div class="container content-layout"><h2 id="heic-how">iPhone-Fotos überall nutzbar machen</h2><div class="prose"><p>Neuere iPhones speichern Fotos häufig als HEIC. Das spart Speicherplatz, führt aber bei älteren Windows-Programmen, Formularen und manchen Websites zu Fehlermeldungen. JPG ist größer, dafür nahezu überall kompatibel.</p><h3>Qualität und Bildgröße</h3><p>88 Prozent sind eine gute Wahl für normale Fotos. Wenn die Bilder nur per E-Mail oder auf einer Website verwendet werden, reichen oft 2.000 Pixel Breite. Für Druck oder weitere Bearbeitung solltest du die Originalgröße und eine hohe Qualitätsstufe wählen.</p><h3>Metadaten werden nicht übernommen</h3><p>Das neue JPG enthält nur das sichtbare Bild. Aufnahmedatum, Kameramodell und gespeicherte GPS-Koordinaten werden nicht aus der HEIC-Datei übernommen.</p></div></div></section>
+      <section class="content-band content-band--soft" aria-labelledby="heic-faq"><div class="container content-layout"><h2 id="heic-faq">Häufige Fragen</h2><div class="faq-list"><details><summary>Kann ich mehrere HEIC-Dateien gleichzeitig umwandeln?</summary><div>Ja. Bis zu zwölf Fotos lassen sich in einem Durchgang verarbeiten und anschließend gemeinsam als ZIP herunterladen.</div></details><details><summary>Warum dauert die erste Umwandlung kurz?</summary><div>Der Browser lädt den HEIC-Decoder erst bei Bedarf und verarbeitet danach jedes Bild auf deinem Gerät. Große iPhone-Fotos brauchen entsprechend mehr Arbeitsspeicher.</div></details><details><summary>Verliert das Bild sichtbar an Qualität?</summary><div>JPG ist ein verlustbehaftetes Format. Mit der Voreinstellung bleibt der Unterschied bei normalen Fotos meist gering. Für Nachbearbeitung solltest du das HEIC-Original behalten.</div></details></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge ohne Datei-Upload. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/heic-tool.js"></script>
+  </body>
+</html>

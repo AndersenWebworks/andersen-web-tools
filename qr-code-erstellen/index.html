@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="QR-Code kostenlos für Link, Text, WLAN oder Kontaktdaten erstellen und als PNG oder SVG herunterladen. Ohne Anmeldung und ohne Datenübertragung.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="QR-Code kostenlos erstellen">
+    <meta property="og:description" content="QR-Codes für Links, WLAN, Text und Kontakte direkt im Browser erzeugen.">
+    <meta property="og:url" content="__SITE_URL__/qr-code-erstellen/">
+    <link rel="canonical" href="__SITE_URL__/qr-code-erstellen/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>QR-Code erstellen – kostenlos als PNG und SVG</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "QR-Code erstellen",
+            "url": "__SITE_URL__/qr-code-erstellen/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "QR-Codes für Links, Text, WLAN und Kontaktdaten lokal im Browser erzeugen."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Läuft der QR-Code irgendwann ab?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Der erzeugte QR-Code enthält die Daten direkt und ist nicht an einen Kurzlink oder ein Konto gebunden." } },
+              { "@type": "Question", "name": "Werden WLAN-Passwörter übertragen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. WLAN-Name und Passwort werden nur im Browser in den QR-Code geschrieben." } },
+              { "@type": "Question", "name": "Soll ich PNG oder SVG verwenden?", "acceptedAnswer": { "@type": "Answer", "text": "PNG eignet sich für normale Dokumente und Bilder. SVG bleibt bei jeder Größe scharf und ist für Druck und Gestaltung meist besser." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header"><div class="container site-header__inner"><a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button><nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav></div></header>
+
+    <main id="main">
+      <section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>QR-Code erstellen</span></nav><div class="tool-hero__layout"><div class="tool-hero__copy"><h1>QR-Code kostenlos erstellen</h1><p>Erzeuge einen dauerhaften QR-Code für einen Link, freien Text, WLAN-Zugang oder Kontaktdaten. Als PNG für den Alltag oder als scharfes SVG für den Druck.</p></div><div class="privacy-proof"><i data-lucide="lock-keyhole"></i><div><strong>Keine Weiterleitung</strong><span>Der Code enthält deine Daten direkt. Kein Tracking-Link liegt dazwischen.</span></div></div></div></div></section>
+
+      <section class="tool-stage" aria-labelledby="qr-tool-heading">
+        <div class="container">
+          <div class="workbench">
+            <div class="workbench__header"><h2 id="qr-tool-heading">QR-Code-Werkstatt</h2><span class="local-note"><i data-lucide="shield-check"></i> Lokal im Browser</span></div>
+            <div class="qr-layout">
+              <div class="workbench__main">
+                <div class="segmented-control" role="tablist" aria-label="Inhalt des QR-Codes">
+                  <button type="button" role="tab" aria-selected="true" aria-controls="qr-panel-link" data-qr-mode="link"><i data-lucide="link"></i> Link</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="qr-panel-text" data-qr-mode="text"><i data-lucide="type"></i> Text</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="qr-panel-wifi" data-qr-mode="wifi"><i data-lucide="wifi"></i> WLAN</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="qr-panel-contact" data-qr-mode="contact"><i data-lucide="contact"></i> Kontakt</button>
+                </div>
+
+                <div class="form-grid form-grid--single qr-fields" id="qr-panel-link" role="tabpanel" data-qr-panel="link"><div class="form-field"><label for="qr-url">Webadresse</label><input class="text-input" id="qr-url" type="url" inputmode="url" placeholder="https://beispiel.de/" value="https://andersen-webworks.de/" data-qr-url></div></div>
+                <div class="form-grid form-grid--single qr-fields" id="qr-panel-text" role="tabpanel" data-qr-panel="text" hidden><div class="form-field"><label for="qr-text">Text</label><textarea class="textarea-input" id="qr-text" maxlength="2000" placeholder="Text, Hinweis oder kurze Nachricht" data-qr-text></textarea><span class="field-hint">Lange Texte erzeugen einen dichteren Code und sind schwerer zu scannen.</span></div></div>
+                <div class="form-grid qr-fields" id="qr-panel-wifi" role="tabpanel" data-qr-panel="wifi" hidden><div class="form-field form-field--wide"><label for="qr-wifi-name">WLAN-Name</label><input class="text-input" id="qr-wifi-name" type="text" autocomplete="off" data-qr-wifi-name></div><div class="form-field"><label for="qr-wifi-security">Verschlüsselung</label><select class="select-input" id="qr-wifi-security" data-qr-wifi-security><option value="WPA">WPA/WPA2/WPA3</option><option value="WEP">WEP</option><option value="nopass">Offenes WLAN</option></select></div><div class="form-field"><label for="qr-wifi-password">Passwort</label><input class="text-input" id="qr-wifi-password" type="text" autocomplete="off" data-qr-wifi-password></div><label class="checkbox-row form-field--wide"><input type="checkbox" data-qr-wifi-hidden><span>Netzwerkname ist verborgen</span></label></div>
+                <div class="form-grid qr-fields" id="qr-panel-contact" role="tabpanel" data-qr-panel="contact" hidden><div class="form-field"><label for="qr-first-name">Vorname</label><input class="text-input" id="qr-first-name" type="text" autocomplete="given-name" data-qr-first-name></div><div class="form-field"><label for="qr-last-name">Nachname</label><input class="text-input" id="qr-last-name" type="text" autocomplete="family-name" data-qr-last-name></div><div class="form-field form-field--wide"><label for="qr-organization">Firma oder Organisation</label><input class="text-input" id="qr-organization" type="text" autocomplete="organization" data-qr-organization></div><div class="form-field"><label for="qr-phone">Telefon</label><input class="text-input" id="qr-phone" type="tel" autocomplete="tel" data-qr-phone></div><div class="form-field"><label for="qr-email">E-Mail</label><input class="text-input" id="qr-email" type="email" autocomplete="email" data-qr-email></div><div class="form-field form-field--wide"><label for="qr-contact-url">Webadresse</label><input class="text-input" id="qr-contact-url" type="url" inputmode="url" autocomplete="url" data-qr-contact-url></div></div>
+
+                <div class="form-grid qr-options">
+                  <div class="form-field"><label for="qr-size">Größe <span class="counter" data-qr-size-value>512 px</span></label><input id="qr-size" type="range" min="256" max="1024" step="64" value="512" data-qr-size></div>
+                  <div class="form-field"><label for="qr-correction">Fehlerkorrektur</label><select class="select-input" id="qr-correction" data-qr-correction><option value="M">Mittel</option><option value="Q">Hoch</option><option value="H">Sehr hoch</option><option value="L">Niedrig</option></select></div>
+                  <div class="form-field"><label for="qr-foreground">Vordergrund</label><input id="qr-foreground" type="color" value="#17201d" data-qr-foreground></div>
+                  <div class="form-field"><label for="qr-background">Hintergrund</label><input id="qr-background" type="color" value="#ffffff" data-qr-background></div>
+                </div>
+                <div class="status-message status-message--error" data-qr-error hidden><i data-lucide="circle-x"></i><span></span></div>
+              </div>
+
+              <aside class="qr-preview" aria-label="QR-Code-Vorschau">
+                <div class="qr-canvas-frame">
+                  <div class="qr-preview__placeholder" data-qr-placeholder><i data-lucide="qr-code"></i><span>Dein QR-Code erscheint hier.</span></div>
+                  <canvas data-qr-canvas hidden aria-label="Erzeugter QR-Code"></canvas>
+                </div>
+                <div class="qr-actions"><button class="button button--secondary" type="button" data-qr-download-png disabled><i data-lucide="download"></i> PNG</button><button class="button button--secondary" type="button" data-qr-download-svg disabled><i data-lucide="download"></i> SVG</button></div>
+              </aside>
+            </div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-qr-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-qr-generate><i data-lucide="qr-code"></i> QR-Code erstellen</button></div>
+          </div>
+          <noscript><p class="status-message status-message--error">Dieses Werkzeug benötigt JavaScript. Ohne JavaScript bleibt die Verarbeitung im Browser technisch nicht möglich.</p></noscript>
+        </div>
+      </section>
+
+      <section class="content-band" aria-labelledby="qr-how-heading"><div class="container content-layout"><h2 id="qr-how-heading">Ein QR-Code, der niemandem gehört außer dir</h2><div class="prose"><p>Viele kostenlose Generatoren legen zwischen QR-Code und Zieladresse einen eigenen Kurzlink. Der Anbieter kann Aufrufe messen, das Ziel später sperren oder für eine weitere Nutzung Geld verlangen. Dieses Werkzeug schreibt den Inhalt unmittelbar in den Code. Es gibt kein Konto und keinen Dienst, von dem der QR-Code später abhängt.</p><h3>Für Bildschirm und Druck</h3><p>PNG ist unkompliziert und funktioniert in nahezu jedem Programm. SVG ist eine Vektordatei: Sie bleibt auch auf einem Plakat oder Schild scharf. Prüfe den fertigen Code vor dem Druck immer mit mehreren Handys und lasse rundherum ausreichend freie Fläche.</p></div></div></section>
+      <section class="content-band content-band--soft" aria-labelledby="qr-faq-heading"><div class="container content-layout"><h2 id="qr-faq-heading">Häufige Fragen</h2><div class="faq-list"><details><summary>Läuft der QR-Code irgendwann ab?</summary><div>Nein. Er enthält den Link oder die Angaben direkt. Solange der enthaltene Link erreichbar bleibt, funktioniert auch der Code.</div></details><details><summary>Kann jemand mein WLAN-Passwort aus dem Code lesen?</summary><div>Ja. Ein QR-Code verschlüsselt den Inhalt nicht, sondern stellt ihn nur maschinenlesbar dar. Gib einen WLAN-Code deshalb nur an Personen weiter, die das Passwort kennen dürfen.</div></details><details><summary>Warum sollte der Code dunkel auf hellem Grund sein?</summary><div>Scanner erkennen klare, kontrastreiche Module am zuverlässigsten. Sehr helle Vordergrundfarben, transparente Hintergründe und zu wenig freie Fläche können das Scannen erschweren.</div></details></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge ohne Datenübertragung. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/qr-tool.js"></script>
+  </body>
+</html>

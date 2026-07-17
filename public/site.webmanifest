@@ -1,0 +1,19 @@
+{
+  "name": "Andersen Web Tools",
+  "short_name": "Web Tools",
+  "description": "Kostenlose Browser-Werkzeuge ohne Datei-Upload, Konto oder Werbung.",
+  "lang": "de-DE",
+  "start_url": "/andersen-web-tools/",
+  "scope": "/andersen-web-tools/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b725f",
+  "icons": [
+    {
+      "src": "/andersen-web-tools/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

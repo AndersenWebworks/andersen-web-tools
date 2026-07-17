@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Arbeitszeit kostenlos berechnen: Start, Ende und Pause eingeben, Nettozeit, Dezimalstunden, Industrieminuten und Feierabend sofort sehen.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b725f">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Andersen Web Tools">
+    <meta property="og:title" content="Arbeitszeitrechner mit Pause und Dezimalstunden">
+    <meta property="og:description" content="Nettoarbeitszeit, Sollsaldo und Feierabend direkt im Browser berechnen.">
+    <meta property="og:url" content="__SITE_URL__/arbeitszeitrechner/">
+    <link rel="canonical" href="__SITE_URL__/arbeitszeitrechner/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Arbeitszeitrechner – Pause, Dezimalstunden und Feierabend</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Arbeitszeitrechner",
+            "url": "__SITE_URL__/arbeitszeitrechner/",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Webbrowser",
+            "inLanguage": "de-DE",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "description": "Arbeitsdauer, Pausenabzug, Dezimalstunden, Sollsaldo und Feierabend lokal berechnen."
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Wie wird die Nettoarbeitszeit berechnet?", "acceptedAnswer": { "@type": "Answer", "text": "Von der Zeit zwischen Beginn und Ende wird die eingetragene Pause abgezogen." } },
+              { "@type": "Question", "name": "Was sind Industrieminuten?", "acceptedAnswer": { "@type": "Answer", "text": "Dabei wird die Stunde dezimal dargestellt. 30 Minuten entsprechen 0,50 Stunden, 15 Minuten 0,25 Stunden." } },
+              { "@type": "Question", "name": "Kann der Rechner eine Nachtschicht berechnen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Liegt die Endzeit vor der Startzeit, wird sie automatisch dem Folgetag zugeordnet." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header"><div class="container site-header__inner"><a class="brand" href="/" aria-label="Andersen Web Tools – Startseite"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-navigation"><i data-lucide="menu"></i><span class="sr-only">Menü öffnen</span></button><nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation"><a href="/#werkzeuge">Alle Werkzeuge</a><a href="/datenschutz/">Datenschutz</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a></nav></div></header>
+
+    <main id="main">
+      <section class="tool-hero"><div class="container"><nav class="breadcrumbs" aria-label="Brotkrümelnavigation"><a href="/">Web Tools</a><span aria-hidden="true">/</span><span>Arbeitszeitrechner</span></nav><div class="tool-hero__layout"><div class="tool-hero__copy"><h1>Arbeitszeitrechner</h1><p>Berechne Nettoarbeitszeit, Pause, Dezimalstunden und Sollsaldo – oder finde heraus, wann du Feierabend hast.</p></div><div class="privacy-proof"><i data-lucide="calculator"></i><div><strong>Sofort im Browser berechnet</strong><span>Keine Anmeldung, keine Zeiterfassung und keine Speicherung.</span></div></div></div></div></section>
+
+      <section class="tool-stage" aria-labelledby="time-heading"><div class="container">
+        <div class="workbench">
+          <div class="workbench__header"><h2 id="time-heading">Zeit berechnen</h2><div class="segmented-control segmented-control--two" role="tablist" aria-label="Berechnungsart"><button type="button" role="tab" data-time-mode="duration" aria-selected="true">Arbeitsdauer</button><button type="button" role="tab" data-time-mode="end" aria-selected="false">Feierabend</button></div></div>
+          <div class="workbench__body">
+            <div class="workbench__main">
+              <div data-time-panel="duration"><h3>Arbeitsdauer mit Pause</h3><div class="form-grid"><div class="form-field"><label for="time-start">Arbeitsbeginn</label><input class="text-input" id="time-start" type="time" value="08:00" data-time-start></div><div class="form-field"><label for="time-end">Arbeitsende</label><input class="text-input" id="time-end" type="time" value="16:30" data-time-end></div><div class="form-field"><label for="time-break">Pause</label><div class="input-with-unit"><input class="text-input" id="time-break" type="number" min="0" max="720" step="1" value="30" inputmode="numeric" data-time-break><span>Min.</span></div></div><div class="form-field"><label for="time-target">Sollzeit</label><div class="input-with-unit"><input class="text-input" id="time-target" type="number" min="0.25" max="24" step="0.25" value="8" inputmode="decimal" data-time-target><span>Std.</span></div></div></div></div>
+              <div data-time-panel="end" hidden><h3>Feierabend berechnen</h3><div class="form-grid"><div class="form-field"><label for="end-start">Arbeitsbeginn</label><input class="text-input" id="end-start" type="time" value="08:00" data-end-start></div><div class="form-field"><label for="end-break">Pause</label><div class="input-with-unit"><input class="text-input" id="end-break" type="number" min="0" max="720" step="1" value="30" inputmode="numeric" data-end-break><span>Min.</span></div></div><div class="form-field form-field--wide"><label for="end-target">Gewünschte Arbeitszeit</label><div class="input-with-unit"><input class="text-input" id="end-target" type="number" min="0.25" max="24" step="0.25" value="8" inputmode="decimal" data-end-target><span>Std.</span></div></div></div></div>
+              <div class="status-message status-message--error" data-time-error hidden><i data-lucide="circle-x"></i><span></span></div>
+            </div>
+            <aside class="workbench__aside" aria-label="Berechnungsergebnis"><h3>Ergebnis</h3><div class="calculator-empty" data-time-result hidden><div data-time-result-duration><div class="metric-grid"><div class="metric"><span>Anwesenheit</span><strong data-time-gross>0:00 Std.</strong></div><div class="metric metric--accent"><span>Arbeitszeit</span><strong data-time-net>0:00 Std.</strong></div><div class="metric"><span>Dezimalstunden</span><strong data-time-decimal>0,00 Std.</strong></div><div class="metric"><span>Industrieminuten</span><strong data-time-industrial>0</strong></div><div class="metric"><span>Sollsaldo</span><strong data-time-balance>0:00 Std.</strong></div></div></div><div data-time-result-end hidden><div class="primary-result"><span>Feierabend</span><strong data-time-calculated-end>00:00 Uhr</strong><p data-time-calculated-end-note></p></div></div></div><div class="empty-state" data-time-empty><div><i data-lucide="clock-3"></i><strong>Noch kein Ergebnis</strong><span>Trage deine Zeiten ein und starte die Berechnung.</span></div></div></aside>
+          </div>
+          <div class="workbench__footer"><button class="button button--quiet" type="button" data-time-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button button--secondary" type="button" data-time-copy disabled><i data-lucide="copy"></i> Ergebnis kopieren</button><button class="button" type="button" data-time-calculate><i data-lucide="calculator"></i> Berechnen</button></div>
+        </div>
+      </div></section>
+
+      <section class="content-band" aria-labelledby="time-how"><div class="container content-layout"><h2 id="time-how">Arbeitszeit verständlich in Uhrzeit und Dezimalwert</h2><div class="prose"><p>Für Stundenzettel brauchst du häufig zwei Darstellungen: die vertraute Zeit in Stunden und Minuten sowie den Dezimalwert für Abrechnung oder Tabellen. Aus 7 Stunden und 30 Minuten werden 7,50 Stunden – nicht 7,30.</p><h3>Pause und Sollsaldo</h3><p>Die Pause wird von der Anwesenheitszeit abgezogen. Der Sollsaldo zeigt danach, ob die eingetragene Nettozeit über oder unter deiner Sollzeit liegt. Der Rechner speichert keine Arbeitszeiten und ersetzt kein betriebliches Zeiterfassungssystem.</p><h3>Schichten über Mitternacht</h3><p>Ist die Endzeit kleiner als die Startzeit, ordnet der Rechner sie automatisch dem nächsten Tag zu. So lässt sich auch eine Schicht von 22:00 bis 06:00 Uhr korrekt berechnen.</p></div></div></section>
+      <section class="content-band content-band--soft" aria-labelledby="time-faq"><div class="container content-layout"><h2 id="time-faq">Häufige Fragen</h2><div class="faq-list"><details><summary>Wie rechne ich Minuten in Industrieminuten um?</summary><div>Multipliziere normale Minuten mit 100 und teile das Ergebnis durch 60. So werden aus 15 Minuten 25 Industrieminuten, aus 30 Minuten 50 und aus 45 Minuten 75. Eine Industrieminute dauert 36 Sekunden.</div></details><details><summary>Wird eine gesetzliche Pause automatisch abgezogen?</summary><div>Nein. Der Rechner zieht genau die Pause ab, die du einträgst. So bleibt die Rechnung nachvollziehbar und passt zu deiner tatsächlichen Zeit.</div></details><details><summary>Kann ich das Ergebnis als Arbeitszeitnachweis verwenden?</summary><div>Du kannst den Wert kopieren. Ein formeller Nachweis braucht jedoch die im Betrieb vereinbarten Angaben und gegebenenfalls eine bestätigte Zeiterfassung.</div></details></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container site-footer__inner"><div><a class="brand" href="/"><span class="brand__mark" aria-hidden="true">A</span><span class="brand__text"><strong>Andersen Web Tools</strong><span>von Andersen Webworks</span></span></a><p class="site-footer__copy">Kostenlose Werkzeuge ohne Konto oder Tracking. © <span data-current-year></span> Jan-Erik Andersen.</p></div><nav class="site-footer__nav" aria-label="Rechtliches und Kontakt"><a href="/datenschutz/">Datenschutz</a><a href="/impressum/">Impressum</a><a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools">Kontakt</a></nav></div></footer>
+    <script type="module" src="/src/worktime-tool.js"></script>
+  </body>
+</html>

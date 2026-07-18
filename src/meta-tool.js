@@ -8,7 +8,7 @@ import {
 const defaults = {
   url: "https://beispiel.de/leistung/",
   title: "Webdesign für kleine Unternehmen | Beispiel",
-  description: "Klare, schnelle Websites für kleine Unternehmen. Persönlich geplant, sauber umgesetzt und verständlich betreut.",
+  description: "Webdesign für kleine Unternehmen in Plau am See. Mit Leistungsseiten, Kontaktformular und persönlicher Betreuung.",
   siteName: "Beispiel",
   type: "website",
   image: "",

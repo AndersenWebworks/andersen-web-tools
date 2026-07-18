@@ -2,8 +2,31 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import { BASE_PATH, PUBLIC_ROUTES, SITE_URL } from "./site.config.js";
+import { renderStaticToolGuide } from "./src/public-content.js";
+import { browserToolBySlug } from "./src/tool-catalog.js";
 
 const root = dirname(fileURLToPath(import.meta.url));
+
+function enrichPublicPages() {
+  return {
+    name: "enrich-public-pages",
+    transformIndexHtml: {
+      order: "pre",
+      handler(html, context) {
+        let output = html
+          .split('href="/#werkzeuge"').join('href="/alle-werkzeuge/"')
+          .split("</head>").join(`  <link rel="alternate" type="application/json" title="Werkzeugkatalog" href="${BASE_PATH}werkzeuge.json">\n  </head>`);
+
+        const pathSegments = String(context.path || "").split("/").filter(Boolean);
+        const tool = browserToolBySlug.get(pathSegments[0]);
+        if (tool && output.includes("</main>")) {
+          output = output.split("</main>").join(`${renderStaticToolGuide(tool, BASE_PATH)}\n    </main>`);
+        }
+        return output;
+      }
+    }
+  };
+}
 
 function replaceSiteUrl() {
   return {
@@ -27,13 +50,14 @@ function replaceSiteUrl() {
 
 export default defineConfig({
   base: BASE_PATH,
-  plugins: [replaceSiteUrl()],
+  plugins: [enrichPublicPages(), replaceSiteUrl()],
   build: {
     outDir: "dist",
     emptyOutDir: false,
     rollupOptions: {
       input: {
         home: resolve(root, "index.html"),
+        allTools: resolve(root, "alle-werkzeuge/index.html"),
         calculators: resolve(root, "rechner/index.html"),
         calculatorTemplate: resolve(root, "rechner/werkzeug/index.html"),
         images: resolve(root, "bilder-komprimieren/index.html"),

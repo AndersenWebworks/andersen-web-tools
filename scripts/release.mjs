@@ -96,9 +96,11 @@ async function verifyRelease(siteDirectory, files) {
     "404.html",
     "favicon.svg",
     "index.html",
+    "llms.txt",
     "robots.txt",
     "site.webmanifest",
-    "sitemap.xml"
+    "sitemap.xml",
+    "werkzeuge.json"
   ]);
 
   PUBLIC_ROUTES.filter((route) => route !== "/").forEach((route) => {

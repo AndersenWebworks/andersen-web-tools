@@ -17,3 +17,10 @@ function applyFilter(filter) {
 }
 
 filterButtons.forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.calculatorFilter)));
+
+document.querySelectorAll("[data-category-jump]").forEach((link) => {
+  link.addEventListener("click", () => {
+    applyFilter(link.dataset.categoryJump);
+    window.requestAnimationFrame(() => document.querySelector("[data-calculator-category]:not([hidden])")?.focus());
+  });
+});

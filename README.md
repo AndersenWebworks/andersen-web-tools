@@ -4,7 +4,17 @@ Die Plattform enthält neben den Datei-, Text- und Webwerkzeugen einen eigenen R
 
 Statische Mehrseiten-App mit kostenlosen Werkzeugen, die Eingaben und Dateien vollständig im Browser verarbeiten. Die gebaute Ausgabe benötigt weder Datenbank noch Anwendungsserver.
 
-## Version 3
+## Version 3.1
+
+- zentrale Seite mit allen 36 Werkzeugen und Rechnern, nach konkreten Aufgaben geordnet
+- drei klare Bedienungsschritte und verständliche Begriffserklärungen auf jeder Werkzeugseite
+- direkte Feldhilfen, Begriffserklärungen, häufige Fragen und passende Folgerechner auf allen 24 Rechnerseiten
+- vollständige ItemList-, Breadcrumb- und FAQ-Strukturdaten für die jeweiligen Seitentypen
+- maschinenlesbarer öffentlicher Werkzeugkatalog unter `werkzeuge.json`
+- kompaktes Agentenverzeichnis unter `llms.txt`
+- gemeinsame Katalogdaten für sichtbare Navigation, Sitemap und maschinenlesbare Ausgaben
+
+Die Grundlage aus Version 3 bleibt vollständig enthalten:
 
 - eigener Rechner-Hub mit 24 Rechnern in zwei Wellen
 - indexierbare Einzelseite für jeden Rechner
@@ -49,7 +59,7 @@ npm run public-copy:review
 npm run public-copy:verify
 ```
 
-Die Freigabe ist an Zielgruppe, öffentlichen Zweck, alle 41 Routen und den exakten Hash der sichtbaren Copy gebunden. Jede Text- oder Routenänderung verlangt einen neuen unabhängigen Review. `npm run build` und `npm run release` prüfen die Freigabe automatisch und brechen bei einem fehlenden oder veralteten Stand ab.
+Die Freigabe ist an Zielgruppe, öffentlichen Zweck, alle 42 HTML-Flächen einschließlich Fehlerseite sowie `werkzeuge.json`, `llms.txt` und den exakten Hash der sichtbaren Copy gebunden. Jede Text- oder Routenänderung verlangt einen neuen unabhängigen Review. `npm run build` und `npm run release` prüfen die Freigabe automatisch und brechen bei einem fehlenden oder veralteten Stand ab.
 
 ```powershell
 npm run build

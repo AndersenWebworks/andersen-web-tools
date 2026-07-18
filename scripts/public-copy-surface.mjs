@@ -102,6 +102,7 @@ function calculatorState(route) {
       label: field.label,
       type: field.type,
       unit: field.unit || "",
+      explanation: field.help,
       options: field.options || []
     })),
     defaultResult: calculator.calculate(values)
@@ -120,6 +121,43 @@ export async function writePublicCopySurface(outputDirectory, targetPath = resol
       interactionState: calculatorState(route)
     });
   }
+
+  const catalog = JSON.parse(await readFile(resolve(outputDirectory, "werkzeuge.json"), "utf8"));
+  pages.push({
+    route: "/werkzeuge.json#katalog",
+    title: "Maschinenlesbarer Werkzeugkatalog",
+    metadata: { description: catalog.privacy },
+    content: [catalog.name, catalog.language, catalog.privacy, catalog.directory],
+    controls: [],
+    interactionState: null
+  });
+  catalog.tools.forEach((tool) => {
+    pages.push({
+      route: `/werkzeuge.json#${tool.url.split("/").filter(Boolean).at(-1)}`,
+      title: tool.title,
+      metadata: { description: tool.description },
+      content: [
+        tool.title,
+        tool.category,
+        tool.description,
+        ...(tool.steps || []),
+        ...Object.entries(tool.terms || {}).flat(),
+        ...(tool.inputs || []).flatMap((input) => [input.label, input.explanation])
+      ],
+      controls: [],
+      interactionState: null
+    });
+  });
+
+  const llms = await readFile(resolve(outputDirectory, "llms.txt"), "utf8");
+  pages.push({
+    route: "/llms.txt",
+    title: "Werkzeugverzeichnis für KI-Systeme",
+    metadata: {},
+    content: llms.split("\n").map(compactText).filter(Boolean),
+    controls: [],
+    interactionState: null
+  });
 
   const surface = {
     version: 1,

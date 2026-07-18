@@ -48,6 +48,9 @@ Welle 2 baut die geschäftsnahen Rechner aus. Wo Tarife, Grenzwerte oder persön
 - Gesetzlich oder tariflich veränderliche Werte sind im Formular sichtbar und editierbar.
 - Finanz-, Steuer-, Gesundheits- und Versicherungsrechner werden als nachvollziehbare Orientierung bezeichnet, nicht als Beratung oder verbindlicher Bescheid.
 - Das bestehende GitHub-Pages-Deployment bleibt ohne Backend nutzbar.
+- Jedes Eingabefeld erklärt direkt darunter, welcher Wert gemeint ist und warum er für die Rechnung gebraucht wird.
+- Jede Rechnerseite enthält eine Bedienfolge, ein kleines Begriffslexikon, häufige Missverständnisse und direkte Links zu passenden Folgerechnern.
+- Rechner-Hub, vollständige Werkzeugübersicht, Sitemap, `werkzeuge.json` und `llms.txt` verwenden denselben Katalogstand.
 
 ## Spätere Welle
 

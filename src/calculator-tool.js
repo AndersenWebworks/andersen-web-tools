@@ -77,6 +77,14 @@ function createInput(field) {
     wrapper.append(input);
   }
 
+  if (field.help) {
+    const helpId = `${inputId}-help`;
+    const help = element("p", "field-hint", field.help);
+    help.id = helpId;
+    input.setAttribute("aria-describedby", helpId);
+    wrapper.append(help);
+  }
+
   inputs.set(field.id, input);
   return wrapper;
 }
@@ -154,4 +162,3 @@ if (!calculator || !form || !fieldsRoot) {
   });
   refreshIcons();
 }
-

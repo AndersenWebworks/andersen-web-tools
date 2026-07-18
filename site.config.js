@@ -26,6 +26,7 @@ export const BASE_PATH = normalizeBasePath(process.env.BASE_PATH || new URL(`${S
 
 export const PUBLIC_ROUTES = [
   "/",
+  "/alle-werkzeuge/",
   "/rechner/",
   "/bilder-komprimieren/",
   "/pdf-zusammenfuegen/",

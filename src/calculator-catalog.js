@@ -1,3 +1,5 @@
+import { calculatorGuides } from "./calculator-guides.js";
+
 const currencyFormatter = new Intl.NumberFormat("de-DE", {
   style: "currency",
   currency: "EUR",
@@ -719,7 +721,20 @@ const waveTwo = [
   }
 ];
 
-export const calculators = [...waveOne, ...waveTwo];
+const calculatorDefinitions = [...waveOne, ...waveTwo];
+
+export const calculators = calculatorDefinitions.map((calculator) => {
+  const guide = calculatorGuides[calculator.slug];
+  if (!guide) throw new Error(`Für ${calculator.slug} fehlt die verständliche Rechner-Erklärung.`);
+
+  const fields = calculator.fields.map((field) => {
+    const help = guide.fieldHelp[field.id];
+    if (!help) throw new Error(`Für ${calculator.slug}.${field.id} fehlt die Feld-Erklärung.`);
+    return { ...field, help };
+  });
+
+  return { ...calculator, ...guide, fields };
+});
 
 export const calculatorBySlug = new Map(calculators.map((calculator) => [calculator.slug, calculator]));
 

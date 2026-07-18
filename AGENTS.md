@@ -6,6 +6,9 @@
 - Die Anwendung bleibt statisch und verarbeitet Dateien sowie Eingaben im Browser.
 - Keine Datei-Uploads, Nutzerkonten, Analyse, Werbung oder externe Laufzeitdienste ohne ausdrücklichen Auftrag.
 - Sichtbare Texte sprechen mit den Nutzern. Interne Arbeitsnotizen und Prompttexte gehören nicht in die Oberfläche.
+- Jedes Werkzeug und jeder Rechner besitzt eine eigene indexierbare Seite, eine konkrete Aufgabenbeschreibung, eine kurze Bedienfolge und verständliche Erklärungen aller nicht alltäglichen Begriffe.
+- Rechnerfelder brauchen eine direkt am Feld sichtbare Erklärung. Ein neues Feld ohne Erklärung lässt den gemeinsamen Rechnerkatalog beim Laden geschlossen fehlschlagen.
+- Die zentrale Werkzeugübersicht, `sitemap.xml`, `llms.txt` und `werkzeuge.json` werden aus denselben öffentlichen Katalogdaten erzeugt, damit Menschen, Suchmaschinen und Agenten nicht auf unterschiedliche Bestände treffen.
 - Datenschutz-, Impressums- und Funktionsaussagen müssen mit der tatsächlichen Implementierung übereinstimmen.
 - Öffentliche Copy wird nicht im selben Arbeitslauf freigegeben, der sie geschrieben hat. `npm run public-copy:prepare` erzeugt aus dem gebauten Stand eine vollständige strukturierte Besucherfläche; `npm run public-copy:review` lässt nur diese Fläche und das öffentliche Briefing semantisch prüfen. Jede Text- oder Routenänderung macht die Hash-Freigabe ungültig.
 - `npm run build` und `npm run release` fallen geschlossen aus, wenn die unabhängige Public-Copy-Freigabe fehlt, abgelehnt wurde oder nicht exakt zum gebauten Stand passt. Keyword-, Regex- und Quellcode-Selbstprüfungen ersetzen diesen Empfänger-Pass nicht.

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "project": "andersen-web-tools",
+  "audience": "Menschen im deutschsprachigen Raum, die kostenlose Online-Werkzeuge und Rechner ohne Konto, Werbung, Tracking oder Datei-Upload nutzen möchten",
+  "purpose": "Werkzeuge und Rechner verständlich erklären, direkt zur passenden Aufgabe führen und Vertrauen in die lokale Browser-Verarbeitung schaffen",
+  "surface": ".clautz/public-copy-surface.json",
+  "attestation": ".clautz/public-copy-review.json",
+  "reviewer": {
+    "provider": "codex-cli",
+    "model": "gpt-5.3-codex-spark"
+  }
+}

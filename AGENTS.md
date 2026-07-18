@@ -7,6 +7,8 @@
 - Keine Datei-Uploads, Nutzerkonten, Analyse, Werbung oder externe Laufzeitdienste ohne ausdrücklichen Auftrag.
 - Sichtbare Texte sprechen mit den Nutzern. Interne Arbeitsnotizen und Prompttexte gehören nicht in die Oberfläche.
 - Datenschutz-, Impressums- und Funktionsaussagen müssen mit der tatsächlichen Implementierung übereinstimmen.
+- Öffentliche Copy wird nicht im selben Arbeitslauf freigegeben, der sie geschrieben hat. `npm run public-copy:prepare` erzeugt aus dem gebauten Stand eine vollständige strukturierte Besucherfläche; `npm run public-copy:review` lässt nur diese Fläche und das öffentliche Briefing semantisch prüfen. Jede Text- oder Routenänderung macht die Hash-Freigabe ungültig.
+- `npm run build` und `npm run release` fallen geschlossen aus, wenn die unabhängige Public-Copy-Freigabe fehlt, abgelehnt wurde oder nicht exakt zum gebauten Stand passt. Keyword-, Regex- und Quellcode-Selbstprüfungen ersetzen diesen Empfänger-Pass nicht.
 
 ## Deployment
 

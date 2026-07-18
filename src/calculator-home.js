@@ -2,13 +2,13 @@ import "./styles.css";
 import "./shared.js";
 
 const filterButtons = document.querySelectorAll("[data-calculator-filter]");
-const cards = document.querySelectorAll("[data-calculator-wave]");
+const cards = document.querySelectorAll("[data-calculator-category]");
 const resultCount = document.querySelector("[data-calculator-count]");
 
 function applyFilter(filter) {
   let visible = 0;
   cards.forEach((card) => {
-    const show = filter === "all" || card.dataset.calculatorWave === filter || card.dataset.calculatorCategory === filter;
+    const show = filter === "all" || card.dataset.calculatorCategory === filter;
     card.hidden = !show;
     if (show) visible += 1;
   });
@@ -17,4 +17,3 @@ function applyFilter(filter) {
 }
 
 filterButtons.forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.calculatorFilter)));
-

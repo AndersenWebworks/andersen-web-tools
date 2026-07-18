@@ -41,6 +41,16 @@ Die Entwicklungsvorschau läuft standardmäßig unter `http://127.0.0.1:4178/`.
 
 ## GitHub Pages
 
+Öffentliche Copy besitzt einen eigenen fail-closed Freigabeschritt. Planung, Roadmap und Arbeitsnotizen werden nicht an den Reviewer gegeben; geprüft wird nur die tatsächlich gebaute Besucherfläche.
+
+```powershell
+npm run public-copy:prepare
+npm run public-copy:review
+npm run public-copy:verify
+```
+
+Die Freigabe ist an Zielgruppe, öffentlichen Zweck, alle 41 Routen und den exakten Hash der sichtbaren Copy gebunden. Jede Text- oder Routenänderung verlangt einen neuen unabhängigen Review. `npm run build` und `npm run release` prüfen die Freigabe automatisch und brechen bei einem fehlenden oder veralteten Stand ab.
+
 ```powershell
 npm run build
 npm run preview

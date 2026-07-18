@@ -27,8 +27,8 @@ function escapeHtml(value) {
 
 function calculatorCards() {
   return calculators.map((calculator) => [
-    `<a class="calculator-card" href="${BASE_PATH}rechner/${calculator.slug}/" data-calculator-wave="${calculator.wave}" data-calculator-category="${escapeHtml(calculator.category)}">`,
-    `  <span class="calculator-card__meta"><span>Welle ${calculator.wave}</span><span>${escapeHtml(calculator.category)}</span></span>`,
+    `<a class="calculator-card" href="${BASE_PATH}rechner/${calculator.slug}/" data-calculator-category="${escapeHtml(calculator.category)}">`,
+    `  <span class="calculator-card__meta"><span>${escapeHtml(calculator.category)}</span><span>Kostenlos</span></span>`,
     `  <span><h3>${escapeHtml(calculator.title)}</h3><p>${escapeHtml(calculator.description)}</p></span>`,
     '  <i data-lucide="arrow-right"></i>',
     "</a>"
@@ -50,7 +50,6 @@ async function writeCalculatorPages(outputDirectory) {
       ["__CALCULATOR_INTRO__", escapeHtml(calculator.intro)],
       ["__CALCULATOR_EXPLANATION__", escapeHtml(calculator.explanation)],
       ["__CALCULATOR_NOTICE_HTML__", calculator.notice ? `<div class="status-message status-message--info"><i data-lucide="info"></i><span>${escapeHtml(calculator.notice)}</span></div>` : ""],
-      ["__CALCULATOR_WAVE__", String(calculator.wave)],
       ["__CALCULATOR_CATEGORY__", escapeHtml(calculator.category)]
     ]);
     let html = template;

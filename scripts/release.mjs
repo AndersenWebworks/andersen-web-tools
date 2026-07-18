@@ -15,6 +15,8 @@ import JSZip from "jszip";
 import { build } from "vite";
 import { BASE_PATH, PUBLIC_ROUTES, SITE_URL } from "../site.config.js";
 import { writeProductionFiles } from "./postbuild.mjs";
+import { writePublicCopySurface } from "./public-copy-surface.mjs";
+import { verifyPublicCopyApproval } from "./public-copy-verify.mjs";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const appRoot = resolve(scriptDirectory, "..");
@@ -196,6 +198,8 @@ if (pagesMode) {
 
   const files = await collectFiles(pagesOutput);
   await verifyRelease(pagesOutput, files);
+  await writePublicCopySurface(pagesOutput);
+  await verifyPublicCopyApproval();
   console.log([
     "GitHub-Pages-Ausgabe erstellt.",
     `Webroot: ${pagesOutput}`,
@@ -229,6 +233,8 @@ await writeProductionFiles(siteDirectory);
 
 const files = await collectFiles(siteDirectory);
 await verifyRelease(siteDirectory, files);
+await writePublicCopySurface(siteDirectory);
+await verifyPublicCopyApproval();
 const archive = await packageRelease(files, zipPath);
 const source = await readSourceState();
 

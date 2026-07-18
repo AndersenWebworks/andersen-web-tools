@@ -8,6 +8,9 @@
     "dev": "vite --host 127.0.0.1",
     "build": "node scripts/release.mjs --pages",
     "release": "node scripts/release.mjs",
+    "public-copy:prepare": "node scripts/public-copy-review-build.mjs",
+    "public-copy:review": "node ../ClautzGPT/scripts/public-copy-guard.js review --config public-copy.config.json",
+    "public-copy:verify": "node scripts/public-copy-verify.mjs",
     "preview": "vite preview --outDir pages-output --host 127.0.0.1"
   },
   "dependencies": {
@@ -20,6 +23,7 @@
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
+    "parse5": "^7.3.0",
     "vite": "^6.0.7"
   }
 }

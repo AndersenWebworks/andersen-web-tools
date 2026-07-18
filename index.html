@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Zwölf kostenlose Browser-Werkzeuge für PDF, Bilder, Text, Arbeitszeit, IBAN, QR-Codes und Websites. Ohne Upload, Konto, Werbung oder Tracking.">
+    <meta name="description" content="Zwölf kostenlose Browser-Werkzeuge und 24 Online-Rechner für Dateien, Alltag und Geschäft. Ohne Upload, Konto, Werbung oder Tracking.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0b725f">
     <meta name="color-scheme" content="light">
@@ -11,7 +11,7 @@
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="Andersen Web Tools">
     <meta property="og:title" content="Andersen Web Tools – kostenlos und ohne Datei-Upload">
-    <meta property="og:description" content="Zwölf nützliche Browser-Werkzeuge. Dateien und Eingaben bleiben auf deinem Gerät.">
+    <meta property="og:description" content="Zwölf nützliche Browser-Werkzeuge und 24 Rechner. Dateien und Eingaben bleiben auf deinem Gerät.">
     <meta property="og:url" content="__SITE_URL__/">
     <meta name="twitter:card" content="summary">
     <link rel="canonical" href="__SITE_URL__/">
@@ -40,7 +40,7 @@
           {
             "@type": "ItemList",
             "name": "Kostenlose Browser-Werkzeuge",
-            "numberOfItems": 12,
+            "numberOfItems": 13,
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "url": "__SITE_URL__/pdf-verkleinern/", "name": "PDF verkleinern" },
               { "@type": "ListItem", "position": 2, "url": "__SITE_URL__/bilder-komprimieren/", "name": "Bilder komprimieren und umwandeln" },
@@ -53,7 +53,8 @@
               { "@type": "ListItem", "position": 9, "url": "__SITE_URL__/iban-pruefen-sepa-qr/", "name": "IBAN prüfen und SEPA-QR erstellen" },
               { "@type": "ListItem", "position": 10, "url": "__SITE_URL__/qr-code-erstellen/", "name": "QR-Code erstellen" },
               { "@type": "ListItem", "position": 11, "url": "__SITE_URL__/farbkontrast-pruefen/", "name": "Farbkontrast prüfen" },
-              { "@type": "ListItem", "position": 12, "url": "__SITE_URL__/meta-tags-erstellen/", "name": "Meta-Tags erstellen" }
+              { "@type": "ListItem", "position": 12, "url": "__SITE_URL__/meta-tags-erstellen/", "name": "Meta-Tags erstellen" },
+              { "@type": "ListItem", "position": 13, "url": "__SITE_URL__/rechner/", "name": "24 kostenlose Online-Rechner" }
             ]
           }
         ]
@@ -73,6 +74,7 @@
         </button>
         <nav class="site-nav" id="site-navigation" data-navigation aria-label="Hauptnavigation">
           <a href="#werkzeuge" aria-current="page">Werkzeuge</a>
+          <a href="/rechner/">Rechner</a>
           <a href="#warum">Warum kostenlos?</a>
           <a href="mailto:mail@andersen-webworks.de?subject=Andersen%20Web%20Tools%20unterstützen">Unterstützen</a>
         </nav>
@@ -106,7 +108,7 @@
           <div class="section-heading">
             <div>
               <h2 id="tools-heading">Was möchtest du erledigen?</h2>
-              <p>Zwölf fertige Werkzeuge für Dokumente, Bilder, Texte, Zahlen und Websites.</p>
+              <p>Zwölf Werkzeuge für Dateien und Webaufgaben sowie ein eigener Bereich mit 24 Rechnern.</p>
             </div>
             <div>
               <div class="filter-bar" role="group" aria-label="Werkzeuge filtern">
@@ -114,13 +116,19 @@
                 <button class="filter-button" type="button" data-tool-filter="files" aria-pressed="false">Dateien</button>
                 <button class="filter-button" type="button" data-tool-filter="text" aria-pressed="false">Text</button>
                 <button class="filter-button" type="button" data-tool-filter="business" aria-pressed="false">Geschäft</button>
+                <button class="filter-button" type="button" data-tool-filter="calculator" aria-pressed="false">Rechner</button>
                 <button class="filter-button" type="button" data-tool-filter="web" aria-pressed="false">Web</button>
               </div>
-              <span class="sr-only" aria-live="polite" data-tool-count>12 Werkzeuge</span>
+              <span class="sr-only" aria-live="polite" data-tool-count>13 Werkzeuge</span>
             </div>
           </div>
 
           <div class="tool-grid">
+            <a class="tool-card tool-card--featured" href="/rechner/" data-tool-category="calculator">
+              <span class="tool-card__icon"><i data-lucide="calculator"></i></span>
+              <span><h3>24 kostenlose Rechner</h3><p>Prozent, Mehrwertsteuer, Zinseszins, Arbeit, Gehalt, Versicherung und mehr nachvollziehbar berechnen.</p></span>
+              <i data-lucide="arrow-right"></i>
+            </a>
             <a class="tool-card" href="/pdf-verkleinern/" data-tool-category="files">
               <span class="tool-card__icon"><i data-lucide="file-down"></i></span>
               <span><h3>PDF verkleinern</h3><p>Dateigröße mit wählbarer Qualität reduzieren oder die vorhandene Dokumentstruktur erhalten.</p></span>

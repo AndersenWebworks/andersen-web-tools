@@ -34,6 +34,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(root, "index.html"),
+        calculators: resolve(root, "rechner/index.html"),
+        calculatorTemplate: resolve(root, "rechner/werkzeug/index.html"),
         images: resolve(root, "bilder-komprimieren/index.html"),
         pdf: resolve(root, "pdf-zusammenfuegen/index.html"),
         pdfCompress: resolve(root, "pdf-verkleinern/index.html"),

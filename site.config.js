@@ -1,3 +1,5 @@
+import { calculatorRoutes } from "./src/calculator-catalog.js";
+
 export const SITE_NAME = "Andersen Web Tools";
 const DEFAULT_SITE_URL = "https://andersenwebworks.github.io/andersen-web-tools";
 
@@ -24,6 +26,7 @@ export const BASE_PATH = normalizeBasePath(process.env.BASE_PATH || new URL(`${S
 
 export const PUBLIC_ROUTES = [
   "/",
+  "/rechner/",
   "/bilder-komprimieren/",
   "/pdf-zusammenfuegen/",
   "/pdf-verkleinern/",
@@ -36,6 +39,7 @@ export const PUBLIC_ROUTES = [
   "/qr-code-erstellen/",
   "/farbkontrast-pruefen/",
   "/meta-tags-erstellen/",
+  ...calculatorRoutes,
   "/datenschutz/",
   "/impressum/"
 ];

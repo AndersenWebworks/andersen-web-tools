@@ -1,8 +1,19 @@
 # Andersen Web Tools
 
+Die Plattform enthält neben den Datei-, Text- und Webwerkzeugen einen eigenen Rechnerbereich mit 24 Rechnern. Die verbindliche Aufteilung von Welle 1 und Welle 2 steht in [`docs/rechner-roadmap.md`](docs/rechner-roadmap.md).
+
 Statische Mehrseiten-App mit kostenlosen Werkzeugen, die Eingaben und Dateien vollständig im Browser verarbeiten. Die gebaute Ausgabe benötigt weder Datenbank noch Anwendungsserver.
 
-## Version 2
+## Version 3
+
+- eigener Rechner-Hub mit 24 Rechnern in zwei Wellen
+- indexierbare Einzelseite für jeden Rechner
+- gemeinsame Formular-, Ergebnis- und Fehlerlogik
+- sichtbare Rechenwege und anpassbare Annahmen bei veränderlichen Tarifen
+- Prozent, Mehrwertsteuer, Rabatt, Marge, Zinseszins, Zahlungsgebühren, Fahrt, Strom, Urlaub, Zeitspannen, Skonto und Stückpreise
+- Stundenlohn, Arbeitgeberkosten, Minijob, Brutto-Netto-Schätzung, GKV, Pflegeversicherung, Krankengeld, Firmenwagen, Pendlerpauschale, GKV-PKV-Vergleich und Monatsbudget
+
+Die bestehenden Werkzeuge aus Version 2 bleiben vollständig enthalten:
 
 - PDF-Dateien mit wählbarer Qualität verkleinern
 - Bilder komprimieren, skalieren und in JPG, PNG, WebP oder AVIF umwandeln
@@ -72,7 +83,7 @@ Dieser Befehl erzeugt unter `releases/` einen neuen, eindeutig benannten Ordner 
 1. Eigenes GitHub-Repository anlegen und `main` pushen.
 2. GitHub Actions als Pages-Quelle aktivieren.
 3. Den ersten Workflow-Lauf und die öffentliche Pages-Adresse prüfen.
-4. Startseite, alle zwölf Werkzeuge, `sitemap.xml`, `robots.txt`, Impressum und Datenschutz über die öffentliche URL prüfen.
+4. Startseite, Rechner-Hub, alle zwölf Werkzeuge, alle 24 Rechner, `sitemap.xml`, `robots.txt`, Impressum und Datenschutz über die öffentliche URL prüfen.
 5. Erst danach bei Bedarf die eigene Domain anbinden und die Sitemap einreichen.
 
 GitHub Pages behält die Deployment-Historie des Workflows. Für unabhängige Archivstände bleibt zusätzlich der versionierte Release-Befehl verfügbar.

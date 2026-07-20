@@ -3,7 +3,7 @@ export const calculatorGuides = {
     steps: [
       "Wähle zuerst, welche Größe du suchst: Prozentwert, Prozentsatz, Grundwert oder Veränderung.",
       "Trage die beiden Werte ein, die du bereits kennst.",
-      "Klicke auf Berechnen. Das Ergebnis zeigt auch den eingesetzten Rechenweg."
+      "Sobald beide Werte eingetragen sind, erscheinen Ergebnis und Rechnung."
     ],
     fieldHelp: {
       mode: "Der Rechner passt die folgenden Felder an die gewählte Prozentaufgabe an.",

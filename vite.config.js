@@ -52,6 +52,7 @@ export default defineConfig({
   base: BASE_PATH,
   plugins: [enrichPublicPages(), replaceSiteUrl()],
   build: {
+    cssCodeSplit: false,
     outDir: "dist",
     emptyOutDir: false,
     rollupOptions: {

@@ -10,8 +10,8 @@
   --brand: #0b725f;
   --brand-dark: #075345;
   --brand-soft: #dff1eb;
-  --sun: #f2b134;
-  --sun-soft: #fff2cc;
+  --sun: #d97964;
+  --sun-soft: #fae8e4;
   --coral: #c84f45;
   --coral-soft: #f9e5e2;
   --focus: #005fcc;
@@ -42,7 +42,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   color: var(--ink);
   background: var(--paper);
   font-size: 16px;
@@ -2396,8 +2396,8 @@ code {
   --brand: #08735d;
   --brand-dark: #06261e;
   --brand-soft: #dfeee8;
-  --sun: #f2c500;
-  --sun-soft: #fff5b8;
+  --sun: #d97964;
+  --sun-soft: #fae8e4;
   --coral: #a63d32;
   --coral-soft: #f4dedb;
   --focus: #005fcc;
@@ -2415,10 +2415,8 @@ body {
 }
 
 body::before {
-  width: 52px;
-  height: 5px;
-  background: var(--ink);
-  box-shadow: 52px 0 0 var(--coral), 104px 0 0 var(--sun);
+  display: none;
+  content: none;
 }
 
 h1,
@@ -2459,11 +2457,11 @@ h3 {
 }
 
 .brand {
-  gap: 14px;
+  gap: 0;
 }
 
 .brand__mark {
-  display: grid;
+  display: none;
   width: 45px;
   height: 48px;
   flex-basis: 45px;
@@ -2860,6 +2858,10 @@ h3 {
   margin-bottom: 0;
 }
 
+.section-heading > div {
+  min-width: 0;
+}
+
 .section-heading h2 {
   max-width: 11ch;
   font-size: 58px;
@@ -2879,6 +2881,8 @@ h3 {
 
 .filter-bar {
   display: flex;
+  width: 100%;
+  max-width: 100%;
   gap: 30px;
   margin-top: 8px;
   padding: 0;
@@ -2986,6 +2990,13 @@ h3 {
   margin: 0;
   font-family: "Avenir Next", "Segoe UI", Tahoma, sans-serif;
   font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.tool-card > span:not(.tool-card__icon),
+.calculator-card > span,
+.portal-card > span {
+  min-width: 0;
 }
 
 .tool-card p,
@@ -3259,12 +3270,6 @@ h3 {
 }
 
 @media (max-width: 720px) {
-  body::before {
-    width: 44px;
-    height: 4px;
-    box-shadow: 44px 0 0 var(--coral), 88px 0 0 var(--sun);
-  }
-
   .container {
     width: min(calc(100% - 28px), var(--content));
   }
@@ -3274,8 +3279,12 @@ h3 {
     min-height: 68px;
   }
 
+  .site-header__inner {
+    gap: 16px;
+  }
+
   .brand {
-    gap: 9px;
+    gap: 0;
   }
 
   .brand__mark {
@@ -3335,23 +3344,27 @@ h3 {
   }
 
   .hero__tool {
-    top: 8px;
-    right: -76px;
-    width: 240px;
+    top: 26px;
+    right: -48px;
+    width: 210px;
     max-width: none;
-    opacity: 0.16;
+    opacity: 0.11;
   }
 
   .task-search {
-    grid-template-columns: minmax(0, 1fr) 62px;
+    grid-template-columns: minmax(0, 1fr) 56px;
     margin-top: 32px;
   }
 
   .task-search input {
-    height: 64px;
+    height: 60px;
+    padding-right: 12px;
+    padding-left: 44px;
+    font-size: 14px;
+  }
+
+  .task-search:has(.task-search__clear:not([hidden])) input {
     padding-right: 48px;
-    padding-left: 52px;
-    font-size: 16px;
   }
 
   .task-search > svg {
@@ -3361,12 +3374,12 @@ h3 {
   }
 
   .task-search__submit {
-    width: 62px;
-    height: 64px;
+    width: 56px;
+    height: 60px;
   }
 
   .task-search__clear {
-    right: 67px;
+    right: 61px;
   }
 
   .hero__facts {
@@ -3379,16 +3392,18 @@ h3 {
   }
 
   .popular-tools__heading h2 {
-    font-size: 36px;
+    min-width: 0;
+    font-size: 34px;
   }
 
   .popular-tools__heading a {
-    font-size: 0;
+    flex: 0 0 auto;
+    font-size: 14px;
+    white-space: nowrap;
   }
 
   .popular-tools__heading a::before {
-    content: "Alle 36";
-    font-size: 15px;
+    content: none;
   }
 
   .popular-list li::before {
@@ -3486,6 +3501,13 @@ h3 {
 }
 
 @media (max-width: 380px) {
+  .popular-tools__heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 14px;
+  }
+
   .hero h1 {
     font-size: 45px;
   }
@@ -3756,6 +3778,20 @@ h3 {
   display: grid;
   grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.28fr);
   gap: 72px;
+}
+
+.guide-layout > *,
+.glossary-layout > *,
+.faq-layout > * {
+  min-width: 0;
+}
+
+.guide-layout h2,
+.glossary-layout h2,
+.faq-layout h2,
+.related-section h2 {
+  hyphens: auto;
+  overflow-wrap: anywhere;
 }
 
 .guide-intro,

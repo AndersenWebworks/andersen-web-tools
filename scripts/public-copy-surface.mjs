@@ -97,7 +97,7 @@ function calculatorState(route) {
   if (!calculator) return null;
   const values = Object.fromEntries(calculator.fields.map((field) => [
     field.id,
-    field.valueProvider ? field.valueProvider() : field.value
+    field.reviewValue ?? (field.valueProvider ? field.valueProvider() : field.value)
   ]));
   return {
     category: calculator.category,

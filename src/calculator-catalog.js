@@ -353,7 +353,7 @@ const waveOne = [
     explanation: "Volle Jahre und Monate werden kalendergenau gezählt. Die Gesamttage ergeben sich aus der tatsächlichen Differenz beider Daten.",
     fields: [
       { id: "start", label: "Startdatum", type: "date", value: "1990-01-01" },
-      { id: "end", label: "Enddatum", type: "date", value: "today", valueProvider: currentLocalDate }
+      { id: "end", label: "Enddatum", type: "date", value: "today", valueProvider: currentLocalDate, reviewValue: "2026-01-01" }
     ],
     calculate(values) {
       let start = parseDate(values.start, "Das Startdatum");
@@ -375,7 +375,7 @@ const waveOne = [
     fields: [
       { id: "amount", label: "Rechnungsbetrag", type: "number", value: 1190, min: 0, step: 0.01, unit: "€" },
       { id: "rate", label: "Skonto", type: "number", value: 2, min: 0, max: 100, step: 0.01, unit: "%" },
-      { id: "invoiceDate", label: "Rechnungsdatum", type: "date", value: "today", valueProvider: currentLocalDate },
+      { id: "invoiceDate", label: "Rechnungsdatum", type: "date", value: "today", valueProvider: currentLocalDate, reviewValue: "2026-01-01" },
       { id: "discountDays", label: "Skontofrist", type: "number", value: 10, min: 0, step: 1, unit: "Tage", advanced: true },
       { id: "dueDays", label: "Zahlungsziel", type: "number", value: 30, min: 0, step: 1, unit: "Tage", advanced: true }
     ],

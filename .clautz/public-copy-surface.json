@@ -7015,25 +7015,25 @@
         ],
         "defaultResult": {
           "primaryLabel": "Genaue Zeitspanne",
-          "primaryValue": "36 Jahre, 6 Monate, 17 Tage",
+          "primaryValue": "36 Jahre, 0 Monate, 0 Tage",
           "metrics": [
             {
               "label": "Gesamttage",
-              "value": "13.347 Tage",
+              "value": "13.149 Tage",
               "tone": ""
             },
             {
               "label": "Volle Wochen",
-              "value": "1.906 Wochen",
+              "value": "1.878 Wochen",
               "tone": ""
             },
             {
               "label": "Resttage",
-              "value": "5 Tage",
+              "value": "3 Tage",
               "tone": ""
             }
           ],
-          "explanation": "01.01.1990 bis 18.07.2026."
+          "explanation": "01.01.1990 bis 01.01.2026."
         }
       }
     },
@@ -7280,12 +7280,12 @@
             },
             {
               "label": "Skonto bis",
-              "value": "28.07.2026",
+              "value": "11.01.2026",
               "tone": ""
             },
             {
               "label": "Fällig am",
-              "value": "17.08.2026",
+              "value": "31.01.2026",
               "tone": ""
             }
           ],

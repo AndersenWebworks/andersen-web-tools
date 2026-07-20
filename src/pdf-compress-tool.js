@@ -52,6 +52,7 @@ let sourceBytes = null;
 let previewPdf = null;
 let activeProfile = "balanced";
 let currentOutput = null;
+let compressionTimer = 0;
 
 function setError(message = "") {
   elements.error.querySelector("span").textContent = message;
@@ -105,6 +106,7 @@ async function selectFile(file) {
     elements.pages.textContent = String(previewPdf.numPages);
     elements.inputSize.textContent = formatBytes(file.size);
     elements.process.disabled = false;
+    scheduleCompression();
   } catch (error) {
     await destroyPdf(previewPdf);
     previewPdf = null;
@@ -127,6 +129,13 @@ function selectProfile(profile) {
   setNotice(profile === "structure"
     ? "Dieser Modus bewahrt Text, Links und Formularfelder. Bei bereits gut optimierten PDFs kann die Datei gleich groß oder etwas größer werden."
     : "Die Seiten werden als Bilder neu aufgebaut. Dadurch werden Textauswahl, Links, Formulare und vorhandene digitale Signaturen entfernt.");
+  scheduleCompression();
+}
+
+function scheduleCompression() {
+  window.clearTimeout(compressionTimer);
+  if (!sourceFile || !sourceBytes || !previewPdf) return;
+  compressionTimer = window.setTimeout(compressPdf, 220);
 }
 
 async function rebuildWithImages(profile) {

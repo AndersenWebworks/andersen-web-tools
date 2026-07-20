@@ -63,7 +63,7 @@
               </div>
               <aside class="workbench__aside" aria-label="PDF-Einstellungen"><h3>PDF einstellen</h3><div class="form-grid form-grid--single"><div class="form-field"><label for="to-pdf-page-size">Seitengröße</label><select class="select-input" id="to-pdf-page-size" data-to-pdf-page-size><option value="a4">DIN A4, automatisch Hoch- oder Querformat</option><option value="original">Passend zum Bild</option></select></div><div class="form-field"><label for="to-pdf-margin">Rand</label><select class="select-input" id="to-pdf-margin" data-to-pdf-margin><option value="0">Ohne Rand</option><option value="10" selected>10 mm</option><option value="20">20 mm</option></select></div><div class="summary-strip"><div class="summary-item"><span>Bilder</span><strong data-to-pdf-count>0</strong></div><div class="summary-item"><span>Originale</span><strong data-to-pdf-size>0 B</strong></div><div class="summary-item"><span>Upload</span><strong>Keiner</strong></div></div></div></aside>
             </div>
-            <div class="workbench__footer"><button class="button button--quiet" type="button" data-to-pdf-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-to-pdf-process disabled><i data-lucide="file-down"></i> PDF erstellen</button></div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-to-pdf-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-to-pdf-process disabled hidden><i data-lucide="file-down"></i> PDF erstellen</button></div>
           </div>
 
           <div class="mode-panel" data-convert-panel="pdf-to-images" hidden>
@@ -75,7 +75,7 @@
               </div>
               <aside class="workbench__aside" aria-label="JPG-Einstellungen"><h3>JPG einstellen</h3><div class="form-grid form-grid--single"><div class="form-field"><label for="to-image-dpi">Auflösung</label><select class="select-input" id="to-image-dpi" data-to-image-dpi><option value="108">Klein – 108 dpi</option><option value="144" selected>Standard – 144 dpi</option><option value="192">Fein – 192 dpi</option></select></div><div class="form-field"><label for="to-image-quality">JPG-Qualität <span class="counter" data-to-image-quality-value>84 %</span></label><div class="range-row"><input id="to-image-quality" type="range" min="55" max="95" value="84" data-to-image-quality><span class="range-value">JPG</span></div></div><div class="summary-strip"><div class="summary-item"><span>Seiten</span><strong data-to-image-pages>0</strong></div><div class="summary-item"><span>Format</span><strong>JPG</strong></div><div class="summary-item"><span>Upload</span><strong>Keiner</strong></div></div></div></aside>
             </div>
-            <div class="workbench__footer"><button class="button button--quiet" type="button" data-to-image-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-to-image-process disabled><i data-lucide="image-down"></i> Seiten umwandeln</button></div>
+            <div class="workbench__footer"><button class="button button--quiet" type="button" data-to-image-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-to-image-process disabled hidden><i data-lucide="image-down"></i> Seiten umwandeln</button></div>
           </div>
         </div>
 

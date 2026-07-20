@@ -34,6 +34,7 @@ const elements = {
 
 let files = [];
 let results = [];
+let convertTimer = 0;
 
 function setError(message = "") {
   elements.error.querySelector("span").textContent = message;
@@ -67,6 +68,7 @@ function renderFiles() {
       files.splice(index, 1);
       clearResults();
       renderFiles();
+      scheduleConversion();
     });
     elements.list.append(row);
   });
@@ -108,6 +110,14 @@ function addFiles(fileList) {
   files.push(...accepted);
   elements.input.value = "";
   renderFiles();
+  scheduleConversion();
+}
+
+function scheduleConversion() {
+  window.clearTimeout(convertTimer);
+  clearResults();
+  if (!files.length) return;
+  convertTimer = window.setTimeout(convertAll, 320);
 }
 
 async function convertFile(file, fileIndex) {
@@ -221,9 +231,9 @@ elements.dropzone.addEventListener("drop", (event) => {
 });
 elements.quality.addEventListener("input", () => {
   elements.qualityValue.textContent = `${elements.quality.value} %`;
-  clearResults();
+  scheduleConversion();
 });
-elements.width.addEventListener("change", clearResults);
+elements.width.addEventListener("input", scheduleConversion);
 elements.process.addEventListener("click", convertAll);
 elements.reset.addEventListener("click", resetAll);
 elements.downloadAll.addEventListener("click", downloadAll);

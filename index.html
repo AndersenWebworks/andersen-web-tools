@@ -82,34 +82,48 @@
     </header>
 
     <main id="main">
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-heading">
         <div class="container hero__layout">
           <div class="hero__copy">
-            <h1>Kostenlose Werkzeuge für Dateien, Texte und Berechnungen</h1>
-            <p>Verkleinere PDFs, wandle Bilder um, prüfe Texte oder berechne Preise, Arbeitszeiten, Gehalt und Versicherungsbeiträge.</p>
-            <div class="hero__actions"><a class="button" href="/alle-werkzeuge/">Passendes Werkzeug finden <i data-lucide="arrow-right"></i></a><a class="button button--secondary" href="/rechner/">Zu den Rechnern</a></div>
+            <h1 id="hero-heading">Was soll erledigt werden?</h1>
+            <form class="task-search" role="search" data-tool-search-form>
+              <i data-lucide="search"></i>
+              <label class="sr-only" for="tool-search">Werkzeug oder Aufgabe suchen</label>
+              <input id="tool-search" type="search" list="tool-search-options" autocomplete="off" placeholder="Werkzeug oder Aufgabe suchen" data-tool-search>
+              <button class="task-search__clear" type="button" aria-label="Suche leeren" data-tool-search-clear hidden><i data-lucide="x"></i></button>
+              <button class="task-search__submit" type="submit" aria-label="Ersten Treffer öffnen"><i data-lucide="arrow-right"></i></button>
+              <datalist id="tool-search-options" data-tool-search-options></datalist>
+            </form>
+            <div class="hero__facts" aria-label="Nutzungshinweise">
+              <span><i data-lucide="user-round"></i> Ohne Anmeldung</span>
+              <span><i data-lucide="lock-keyhole"></i> Dateien bleiben auf deinem Gerät</span>
+            </div>
           </div>
-          <div class="hero__statement">
-            <strong>Deine Datei bleibt auf deinem Gerät.</strong>
-            <p>Die Werkzeuge laufen direkt in deinem Browser. Nur die Website selbst wird vom Server geladen.</p>
-          </div>
+          <img class="hero__tool" src="/clamp.png" alt="" aria-hidden="true">
         </div>
       </section>
 
-      <div class="trust-band" aria-label="Eigenschaften der Werkzeuge">
-        <div class="container trust-band__inner">
-          <div class="trust-item"><i data-lucide="lock-keyhole"></i><span>Keine Datei wird hochgeladen</span></div>
-          <div class="trust-item"><i data-lucide="shield-check"></i><span>Ohne Konto, Cookies oder Analyse</span></div>
-          <div class="trust-item"><i data-lucide="smartphone"></i><span>Am Computer und auf dem Handy nutzbar</span></div>
+      <section class="popular-tools" aria-labelledby="popular-heading">
+        <div class="container">
+          <div class="popular-tools__heading">
+            <h2 id="popular-heading">Oft gebraucht</h2>
+            <a href="/alle-werkzeuge/">Alle 36 Werkzeuge <i data-lucide="arrow-right"></i></a>
+          </div>
+          <ol class="popular-list">
+            <li><a href="/pdf-verkleinern/"><span class="popular-list__icon"><i data-lucide="file-down"></i></span><strong>PDF verkleinern</strong><span>PDF-Dateigröße reduzieren</span><i data-lucide="arrow-right"></i></a></li>
+            <li><a href="/bilder-komprimieren/"><span class="popular-list__icon"><i data-lucide="image-down"></i></span><strong>Bilder komprimieren</strong><span>JPG, PNG oder WebP verkleinern</span><i data-lucide="arrow-right"></i></a></li>
+            <li><a href="/rechner/prozentrechner/"><span class="popular-list__icon"><i data-lucide="calculator"></i></span><strong>Prozentrechner</strong><span>Prozentwert, Grundwert oder Veränderung</span><i data-lucide="arrow-right"></i></a></li>
+            <li><a href="/arbeitszeitrechner/"><span class="popular-list__icon"><i data-lucide="clock-3"></i></span><strong>Arbeitszeit berechnen</strong><span>Arbeitsdauer und Pausen ermitteln</span><i data-lucide="arrow-right"></i></a></li>
+          </ol>
         </div>
-      </div>
+      </section>
 
       <section class="tool-directory" id="werkzeuge" aria-labelledby="tools-heading">
         <div class="container">
           <div class="section-heading">
             <div>
-              <h2 id="tools-heading">Was möchtest du erledigen?</h2>
-              <p>Wähle eine häufige Aufgabe oder öffne die vollständige Übersicht mit allen 36 Werkzeugen und Rechnern.</p>
+              <h2 id="tools-heading">Werkzeuge nach Aufgabe</h2>
+              <p>Dateien verkleinern, Texte prüfen, Zeiten erfassen oder Beträge berechnen.</p>
             </div>
             <div>
               <div class="filter-bar" role="group" aria-label="Werkzeuge filtern">
@@ -198,8 +212,8 @@
       <section class="principles" id="warum" aria-labelledby="principles-heading">
         <div class="container principles__layout">
           <div class="principles__intro">
-            <h2 id="principles-heading">Kostenlos, ohne Abo und Werbung</h2>
-            <p>Alle Werkzeuge sind frei zugänglich. Dateien und Eingaben werden nicht an Andersen Webworks übertragen.</p>
+            <h2 id="principles-heading">Ein Projekt von Erik Andersen</h2>
+            <p>Andersen Web Tools entsteht in Mecklenburg-Vorpommern. Alle Werkzeuge sind frei zugänglich.</p>
             <a class="button" href="https://andersen-webworks.de/" target="_blank" rel="noopener noreferrer">Andersen Webworks <i data-lucide="external-link"></i></a>
           </div>
           <div class="principles__list">

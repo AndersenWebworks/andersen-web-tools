@@ -38,6 +38,7 @@ const elements = {
 let activeMode = "link";
 let currentPayload = "";
 let currentSvg = "";
+let generationTimer = 0;
 
 function setError(message = "") {
   elements.error.querySelector("span").textContent = message;
@@ -156,6 +157,7 @@ function selectMode(mode) {
   });
   clearResult();
   setError();
+  scheduleGeneration();
 }
 
 function clearResult() {
@@ -187,6 +189,21 @@ async function generateQrCode() {
   } finally {
     setButtonLoading(elements.generate, false);
   }
+}
+
+function hasRequiredInput() {
+  if (activeMode === "link") return Boolean(elements.url.value.trim());
+  if (activeMode === "text") return Boolean(elements.text.value.trim());
+  if (activeMode === "wifi") return Boolean(elements.wifiName.value.trim());
+  return Boolean(elements.firstName.value.trim() || elements.lastName.value.trim());
+}
+
+function scheduleGeneration() {
+  window.clearTimeout(generationTimer);
+  clearResult();
+  setError();
+  if (!hasRequiredInput()) return;
+  generationTimer = window.setTimeout(generateQrCode, 220);
 }
 
 function downloadPng() {
@@ -225,17 +242,17 @@ function resetAll() {
 elements.modes.forEach((button) => button.addEventListener("click", () => selectMode(button.dataset.qrMode)));
 elements.size.addEventListener("input", () => {
   elements.sizeValue.textContent = `${elements.size.value} px`;
-  clearResult();
+  scheduleGeneration();
 });
 elements.wifiSecurity.addEventListener("change", () => {
   const open = elements.wifiSecurity.value === "nopass";
   elements.wifiPassword.disabled = open;
   if (open) elements.wifiPassword.value = "";
-  clearResult();
+  scheduleGeneration();
 });
 document.querySelectorAll(".qr-fields input, .qr-fields textarea, .qr-fields select, .qr-options input, .qr-options select").forEach((control) => {
-  control.addEventListener("input", clearResult);
-  control.addEventListener("change", clearResult);
+  control.addEventListener("input", scheduleGeneration);
+  control.addEventListener("change", scheduleGeneration);
 });
 elements.generate.addEventListener("click", generateQrCode);
 elements.reset.addEventListener("click", resetAll);
@@ -243,3 +260,4 @@ elements.downloadPng.addEventListener("click", downloadPng);
 elements.downloadSvg.addEventListener("click", downloadSvg);
 
 refreshIcons();
+scheduleGeneration();

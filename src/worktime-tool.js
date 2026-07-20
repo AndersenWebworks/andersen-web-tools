@@ -20,7 +20,6 @@ const elements = {
   balance: document.querySelector("[data-time-balance]"),
   calculatedEnd: document.querySelector("[data-time-calculated-end]"),
   calculatedEndNote: document.querySelector("[data-time-calculated-end-note]"),
-  calculate: document.querySelector("[data-time-calculate]"),
   reset: document.querySelector("[data-time-reset]"),
   copy: document.querySelector("[data-time-copy]"),
   empty: document.querySelector("[data-time-empty]"),
@@ -99,6 +98,7 @@ function selectMode(mode) {
   elements.copy.disabled = true;
   currentSummary = "";
   setError();
+  calculate();
 }
 
 function calculateDuration() {
@@ -163,14 +163,7 @@ function resetAll() {
 }
 
 elements.modes.forEach((button) => button.addEventListener("click", () => selectMode(button.dataset.timeMode)));
-document.querySelectorAll("[data-time-panel] input").forEach((input) => input.addEventListener("input", () => {
-  elements.result.hidden = true;
-  elements.empty.hidden = false;
-  elements.copy.disabled = true;
-  currentSummary = "";
-  setError();
-}));
-elements.calculate.addEventListener("click", calculate);
+document.querySelectorAll("[data-time-panel] input").forEach((input) => input.addEventListener("input", calculate));
 elements.reset.addEventListener("click", resetAll);
 elements.copy.addEventListener("click", async () => {
   await copyText(currentSummary);

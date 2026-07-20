@@ -95,7 +95,10 @@ function calculatorState(route) {
   if (parts.length !== 2 || parts[0] !== "rechner") return null;
   const calculator = calculatorBySlug.get(parts[1]);
   if (!calculator) return null;
-  const values = Object.fromEntries(calculator.fields.map((field) => [field.id, field.value]));
+  const values = Object.fromEntries(calculator.fields.map((field) => [
+    field.id,
+    field.valueProvider ? field.valueProvider() : field.value
+  ]));
   return {
     category: calculator.category,
     fields: calculator.fields.map((field) => ({
@@ -103,6 +106,7 @@ function calculatorState(route) {
       type: field.type,
       unit: field.unit || "",
       explanation: field.help,
+      advanced: Boolean(field.advanced),
       options: field.options || []
     })),
     defaultResult: calculator.calculate(values)

@@ -8,6 +8,9 @@
 - Sichtbare Texte sprechen mit den Nutzern. Interne Arbeitsnotizen und Prompttexte gehören nicht in die Oberfläche.
 - Jedes Werkzeug und jeder Rechner besitzt eine eigene indexierbare Seite, eine konkrete Aufgabenbeschreibung, eine kurze Bedienfolge und verständliche Erklärungen aller nicht alltäglichen Begriffe.
 - Rechnerfelder brauchen eine direkt am Feld sichtbare Erklärung. Ein neues Feld ohne Erklärung lässt den gemeinsamen Rechnerkatalog beim Laden geschlossen fehlschlagen.
+- Nutzer geben nur Tatsachen ein, die das Werkzeug nicht zuverlässig selbst kennen oder ableiten kann. Formeln, gesetzliche Werte, Grenzwerte, Datumswerte und technisch eindeutige Zwischenschritte übernimmt die Anwendung.
+- Rechner und Vorschauen aktualisieren sich nach gültigen Eingaben ohne zusätzlichen Startknopf. Dateiwerkzeuge beginnen nach der letzten nötigen Auswahl automatisch; der Download bleibt eine bewusste Nutzeraktion.
+- Seltene Abweichungen liegen unter `Weitere Einstellungen`. Jahresgebundene Werte werden zentral mit Bezugsjahr gepflegt und dürfen nicht als verstreute Standardwerte in einzelnen Rechnern liegen.
 - Die zentrale Werkzeugübersicht, `sitemap.xml`, `llms.txt` und `werkzeuge.json` werden aus denselben öffentlichen Katalogdaten erzeugt, damit Menschen, Suchmaschinen und Agenten nicht auf unterschiedliche Bestände treffen.
 - Datenschutz-, Impressums- und Funktionsaussagen müssen mit der tatsächlichen Implementierung übereinstimmen.
 - Öffentliche Copy wird nicht im selben Arbeitslauf freigegeben, der sie geschrieben hat. `npm run public-copy:prepare` erzeugt aus dem gebauten Stand eine vollständige strukturierte Besucherfläche; `npm run public-copy:review` lässt nur diese Fläche und das öffentliche Briefing semantisch prüfen. Jede Text- oder Routenänderung macht die Hash-Freigabe ungültig.

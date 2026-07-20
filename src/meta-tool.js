@@ -112,8 +112,7 @@ function updatePreview() {
     ? '<i data-lucide="file-image"></i><span>Vorschaubild hinterlegt</span>'
     : '<i data-lucide="file-image"></i><span class="sr-only">Kein Vorschaubild angegeben</span>';
   refreshIcons(elements.socialImage);
-  elements.resultPanel.hidden = true;
-  generatedCode = "";
+  generateCode(false);
 }
 
 function collectData() {
@@ -161,14 +160,14 @@ function buildMetaCode(data) {
   return lines.join("\n");
 }
 
-function generateCode() {
+function generateCode(scrollToResult = true) {
   setError();
   try {
     const data = collectData();
     generatedCode = buildMetaCode(data);
     elements.code.textContent = generatedCode;
     elements.resultPanel.hidden = false;
-    elements.resultPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (scrollToResult) elements.resultPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (error) {
     elements.resultPanel.hidden = true;
     setError(error instanceof Error ? error.message : "Die Meta-Tags konnten nicht erzeugt werden.");
@@ -190,7 +189,7 @@ function resetForm() {
 
 [elements.url, elements.title, elements.description, elements.siteName, elements.image].forEach((control) => control.addEventListener("input", updatePreview));
 [elements.type, elements.index, elements.follow].forEach((control) => control.addEventListener("change", updatePreview));
-elements.generate.addEventListener("click", generateCode);
+elements.generate.addEventListener("click", () => generateCode());
 elements.reset.addEventListener("click", resetForm);
 elements.copy.addEventListener("click", async () => {
   if (!generatedCode) return;

@@ -56,7 +56,7 @@
           <div class="workbench__body">
             <div class="workbench__main">
               <h3>1. IBAN formal prüfen</h3>
-              <div class="form-field"><label for="iban-input">IBAN</label><div class="action-input"><input class="text-input" id="iban-input" type="text" maxlength="42" inputmode="text" autocomplete="off" placeholder="DE89 3704 0044 0532 0130 00" data-iban-input><button class="button" type="button" data-iban-validate><i data-lucide="badge-check"></i> Prüfen</button></div></div>
+              <div class="form-field"><label for="iban-input">IBAN</label><div class="action-input"><input class="text-input" id="iban-input" type="text" maxlength="42" inputmode="text" autocomplete="off" placeholder="DE89 3704 0044 0532 0130 00" data-iban-input><button class="button" type="button" data-iban-validate hidden><i data-lucide="badge-check"></i> Prüfen</button></div></div>
               <div class="validation-result" data-iban-validation hidden><div><strong data-iban-validation-title></strong><p data-iban-validation-text></p></div><div class="summary-strip"><div class="summary-item"><span>Land</span><strong data-iban-country>–</strong></div><div class="summary-item"><span>Zeichen</span><strong data-iban-length>0</strong></div><div class="summary-item"><span>SEPA</span><strong data-iban-sepa>–</strong></div></div><button class="button button--secondary" type="button" data-iban-copy disabled><i data-lucide="copy"></i> IBAN kopieren</button></div>
               <div class="privacy-inline"><i data-lucide="info"></i><p>Eine gültige Prüfziffer bestätigt nur das formale IBAN-Format. Ob das Konto existiert und zum Empfänger gehört, kann ausschließlich die Bank prüfen.</p></div>
             </div>
@@ -71,7 +71,7 @@
               <div class="status-message status-message--error" data-sepa-error hidden><i data-lucide="circle-x"></i><span></span></div>
             </aside>
           </div>
-          <div class="workbench__footer"><button class="button button--quiet" type="button" data-sepa-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-sepa-generate><i data-lucide="qr-code"></i> SEPA-QR-Code erstellen</button></div>
+          <div class="workbench__footer"><button class="button button--quiet" type="button" data-sepa-reset><i data-lucide="rotate-ccw"></i> Zurücksetzen</button><button class="button" type="button" data-sepa-generate hidden><i data-lucide="qr-code"></i> SEPA-QR-Code erstellen</button></div>
         </div>
 
         <div class="workbench result-panel"><div class="workbench__header"><h2>Überweisungs-QR-Code</h2><span class="local-note"><i data-lucide="landmark"></i> EPC-Format</span></div><div class="qr-preview qr-preview--wide"><div class="qr-canvas-frame"><canvas data-sepa-canvas hidden></canvas><div class="qr-preview__placeholder" data-sepa-placeholder><div><i data-lucide="qr-code"></i><strong>Noch kein QR-Code</strong><span>Gültige IBAN und Überweisungsdaten eintragen.</span></div></div></div><div class="qr-actions"><button class="button button--secondary" type="button" data-sepa-download-png disabled><i data-lucide="download"></i> PNG</button><button class="button button--secondary" type="button" data-sepa-download-svg disabled><i data-lucide="download"></i> SVG</button></div></div></div>

@@ -21,17 +21,22 @@
         "Rechner",
         "Warum kostenlos?",
         "Unterstützen",
-        "Kostenlose Werkzeuge für Dateien, Texte und Berechnungen",
-        "Verkleinere PDFs, wandle Bilder um, prüfe Texte oder berechne Preise, Arbeitszeiten, Gehalt und Versicherungsbeiträge.",
-        "Passendes Werkzeug finden",
-        "Zu den Rechnern",
-        "Deine Datei bleibt auf deinem Gerät.",
-        "Die Werkzeuge laufen direkt in deinem Browser. Nur die Website selbst wird vom Server geladen.",
-        "Keine Datei wird hochgeladen",
-        "Ohne Konto, Cookies oder Analyse",
-        "Am Computer und auf dem Handy nutzbar",
-        "Was möchtest du erledigen?",
-        "Wähle eine häufige Aufgabe oder öffne die vollständige Übersicht mit allen 36 Werkzeugen und Rechnern.",
+        "Was soll erledigt werden?",
+        "Werkzeug oder Aufgabe suchen",
+        "Ohne Anmeldung",
+        "Dateien bleiben auf deinem Gerät",
+        "Oft gebraucht",
+        "Alle 36 Werkzeuge",
+        "PDF verkleinern",
+        "PDF-Dateigröße reduzieren",
+        "Bilder komprimieren",
+        "JPG, PNG oder WebP verkleinern",
+        "Prozentrechner",
+        "Prozentwert, Grundwert oder Veränderung",
+        "Arbeitszeit berechnen",
+        "Arbeitsdauer und Pausen ermitteln",
+        "Werkzeuge nach Aufgabe",
+        "Dateien verkleinern, Texte prüfen, Zeiten erfassen oder Beträge berechnen.",
         "Alle",
         "Dateien",
         "Text",
@@ -66,8 +71,8 @@
         "Meta-Tags erstellen",
         "Suchergebnis und Social Preview ansehen, Tags erzeugen und sauber kopieren.",
         "Alle Werkzeuge nach Aufgabe ansehen",
-        "Kostenlos, ohne Abo und Werbung",
-        "Alle Werkzeuge sind frei zugänglich. Dateien und Eingaben werden nicht an Andersen Webworks übertragen.",
+        "Ein Projekt von Erik Andersen",
+        "Andersen Web Tools entsteht in Mecklenburg-Vorpommern. Alle Werkzeuge sind frei zugänglich.",
         "Andersen Webworks",
         "Lokal statt hochgeladen",
         "Dateien und Eingaben werden im Browser verarbeitet und nicht an uns übertragen.",
@@ -129,15 +134,57 @@
           ]
         },
         {
-          "element": "a",
+          "element": "label",
           "labels": [
-            "Passendes Werkzeug finden"
+            "Werkzeug oder Aufgabe suchen"
+          ]
+        },
+        {
+          "element": "input",
+          "labels": [
+            "Werkzeug oder Aufgabe suchen"
+          ]
+        },
+        {
+          "element": "button",
+          "labels": [
+            "Suche leeren"
+          ]
+        },
+        {
+          "element": "button",
+          "labels": [
+            "Ersten Treffer öffnen"
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Zu den Rechnern"
+            "Alle 36 Werkzeuge"
+          ]
+        },
+        {
+          "element": "a",
+          "labels": [
+            "PDF verkleinern PDF-Dateigröße reduzieren"
+          ]
+        },
+        {
+          "element": "a",
+          "labels": [
+            "Bilder komprimieren JPG, PNG oder WebP verkleinern"
+          ]
+        },
+        {
+          "element": "a",
+          "labels": [
+            "Prozentrechner Prozentwert, Grundwert oder Veränderung"
+          ]
+        },
+        {
+          "element": "a",
+          "labels": [
+            "Arbeitszeit berechnen Arbeitsdauer und Pausen ermitteln"
           ]
         },
         {
@@ -408,19 +455,19 @@
         "Stundenlohn, Jahresgehalt und Monatsstunden aus Gehalt und Wochenarbeitszeit berechnen.",
         "Rechner",
         "Arbeitgeberkostenrechner",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "Rechner",
         "Minijob-Arbeitszeitrechner",
         "Mögliche Monatsstunden, Wochenstunden und Rentenbeitrag bei einem Minijob berechnen.",
         "Rechner",
         "Brutto-Netto-Schätzer",
-        "Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen.",
+        "Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen.",
         "Rechner",
         "Firmenwagen-Sachbezug",
-        "Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen.",
+        "Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen.",
         "Rechner",
         "Pendlerpauschale berechnen",
-        "Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen.",
+        "Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen.",
         "Finanzen berechnen",
         "Sparplan, Zinseszins und Monatsbudget berechnen.",
         "Rechner",
@@ -439,10 +486,10 @@
         "Monatliche und jährliche Mehrkosten zwischen zwei Zusatzbeitragssätzen berechnen.",
         "Rechner",
         "Pflegeversicherungsbeitrag",
-        "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
+        "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
         "Rechner",
         "Krankengeld-Schätzung",
-        "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen.",
+        "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen.",
         "Rechner",
         "GKV- und PKV-Kosten vergleichen",
         "Eigene monatliche Kosten einer gesetzlichen und privaten Krankenversicherung als Szenario vergleichen.",
@@ -643,7 +690,7 @@
         {
           "element": "a",
           "labels": [
-            "Rechner Arbeitgeberkostenrechner Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+            "Rechner Arbeitgeberkostenrechner Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -655,19 +702,19 @@
         {
           "element": "a",
           "labels": [
-            "Rechner Brutto-Netto-Schätzer Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen."
+            "Rechner Brutto-Netto-Schätzer Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Rechner Firmenwagen-Sachbezug Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen."
+            "Rechner Firmenwagen-Sachbezug Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen."
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Rechner Pendlerpauschale berechnen Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen."
+            "Rechner Pendlerpauschale berechnen Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen."
           ]
         },
         {
@@ -697,13 +744,13 @@
         {
           "element": "a",
           "labels": [
-            "Rechner Pflegeversicherungsbeitrag Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen."
+            "Rechner Pflegeversicherungsbeitrag Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen."
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Rechner Krankengeld-Schätzung Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen."
+            "Rechner Krankengeld-Schätzung Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen."
           ]
         },
         {
@@ -838,7 +885,7 @@
         "Arbeit",
         "Kostenlos",
         "Arbeitgeberkostenrechner",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "Arbeit",
         "Kostenlos",
         "Minijob-Arbeitszeitrechner",
@@ -846,7 +893,7 @@
         "Arbeit",
         "Kostenlos",
         "Brutto-Netto-Schätzer",
-        "Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen.",
+        "Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen.",
         "Versicherung",
         "Kostenlos",
         "GKV-Beitragsrechner",
@@ -858,19 +905,19 @@
         "Versicherung",
         "Kostenlos",
         "Pflegeversicherungsbeitrag",
-        "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
+        "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
         "Versicherung",
         "Kostenlos",
         "Krankengeld-Schätzung",
-        "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen.",
+        "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen.",
         "Arbeit",
         "Kostenlos",
         "Firmenwagen-Sachbezug",
-        "Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen.",
+        "Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen.",
         "Arbeit",
         "Kostenlos",
         "Pendlerpauschale berechnen",
-        "Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen.",
+        "Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen.",
         "Versicherung",
         "Kostenlos",
         "GKV- und PKV-Kosten vergleichen",
@@ -1076,7 +1123,7 @@
         {
           "element": "a",
           "labels": [
-            "Arbeit Kostenlos Arbeitgeberkostenrechner Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+            "Arbeit Kostenlos Arbeitgeberkostenrechner Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -1088,7 +1135,7 @@
         {
           "element": "a",
           "labels": [
-            "Arbeit Kostenlos Brutto-Netto-Schätzer Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen."
+            "Arbeit Kostenlos Brutto-Netto-Schätzer Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -1106,25 +1153,25 @@
         {
           "element": "a",
           "labels": [
-            "Versicherung Kostenlos Pflegeversicherungsbeitrag Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen."
+            "Versicherung Kostenlos Pflegeversicherungsbeitrag Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen."
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Versicherung Kostenlos Krankengeld-Schätzung Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen."
+            "Versicherung Kostenlos Krankengeld-Schätzung Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen."
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Arbeit Kostenlos Firmenwagen-Sachbezug Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen."
+            "Arbeit Kostenlos Firmenwagen-Sachbezug Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen."
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Arbeit Kostenlos Pendlerpauschale berechnen Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen."
+            "Arbeit Kostenlos Pendlerpauschale berechnen Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen."
           ]
         },
         {
@@ -1244,7 +1291,7 @@
         "2",
         "Lege Dateiformat, Qualität und bei Bedarf eine maximale Bildgröße fest.",
         "3",
-        "Vergleiche Original und Ergebnis und lade einzelne Bilder oder alle als ZIP herunter.",
+        "Die Ergebnisse erscheinen automatisch. Vergleiche sie mit den Originalen und lade einzelne Bilder oder alle als ZIP herunter.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "Pixelmaß",
@@ -1522,7 +1569,7 @@
         "2",
         "Bringe die Dateien per Ziehen in die richtige Reihenfolge.",
         "3",
-        "Vergib einen Dateinamen, verbinde die PDFs und lade das Ergebnis herunter.",
+        "Die verbundene PDF wird automatisch neu erstellt, sobald Auswahl oder Reihenfolge stimmen. Lade sie anschließend herunter.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "Dateireihenfolge",
@@ -1742,7 +1789,7 @@
         "2",
         "Entscheide zwischen erhaltener Dokumentstruktur und stärkerer Verkleinerung als Seitenbilder.",
         "3",
-        "Prüfe Größe und Qualität und lade die neue PDF herunter.",
+        "Die verkleinerte PDF wird automatisch vorbereitet. Prüfe Größe und Qualität und lade sie herunter.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "Dokumentstruktur",
@@ -1982,7 +2029,7 @@
         "2",
         "Stelle JPG-Qualität und bei Bedarf eine maximale Breite ein.",
         "3",
-        "Lade ein einzelnes JPG oder mehrere Ergebnisse gemeinsam als ZIP herunter.",
+        "Die JPG-Dateien werden automatisch vorbereitet. Lade ein einzelnes Ergebnis oder mehrere gemeinsam als ZIP herunter.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "HEIC",
@@ -2261,7 +2308,7 @@
         "2",
         "Lade die Ausgangsdateien und stelle Seitengröße, Rand oder Bildauflösung ein.",
         "3",
-        "Starte die Umwandlung und lade die fertige PDF oder die JPG-Seiten herunter.",
+        "Die Umwandlung beginnt automatisch. Lade die fertige PDF oder die JPG-Seiten herunter.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "Seitengröße",
@@ -2599,7 +2646,7 @@
         "2",
         "Zeichne deine Unterschrift oder lade ein Bild davon hoch.",
         "3",
-        "Setze Position und Größe fest und lade die neu erzeugte PDF herunter.",
+        "Setze Position und Größe fest. Die neue PDF wird automatisch vorbereitet und kann danach heruntergeladen werden.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "Sichtbare Unterschrift",
@@ -3054,11 +3101,10 @@
         "0:00 Std.",
         "Feierabend",
         "00:00 Uhr",
-        "Noch kein Ergebnis",
-        "Trage deine Zeiten ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald alle nötigen Zeiten eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "Arbeitszeit in Uhrzeit und Dezimalwert",
         "Für Stundenzettel brauchst du häufig zwei Darstellungen: die vertraute Zeit in Stunden und Minuten sowie den Dezimalwert für Abrechnung oder Tabellen. Aus 7 Stunden und 30 Minuten werden 7,50 Stunden – nicht 7,30.",
         "Pause und Sollsaldo",
@@ -3079,7 +3125,7 @@
         "2",
         "Trage Beginn, Ende beziehungsweise gewünschte Arbeitszeit und Pause ein.",
         "3",
-        "Lies Uhrzeit, Nettozeit, Dezimalstunden und bei Bedarf den Sollsaldo ab.",
+        "Uhrzeit, Nettozeit, Dezimalstunden und Sollsaldo ändern sich sofort mit deinen Eingaben.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "Nettoarbeitszeit",
@@ -3216,12 +3262,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Werkzeuge ansehen"
@@ -3343,11 +3383,11 @@
         "So benutzt du das Werkzeug",
         "IBAN-Format kontrollieren und Überweisungsdaten als Banking-QR-Code ausgeben.",
         "1",
-        "Trage die IBAN ein und prüfe zuerst Format und Prüfziffer.",
+        "Trage die IBAN ein; Format und Prüfziffer werden während der Eingabe geprüft.",
         "2",
         "Ergänze Empfänger, Betrag und bei Bedarf BIC sowie Verwendungszweck.",
         "3",
-        "Erzeuge den SEPA-QR-Code und kontrolliere alle Daten erneut in deiner Banking-App.",
+        "Der SEPA-QR-Code erscheint, sobald die nötigen Angaben vollständig sind. Kontrolliere die Daten erneut in deiner Banking-App.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "IBAN-Prüfziffer",
@@ -3626,7 +3666,7 @@
         "2",
         "Trage die Informationen ein und stelle Größe, Farben und Fehlerkorrektur ein.",
         "3",
-        "Prüfe den Code mit einem Handy und lade ihn als PNG oder SVG herunter.",
+        "Der Code aktualisiert sich mit jeder Eingabe. Prüfe ihn mit einem Handy und lade ihn als PNG oder SVG herunter.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "Fehlerkorrektur",
@@ -4275,7 +4315,7 @@
         "2",
         "Prüfe Suchergebnis und Social-Vorschau und ergänze bei Bedarf Website-Name und Bildadresse.",
         "3",
-        "Kopiere den erzeugten HTML-Block in den Kopfbereich oder die SEO-Einstellungen der Zielseite.",
+        "Der HTML-Block wird während der Eingabe aktualisiert. Kopiere ihn in den Kopfbereich oder die SEO-Einstellungen der Zielseite.",
         "Begriffe aus diesem Werkzeug",
         "Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.",
         "Meta-Description",
@@ -4542,17 +4582,16 @@
         "3",
         "Klicke auf Berechnen. Das Ergebnis zeigt auch den eingesetzten Rechenweg.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Der Prozentwert ist Grundwert mal Prozentsatz geteilt durch 100. Bei Veränderungen wird die Differenz durch den Ausgangswert geteilt.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Grundwert",
@@ -4646,12 +4685,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -4708,6 +4741,7 @@
             "type": "select",
             "unit": "",
             "explanation": "Der Rechner passt die folgenden Felder an die gewählte Prozentaufgabe an.",
+            "advanced": false,
             "options": [
               [
                 "part",
@@ -4732,6 +4766,7 @@
             "type": "number",
             "unit": "",
             "explanation": "Der ganze Ausgangswert, auf den sich die Prozentangabe bezieht, zum Beispiel 250 Euro.",
+            "advanced": false,
             "options": []
           },
           {
@@ -4739,6 +4774,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Der Anteil in Prozent, zum Beispiel 19 bei 19 Prozent.",
+            "advanced": false,
             "options": []
           },
           {
@@ -4746,6 +4782,7 @@
             "type": "number",
             "unit": "",
             "explanation": "Der Teil des Grundwerts, zum Beispiel 47,50 Euro von insgesamt 250 Euro.",
+            "advanced": false,
             "options": []
           },
           {
@@ -4753,6 +4790,7 @@
             "type": "number",
             "unit": "",
             "explanation": "Der Wert vor der Erhöhung oder Senkung.",
+            "advanced": false,
             "options": []
           },
           {
@@ -4760,6 +4798,7 @@
             "type": "number",
             "unit": "",
             "explanation": "Der Wert nach der Erhöhung oder Senkung.",
+            "advanced": false,
             "options": []
           }
         ],
@@ -4819,17 +4858,16 @@
         "3",
         "Du erhältst Nettobetrag, Steueranteil und Bruttobetrag getrennt.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Von Netto zu Brutto wird der Nettobetrag mit 1 plus Steuersatz multipliziert. Bei der Rückwärtsrechnung wird Brutto durch diesen Faktor geteilt.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Netto",
@@ -4923,12 +4961,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -4985,6 +5017,7 @@
             "type": "select",
             "unit": "",
             "explanation": "Netto zu Brutto addiert die Steuer. Brutto zu Netto löst die bereits enthaltene Steuer heraus.",
+            "advanced": false,
             "options": [
               [
                 "net",
@@ -5001,14 +5034,29 @@
             "type": "number",
             "unit": "€",
             "explanation": "Der Betrag, den du bereits kennst. Ob er netto oder brutto ist, legst du darüber fest.",
+            "advanced": false,
             "options": []
           },
           {
             "label": "Mehrwertsteuersatz",
-            "type": "number",
-            "unit": "%",
+            "type": "select",
+            "unit": "",
             "explanation": "Der anzuwendende Steuersatz, häufig 19 oder 7 Prozent. Prüfe, welcher Satz für deinen Fall gilt.",
-            "options": []
+            "advanced": false,
+            "options": [
+              [
+                "19",
+                "19 % – regulär"
+              ],
+              [
+                "7",
+                "7 % – ermäßigt"
+              ],
+              [
+                "0",
+                "0 %"
+              ]
+            ]
           }
         ],
         "defaultResult": {
@@ -5072,17 +5120,16 @@
         "3",
         "Der Rechner zeigt Endpreis, Ersparnis und den tatsächlich wirksamen Gesamtrabatt.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Mehrere Rabatte werden nacheinander auf den jeweils verbleibenden Preis angewendet. 20 und 10 Prozent ergeben deshalb zusammen 28 Prozent, nicht 30.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Rabatt",
@@ -5176,12 +5223,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -5238,6 +5279,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Der Preis, bevor ein Rabatt abgezogen wird.",
+            "advanced": false,
             "options": []
           },
           {
@@ -5245,6 +5287,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Der erste Nachlass in Prozent.",
+            "advanced": false,
             "options": []
           },
           {
@@ -5252,21 +5295,22 @@
             "type": "number",
             "unit": "%",
             "explanation": "Ein zusätzlicher Nachlass, der auf den bereits reduzierten Preis angewendet wird.",
+            "advanced": true,
             "options": []
           }
         ],
         "defaultResult": {
           "primaryLabel": "Endpreis",
-          "primaryValue": "86,40 €",
+          "primaryValue": "96,00 €",
           "metrics": [
             {
               "label": "Ersparnis",
-              "value": "33,60 €",
+              "value": "24,00 €",
               "tone": "accent"
             },
             {
               "label": "Effektiver Rabatt",
-              "value": "28 %",
+              "value": "20 %",
               "tone": ""
             },
             {
@@ -5275,7 +5319,7 @@
               "tone": ""
             }
           ],
-          "explanation": "120,00 € − 33,60 € = 86,40 €"
+          "explanation": "120,00 € − 24,00 € = 96,00 €"
         }
       }
     },
@@ -5316,17 +5360,16 @@
         "3",
         "Vergleiche Rohertrag, Gewinnaufschlag und Handelsspanne im Ergebnis.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Der Aufschlag bezieht den Rohertrag auf den Einstandspreis. Die Marge bezieht denselben Rohertrag auf den Verkaufspreis.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Rohertrag",
@@ -5420,12 +5463,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -5482,6 +5519,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Was dich die Ware oder Leistung im Einkauf kostet, ohne Mehrwertsteuer.",
+            "advanced": false,
             "options": []
           },
           {
@@ -5489,6 +5527,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Der Verkaufspreis ohne Mehrwertsteuer. Nur so sind Einkauf und Verkauf sauber vergleichbar.",
+            "advanced": false,
             "options": []
           }
         ],
@@ -5553,17 +5592,16 @@
         "3",
         "Vergleiche im Ergebnis deine Einzahlungen mit dem rechnerischen Zinsertrag.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Das Kapital wird monatlich verzinst; die Sparrate fließt jeweils am Monatsende ein. Steuern, Kosten und schwankende Kurse sind nicht berücksichtigt.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Zinseszins",
@@ -5657,12 +5695,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -5719,6 +5751,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Der Betrag, der zu Beginn bereits angelegt ist. Ohne Startkapital kannst du 0 eintragen.",
+            "advanced": false,
             "options": []
           },
           {
@@ -5726,6 +5759,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Der Betrag, der in dieser Rechnung am Ende jedes Monats hinzukommt.",
+            "advanced": false,
             "options": []
           },
           {
@@ -5733,6 +5767,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Angenommene durchschnittliche Wertentwicklung pro Jahr. Sie ist keine Garantie.",
+            "advanced": false,
             "options": []
           },
           {
@@ -5740,6 +5775,7 @@
             "type": "number",
             "unit": "Jahre",
             "explanation": "Wie lange das Geld angelegt und die Sparrate eingezahlt wird.",
+            "advanced": false,
             "options": []
           }
         ],
@@ -5804,17 +5840,16 @@
         "3",
         "Der Rechner trennt Zahlbetrag, Gebühr und verbleibenden Nettoeingang.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Gebührenmodelle ändern sich. Deshalb bleiben Prozentsatz und Festgebühr sichtbar und frei änderbar.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Variable Gebühr",
@@ -5908,12 +5943,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -5970,6 +5999,7 @@
             "type": "select",
             "unit": "",
             "explanation": "Gebühr abziehen startet mit dem Zahlbetrag. Nettoziel berechnet rückwärts, was der Kunde zahlen müsste.",
+            "advanced": false,
             "options": [
               [
                 "deduct",
@@ -5986,6 +6016,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Je nach Rechenrichtung der vorhandene Zahlbetrag oder der gewünschte Betrag nach Gebühren.",
+            "advanced": false,
             "options": []
           },
           {
@@ -5993,6 +6024,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Der prozentuale Teil der Gebühr laut aktuellem Tarif des Zahlungsdienstes.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6000,6 +6032,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Ein fester Betrag, der zusätzlich pro Zahlung berechnet wird.",
+            "advanced": false,
             "options": []
           }
         ],
@@ -6064,17 +6097,16 @@
         "3",
         "Du siehst Gesamtkosten, benötigte Liter und den Anteil pro Person.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Strecke mal Verbrauch je 100 Kilometer ergibt die Kraftstoffmenge. Weitere Fahrzeugkosten wie Verschleiß oder Versicherung sind nicht enthalten.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Verbrauch je 100 km",
@@ -6168,12 +6200,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -6230,6 +6256,7 @@
             "type": "number",
             "unit": "km",
             "explanation": "Alle gefahrenen Kilometer zusammen. Für Hin- und Rückfahrt musst du beide Strecken berücksichtigen.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6237,6 +6264,7 @@
             "type": "number",
             "unit": "l/100 km",
             "explanation": "Durchschnittlicher Kraftstoffverbrauch deines Fahrzeugs für 100 Kilometer.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6244,6 +6272,7 @@
             "type": "number",
             "unit": "€/l",
             "explanation": "Preis für einen Liter des verwendeten Kraftstoffs.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6251,6 +6280,7 @@
             "type": "number",
             "unit": "",
             "explanation": "Zahl der Personen, auf die die reinen Kraftstoffkosten gleichmäßig verteilt werden sollen.",
+            "advanced": true,
             "options": []
           }
         ],
@@ -6265,7 +6295,7 @@
             },
             {
               "label": "Pro Person",
-              "value": "20,16 €",
+              "value": "40,32 €",
               "tone": "accent"
             },
             {
@@ -6315,17 +6345,16 @@
         "3",
         "Der Rechner zeigt Verbrauch und Kosten pro Tag, Monat und Jahr.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Watt werden durch 1.000 in Kilowatt umgerechnet und mit Laufzeit sowie Strompreis multipliziert.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Watt",
@@ -6419,12 +6448,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -6481,6 +6504,7 @@
             "type": "number",
             "unit": "W",
             "explanation": "Elektrische Leistung des Geräts. Sie steht meist auf dem Typenschild oder Netzteil.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6488,6 +6512,7 @@
             "type": "number",
             "unit": "Std.",
             "explanation": "Durchschnittliche Zahl der Stunden, die das Gerät an einem Betriebstag läuft.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6495,6 +6520,7 @@
             "type": "number",
             "unit": "",
             "explanation": "An wie vielen Tagen im Jahr das Gerät ungefähr genutzt wird.",
+            "advanced": true,
             "options": []
           },
           {
@@ -6502,21 +6528,22 @@
             "type": "number",
             "unit": "€/kWh",
             "explanation": "Preis für eine Kilowattstunde aus deinem Stromvertrag.",
+            "advanced": true,
             "options": []
           }
         ],
         "defaultResult": {
           "primaryLabel": "Kosten pro Jahr",
-          "primaryValue": "84,00 €",
+          "primaryValue": "122,64 €",
           "metrics": [
             {
               "label": "Verbrauch pro Jahr",
-              "value": "240 kWh",
+              "value": "350,4 kWh",
               "tone": ""
             },
             {
               "label": "Pro Monat",
-              "value": "7,00 €",
+              "value": "10,22 €",
               "tone": "accent"
             },
             {
@@ -6525,7 +6552,7 @@
               "tone": ""
             }
           ],
-          "explanation": "120 W × 8 Std. × 250 Tage = 240 kWh."
+          "explanation": "120 W × 8 Std. × 365 Tage = 350,4 kWh."
         }
       }
     },
@@ -6566,18 +6593,17 @@
         "3",
         "Nutze das Ergebnis als rechnerische Orientierung und prüfe Vertrag und Rundungsregeln.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Der Ausgangsurlaub wird im Verhältnis der Arbeitstage pro Woche und anschließend anteilig nach vollen Monaten umgerechnet.",
         "Das Ergebnis ist eine mathematische Orientierung. Tarifvertrag, Arbeitsvertrag, Eintrittsdatum, Wartezeit und Rundungsregeln können den rechtlichen Anspruch verändern.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Jahresurlaub",
@@ -6596,7 +6622,7 @@
         "Stundenlohn aus Monatsgehalt",
         "Stundenlohn, Jahresgehalt und Monatsstunden aus Gehalt und Wochenarbeitszeit berechnen.",
         "Arbeitgeberkostenrechner",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "Minijob-Arbeitszeitrechner",
         "Mögliche Monatsstunden, Wochenstunden und Rentenbeitrag bei einem Minijob berechnen.",
         "A",
@@ -6671,12 +6697,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -6691,7 +6711,7 @@
         {
           "element": "a",
           "labels": [
-            "Arbeitgeberkostenrechner Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+            "Arbeitgeberkostenrechner Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -6733,6 +6753,7 @@
             "type": "number",
             "unit": "Tage",
             "explanation": "Urlaubstage pro Jahr, die bei der angegebenen Vollzeit-Woche gelten.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6740,6 +6761,7 @@
             "type": "number",
             "unit": "pro Woche",
             "explanation": "Zahl der regelmäßigen Arbeitstage pro Woche in der Vollzeit-Vergleichsgröße.",
+            "advanced": true,
             "options": []
           },
           {
@@ -6747,6 +6769,7 @@
             "type": "number",
             "unit": "pro Woche",
             "explanation": "An wie vielen festen Tagen pro Woche du tatsächlich arbeitest.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6754,6 +6777,7 @@
             "type": "number",
             "unit": "",
             "explanation": "Volle Monate im betreffenden Urlaubsjahr, für die anteilig gerechnet werden soll.",
+            "advanced": true,
             "options": []
           }
         ],
@@ -6818,17 +6842,16 @@
         "3",
         "Das Ergebnis zeigt Gesamttage und die kalendergenaue Aufteilung in Jahre, Monate und Tage.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Volle Jahre und Monate werden kalendergenau gezählt. Die Gesamttage ergeben sich aus der tatsächlichen Differenz beider Daten.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Kalendergenau",
@@ -6922,12 +6945,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -6984,6 +7001,7 @@
             "type": "date",
             "unit": "",
             "explanation": "Der Beginn der Zeitspanne, zum Beispiel Geburts-, Start- oder Rechnungsdatum.",
+            "advanced": false,
             "options": []
           },
           {
@@ -6991,6 +7009,7 @@
             "type": "date",
             "unit": "",
             "explanation": "Das Datum, bis zu dem gerechnet werden soll.",
+            "advanced": false,
             "options": []
           }
         ],
@@ -7055,17 +7074,16 @@
         "3",
         "Du erhältst Zahlbetrag, Ersparnis sowie beide Stichtage.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Skonto wird prozentual vom Rechnungsbetrag abgezogen. Die Datumsangaben werden als Kalendertage ab Rechnungsdatum gerechnet.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Skonto",
@@ -7159,12 +7177,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -7221,6 +7233,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Gesamter Rechnungsbetrag, von dem der Skontoabzug berechnet wird.",
+            "advanced": false,
             "options": []
           },
           {
@@ -7228,6 +7241,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Prozentualer Nachlass bei Zahlung innerhalb der Skontofrist.",
+            "advanced": false,
             "options": []
           },
           {
@@ -7235,6 +7249,7 @@
             "type": "date",
             "unit": "",
             "explanation": "Datum, von dem aus beide Fristen gezählt werden.",
+            "advanced": false,
             "options": []
           },
           {
@@ -7242,6 +7257,7 @@
             "type": "number",
             "unit": "Tage",
             "explanation": "Zahl der Kalendertage, in denen die vergünstigte Zahlung möglich ist.",
+            "advanced": true,
             "options": []
           },
           {
@@ -7249,6 +7265,7 @@
             "type": "number",
             "unit": "Tage",
             "explanation": "Zahl der Kalendertage bis zur normalen Fälligkeit ohne Skonto.",
+            "advanced": true,
             "options": []
           }
         ],
@@ -7313,17 +7330,16 @@
         "3",
         "Vergleiche die Kosten pro Einheit und die Ersparnis des günstigeren Angebots.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Der Preis wird durch die jeweilige Menge geteilt. Beide Mengen müssen in derselben Einheit eingegeben werden.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Stückpreis",
@@ -7417,12 +7433,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -7479,6 +7489,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Gesamtpreis der ersten Packung oder Menge.",
+            "advanced": false,
             "options": []
           },
           {
@@ -7486,6 +7497,7 @@
             "type": "number",
             "unit": "",
             "explanation": "Inhalt des ersten Angebots, zum Beispiel 500 Gramm.",
+            "advanced": false,
             "options": []
           },
           {
@@ -7493,6 +7505,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Gesamtpreis der zweiten Packung oder Menge.",
+            "advanced": false,
             "options": []
           },
           {
@@ -7500,14 +7513,29 @@
             "type": "number",
             "unit": "",
             "explanation": "Inhalt des zweiten Angebots in genau derselben Einheit wie Angebot A.",
+            "advanced": false,
             "options": []
           },
           {
             "label": "Vergleichseinheit",
-            "type": "number",
-            "unit": "Einheiten",
+            "type": "select",
+            "unit": "",
             "explanation": "Gemeinsame Bezugsmenge für den Preisvergleich, zum Beispiel 100 Gramm oder 1 Liter.",
-            "options": []
+            "advanced": true,
+            "options": [
+              [
+                "1",
+                "pro Stück"
+              ],
+              [
+                "100",
+                "pro 100"
+              ],
+              [
+                "1000",
+                "pro 1.000"
+              ]
+            ]
           }
         ],
         "defaultResult": {
@@ -7571,17 +7599,16 @@
         "3",
         "Der Rechner zeigt durchschnittliche Monatsstunden, Jahresgehalt und rechnerischen Stundenlohn.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Die durchschnittlichen Monatsstunden ergeben sich aus Wochenstunden mal 52 geteilt durch 12.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Bruttogehalt",
@@ -7600,7 +7627,7 @@
         "Urlaubsanspruch umrechnen",
         "Urlaubstage bei anderer Wochenarbeitszeit oder anteiligen Beschäftigungsmonaten umrechnen.",
         "Arbeitgeberkostenrechner",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "Minijob-Arbeitszeitrechner",
         "Mögliche Monatsstunden, Wochenstunden und Rentenbeitrag bei einem Minijob berechnen.",
         "A",
@@ -7675,12 +7702,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -7695,7 +7716,7 @@
         {
           "element": "a",
           "labels": [
-            "Arbeitgeberkostenrechner Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+            "Arbeitgeberkostenrechner Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -7737,6 +7758,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Regelmäßiges Bruttogehalt vor Steuern und Abgaben.",
+            "advanced": false,
             "options": []
           },
           {
@@ -7744,6 +7766,7 @@
             "type": "number",
             "unit": "Std.",
             "explanation": "Vertraglich vereinbarte Arbeitsstunden in einer normalen Woche.",
+            "advanced": false,
             "options": []
           },
           {
@@ -7751,6 +7774,7 @@
             "type": "number",
             "unit": "",
             "explanation": "Zahl der Gehaltszahlungen pro Jahr. Bei Weihnachts- oder Urlaubsgeld können es mehr als zwölf sein.",
+            "advanced": true,
             "options": []
           }
         ],
@@ -7782,9 +7806,9 @@
       "route": "/rechner/arbeitgeberkostenrechner/",
       "title": "Arbeitgeberkostenrechner – kostenlos online berechnen",
       "metadata": {
-        "description": "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "description": "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "og:title": "Arbeitgeberkostenrechner",
-        "og:description": "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+        "og:description": "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
       },
       "content": [
         "Arbeitgeberkostenrechner – kostenlos online berechnen",
@@ -7803,7 +7827,7 @@
         "Arbeitgeberkostenrechner",
         "Arbeit",
         "Arbeitgeberkostenrechner",
-        "Sieh, was ein Bruttogehalt einschließlich Arbeitgeberanteilen und zusätzlicher Personalkosten kostet.",
+        "Trage das Bruttogehalt ein. Kranken-, Pflege-, Renten- und Arbeitslosenversicherung werden bis zu den geltenden Beitragsgrenzen berechnet.",
         "Sofort im Browser berechnet",
         "Keine Anmeldung, keine Speicherung und keine Übertragung.",
         "So berechnest du Arbeitgeberkostenrechner",
@@ -7811,22 +7835,21 @@
         "1",
         "Trage das monatliche Bruttogehalt ein.",
         "2",
-        "Übernimm die für dich passenden Arbeitgeberanteile, Umlagen und festen Zusatzkosten.",
+        "Öffne die weiteren Einstellungen nur, wenn betriebliche Umlagen oder feste Zusatzkosten abweichen.",
         "3",
-        "Das Ergebnis schätzt die gesamten Monats- und Jahreskosten.",
+        "Das Ergebnis zeigt Brutto, Sozialversicherung und gesamte Monats- und Jahreskosten.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Die prozentualen Lohnnebenkosten werden auf das Bruttogehalt gerechnet und um feste Kosten ergänzt. Beitragsgrenzen und individuelle Umlagen bleiben außerhalb dieser Schätzung.",
-        "Die Beitragssätze sind frei änderbare Rechenannahmen und keine Lohnabrechnung.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Arbeitgeberanteile werden mit den Werten und Beitragsgrenzen für 2026 berechnet. Nur betriebsabhängige Umlagen und weitere Kosten bleiben als anpassbare Angaben offen.",
+        "U1, U2, Insolvenzgeldumlage, Unfallversicherung und weitere Personalkosten hängen vom Betrieb ab und sind nur als gemeinsame Zusatzannahme enthalten.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Lohnnebenkosten",
@@ -7920,12 +7943,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -7982,20 +7999,15 @@
             "type": "number",
             "unit": "€",
             "explanation": "Bruttogehalt des Beschäftigten vor persönlichen Abzügen.",
+            "advanced": false,
             "options": []
           },
           {
-            "label": "Arbeitgeberanteile Sozialversicherung",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Zusammengefasster prozentualer Arbeitgeberanteil an den Sozialversicherungen.",
-            "options": []
-          },
-          {
-            "label": "Umlagen und Unfallversicherung",
+            "label": "Betriebliche Umlagen und Unfallversicherung",
             "type": "number",
             "unit": "%",
             "explanation": "Weitere prozentuale Arbeitgeberkosten wie Umlagen und Unfallversicherung.",
+            "advanced": true,
             "options": []
           },
           {
@@ -8003,12 +8015,21 @@
             "type": "number",
             "unit": "€",
             "explanation": "Feste monatliche Zusatzkosten, etwa Zuschüsse, Ausstattung oder pauschal angesetzte Verwaltungskosten.",
+            "advanced": true,
+            "options": []
+          },
+          {
+            "label": "Zusatzbeitrag der Krankenkasse",
+            "type": "number",
+            "unit": "%",
+            "explanation": "Zusatzbeitrag der Krankenkasse. Der Arbeitgeber trägt bei Beschäftigten grundsätzlich die Hälfte.",
+            "advanced": true,
             "options": []
           }
         ],
         "defaultResult": {
           "primaryLabel": "Arbeitgeberkosten pro Monat",
-          "primaryValue": "5.020,00 €",
+          "primaryValue": "4.946,00 €",
           "metrics": [
             {
               "label": "Bruttogehalt",
@@ -8016,17 +8037,17 @@
               "tone": ""
             },
             {
-              "label": "Prozentuale Nebenkosten",
-              "value": "920,00 €",
+              "label": "Sozialversicherung und Umlagen",
+              "value": "946,00 €",
               "tone": "accent"
             },
             {
               "label": "Pro Jahr",
-              "value": "60.240,00 €",
+              "value": "59.352,00 €",
               "tone": ""
             }
           ],
-          "explanation": "Annahme: 23 % auf das Bruttogehalt plus 100,00 € feste Kosten."
+          "explanation": "Sozialversicherung 2026: 846,00 €. Betriebliche Zusatzkosten: 100,00 €."
         }
       }
     },
@@ -8055,30 +8076,29 @@
         "Minijob-Arbeitszeitrechner",
         "Arbeit",
         "Minijob-Arbeitszeitrechner",
-        "Rechne eine selbst eingetragene Verdienstgrenze in Arbeitsstunden um und prüfe, wie ein eigener Rentenbeitrag wirkt.",
+        "Trage nur deinen Stundenlohn ein. Die Verdienstgrenze für 2026 und der übliche eigene Rentenbeitrag sind bereits eingesetzt.",
         "Sofort im Browser berechnet",
         "Keine Anmeldung, keine Speicherung und keine Übertragung.",
         "So berechnest du Minijob-Arbeitszeitrechner",
         "Folge diesen drei Schritten und trage anschließend deine Werte ein.",
         "1",
-        "Trage die aktuell für dich geltende monatliche Verdienstgrenze ein.",
+        "Trage deinen vereinbarten Stundenlohn ein.",
         "2",
-        "Ergänze deinen Stundenlohn und bei Bedarf den eigenen Rentenbeitrag.",
+        "Ändere Verdienstgrenze oder Rentenbeitrag nur, wenn sie in deinem Fall vom eingesetzten Wert abweichen.",
         "3",
         "Du erhältst die rechnerisch möglichen Monats- und Wochenstunden sowie den Rentenabzug.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Die Verdienstgrenze wird durch den Stundenlohn geteilt. Weil Mindestlohn und Minijobgrenze wechseln können, bleiben beide Werte sichtbar.",
+        "Die Verdienstgrenze 2026 wird durch den Stundenlohn geteilt. Abweichende persönliche Werte lassen sich unter den weiteren Einstellungen ändern.",
         "Der Rechner prüft keine schwankenden Entgelte, Mehrfachbeschäftigung oder individuellen Befreiungen.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Verdienstgrenze",
@@ -8088,8 +8108,8 @@
         "Rentenbeitrag",
         "Eigener Beitrag zur gesetzlichen Rentenversicherung.",
         "Häufige Fragen",
-        "Warum muss ich die Verdienstgrenze selbst eintragen?",
-        "Die Grenze kann sich ändern. So bleibt sichtbar, mit welchem Wert gerechnet wird.",
+        "Welche Verdienstgrenze ist eingesetzt?",
+        "Für 2026 sind 603 Euro im Monat eingesetzt.",
         "Prüft der Rechner mehrere Minijobs?",
         "Nein. Mehrfachbeschäftigung und schwankende Verdienste brauchen eine individuelle Prüfung.",
         "Passende Rechner für den nächsten Schritt",
@@ -8099,7 +8119,7 @@
         "Stundenlohn aus Monatsgehalt",
         "Stundenlohn, Jahresgehalt und Monatsstunden aus Gehalt und Wochenarbeitszeit berechnen.",
         "Arbeitgeberkostenrechner",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -8172,12 +8192,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -8198,7 +8212,7 @@
         {
           "element": "a",
           "labels": [
-            "Arbeitgeberkostenrechner Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+            "Arbeitgeberkostenrechner Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -8230,17 +8244,19 @@
         "category": "Arbeit",
         "fields": [
           {
-            "label": "Monatliche Verdienstgrenze",
-            "type": "number",
-            "unit": "€",
-            "explanation": "Maximaler regelmäßiger Monatsverdienst, bis zu dem deine Beschäftigung als Minijob behandelt werden soll.",
-            "options": []
-          },
-          {
             "label": "Stundenlohn",
             "type": "number",
             "unit": "€",
             "explanation": "Vereinbarter Bruttoverdienst für eine Arbeitsstunde.",
+            "advanced": false,
+            "options": []
+          },
+          {
+            "label": "Monatliche Verdienstgrenze",
+            "type": "number",
+            "unit": "€",
+            "explanation": "Maximaler regelmäßiger Monatsverdienst, bis zu dem deine Beschäftigung als Minijob behandelt werden soll.",
+            "advanced": true,
             "options": []
           },
           {
@@ -8248,6 +8264,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Prozentualer Eigenanteil zur Rentenversicherung, sofern er bei dir anfällt.",
+            "advanced": true,
             "options": []
           }
         ],
@@ -8279,9 +8296,9 @@
       "route": "/rechner/brutto-netto-schaetzer/",
       "title": "Brutto-Netto-Schätzer – kostenlos online berechnen",
       "metadata": {
-        "description": "Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen.",
+        "description": "Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen.",
         "og:title": "Brutto-Netto-Schätzer",
-        "og:description": "Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen."
+        "og:description": "Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen."
       },
       "content": [
         "Brutto-Netto-Schätzer – kostenlos online berechnen",
@@ -8300,30 +8317,29 @@
         "Brutto-Netto-Schätzer",
         "Arbeit",
         "Brutto-Netto-Schätzer",
-        "Eine transparente Überschlagsrechnung für bekannte oder geschätzte Abzüge – ohne versteckte Steuerklassenformel.",
+        "Du nennst Brutto und wenige persönliche Angaben. Steuertarif, Beitragsgrenzen und Sozialabgaben für 2026 setzt der Rechner selbst ein.",
         "Sofort im Browser berechnet",
         "Keine Anmeldung, keine Speicherung und keine Übertragung.",
         "So berechnest du Brutto-Netto-Schätzer",
         "Folge diesen drei Schritten und trage anschließend deine Werte ein.",
         "1",
-        "Trage dein Monatsbrutto und das beitragspflichtige Brutto ein.",
+        "Trage dein Monatsbrutto ein und wähle Steuerklasse sowie Kinderzahl.",
         "2",
-        "Übernimm bekannte Steuerbeträge, Sozialabgaben und weitere Abzüge aus einer Abrechnung oder Schätzung.",
+        "Ergänze Kirchensteuer oder einen abweichenden Krankenkassen-Zusatzbeitrag nur bei Bedarf.",
         "3",
-        "Der Rechner zieht alle Angaben sichtbar ab und zeigt das geschätzte Netto.",
+        "Der Rechner setzt Tarif und Beitragsgrenzen für 2026 ein und zeigt Steuern, Sozialabgaben und Netto.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Lohnsteuer und Kirchensteuer werden als konkrete Monatsbeträge eingetragen. Sozialabgaben werden prozentual auf das beitragspflichtige Brutto gerechnet.",
-        "Das ist bewusst kein amtlicher Lohnsteuerrechner. Für eine verbindliche Abrechnung braucht es Steuerklasse, Freibeträge, Beitragsgrenzen und die jeweils gültige amtliche Berechnung.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Sozialabgaben werden bis zu den Beitragsgrenzen 2026 berechnet. Die Steuer wird aus dem Einkommensteuertarif 2026 angenähert und auf den Monat verteilt.",
+        "Die Näherung ersetzt keine Lohnabrechnung. Freibeträge, Einmalzahlungen, Steuerklassen V und VI sowie weitere persönliche Besonderheiten sind nicht enthalten.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Beitragspflichtiges Brutto",
@@ -8333,10 +8349,10 @@
         "Netto",
         "Betrag nach den eingetragenen Steuern, Sozialabgaben und weiteren Abzügen.",
         "Häufige Fragen",
-        "Warum ist das kein normaler Brutto-Netto-Rechner mit Steuerklasse?",
-        "Der Rechner macht keine amtliche Steuerberechnung, sondern zeigt eine transparente Schätzung mit deinen bekannten Abzügen.",
-        "Wo finde ich die benötigten Werte?",
-        "Am zuverlässigsten auf einer vorhandenen Lohnabrechnung oder in einer fachlich geprüften Abrechnungsvorschau.",
+        "Warum ist das Ergebnis eine Schätzung?",
+        "Eine echte Lohnabrechnung berücksichtigt mehr persönliche Merkmale, Freibeträge, Einmalzahlungen und amtliche Rundungsregeln.",
+        "Warum fehlen Steuerklassen V und VI?",
+        "Dafür wäre eine vereinfachte Näherung zu unzuverlässig. Diese Fälle gehören in einen amtlichen oder fachlich geprüften Lohnsteuerrechner.",
         "Passende Rechner für den nächsten Schritt",
         "Alle Rechner ansehen",
         "Urlaubsanspruch umrechnen",
@@ -8344,7 +8360,7 @@
         "Stundenlohn aus Monatsgehalt",
         "Stundenlohn, Jahresgehalt und Monatsstunden aus Gehalt und Wochenarbeitszeit berechnen.",
         "Arbeitgeberkostenrechner",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -8417,12 +8433,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -8443,7 +8453,7 @@
         {
           "element": "a",
           "labels": [
-            "Arbeitgeberkostenrechner Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+            "Arbeitgeberkostenrechner Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -8479,34 +8489,107 @@
             "type": "number",
             "unit": "€",
             "explanation": "Gesamtes Monatsgehalt vor allen Abzügen.",
+            "advanced": false,
             "options": []
           },
           {
-            "label": "Beitragspflichtiges Brutto",
-            "type": "number",
-            "unit": "€",
-            "explanation": "Teil des Bruttogehalts, auf den Sozialabgaben berechnet werden. Er kann durch Beitragsgrenzen niedriger sein.",
-            "options": []
+            "label": "Steuerklasse",
+            "type": "select",
+            "unit": "",
+            "explanation": "Steuerklasse auf deiner Lohnabrechnung. Diese Näherung unterstützt I, III und IV.",
+            "advanced": false,
+            "options": [
+              [
+                "1",
+                "I"
+              ],
+              [
+                "3",
+                "III"
+              ],
+              [
+                "4",
+                "IV"
+              ]
+            ]
           },
           {
-            "label": "Lohnsteuer pro Monat",
-            "type": "number",
-            "unit": "€",
-            "explanation": "Monatliche Lohnsteuer als Eurobetrag, nicht als Prozentsatz.",
-            "options": []
+            "label": "Kinder unter 25",
+            "type": "select",
+            "unit": "",
+            "explanation": "Kinder unter 25, die beim Pflegeversicherungsbeitrag berücksichtigt werden.",
+            "advanced": false,
+            "options": [
+              [
+                "0",
+                "Keine"
+              ],
+              [
+                "1",
+                "1 Kind"
+              ],
+              [
+                "2",
+                "2 Kinder"
+              ],
+              [
+                "3",
+                "3 Kinder"
+              ],
+              [
+                "4",
+                "4 Kinder"
+              ],
+              [
+                "5",
+                "5 oder mehr"
+              ]
+            ]
           },
           {
-            "label": "Kirchensteuer pro Monat",
-            "type": "number",
-            "unit": "€",
-            "explanation": "Monatliche Kirchensteuer als Eurobetrag. Wenn keine anfällt, trage 0 ein.",
-            "options": []
+            "label": "Kirchensteuer",
+            "type": "select",
+            "unit": "",
+            "explanation": "Kirchensteuersatz deines Bundeslands. Wenn du keine Kirchensteuer zahlst, bleibt die Auswahl auf Keine.",
+            "advanced": true,
+            "options": [
+              [
+                "0",
+                "Keine"
+              ],
+              [
+                "8",
+                "8 %"
+              ],
+              [
+                "9",
+                "9 %"
+              ]
+            ]
           },
           {
-            "label": "Eigene Sozialabgaben gesamt",
+            "label": "Kinderlosenzuschlag zur Pflegeversicherung",
+            "type": "select",
+            "unit": "",
+            "explanation": "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+            "advanced": true,
+            "options": [
+              [
+                "yes",
+                "Gilt für mich"
+              ],
+              [
+                "no",
+                "Gilt für mich nicht"
+              ]
+            ]
+          },
+          {
+            "label": "Zusatzbeitrag der Krankenkasse",
             "type": "number",
             "unit": "%",
-            "explanation": "Eigener Gesamtanteil für Kranken-, Pflege-, Renten- und Arbeitslosenversicherung in Prozent.",
+            "explanation": "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026.",
+            "advanced": true,
             "options": []
           },
           {
@@ -8514,30 +8597,31 @@
             "type": "number",
             "unit": "€",
             "explanation": "Weitere monatliche Abzüge, zum Beispiel ein eigener Zusatzbeitrag oder eine Pfändung.",
+            "advanced": true,
             "options": []
           }
         ],
         "defaultResult": {
           "primaryLabel": "Geschätztes Netto",
-          "primaryValue": "2.654,00 €",
+          "primaryValue": "2.624,08 €",
           "metrics": [
             {
-              "label": "Abzüge gesamt",
-              "value": "1.346,00 €",
-              "tone": "accent"
-            },
-            {
               "label": "Sozialabgaben",
-              "value": "846,00 €",
+              "value": "870,00 €",
               "tone": ""
             },
             {
-              "label": "Nettoquote",
-              "value": "66,35 %",
+              "label": "Steuern",
+              "value": "505,92 €",
               "tone": ""
+            },
+            {
+              "label": "Abzüge gesamt",
+              "value": "1.375,92 €",
+              "tone": "accent"
             }
           ],
-          "explanation": "4.000,00 € minus 1.346,00 € sichtbare Abzüge."
+          "explanation": "4.000,00 € minus 1.375,92 € berechnete Abzüge. Nettoquote: 65,6 %."
         }
       }
     },
@@ -8566,30 +8650,29 @@
         "GKV-Beitragsrechner",
         "Versicherung",
         "GKV-Beitragsrechner",
-        "Berechne Gesamtbeitrag sowie Arbeitnehmer- und Arbeitgeberanteil mit frei einstellbaren Beitragssätzen.",
+        "Trage dein Monatsbrutto ein. Der Rechner begrenzt es automatisch auf die Beitragsbemessungsgrenze 2026 und setzt den allgemeinen Beitragssatz ein.",
         "Sofort im Browser berechnet",
         "Keine Anmeldung, keine Speicherung und keine Übertragung.",
         "So berechnest du GKV-Beitragsrechner",
         "Folge diesen drei Schritten und trage anschließend deine Werte ein.",
         "1",
-        "Trage dein bereits begrenztes beitragspflichtiges Monatseinkommen ein.",
+        "Trage dein vollständiges Monatsbrutto ein.",
         "2",
-        "Übernimm allgemeinen Beitragssatz und Zusatzbeitrag aus den aktuellen Angaben deiner Krankenkasse.",
+        "Ändere den voreingestellten Zusatzbeitrag nur, wenn du den Satz deiner Krankenkasse kennst.",
         "3",
         "Der Rechner zeigt Gesamtbeitrag sowie den rechnerisch hälftigen Anteil beider Seiten.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Allgemeiner Beitrag und Zusatzbeitrag werden addiert und in dieser Rechnung hälftig geteilt.",
-        "Gib das bereits auf die geltende Beitragsbemessungsgrenze begrenzte Einkommen ein. Sonderregeln und individuelle Krankenkassentarife sind nicht enthalten.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Allgemeiner Beitrag und Zusatzbeitrag werden addiert, bis zur Beitragsbemessungsgrenze 2026 berechnet und bei Beschäftigten hälftig geteilt.",
+        "Der Zusatzbeitrag unterscheidet sich je nach Krankenkasse. Eingesetzt ist der Durchschnitt für 2026; deinen Kassensatz kannst du unter den weiteren Einstellungen ändern.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Beitragspflichtiges Einkommen",
@@ -8600,7 +8683,7 @@
         "Obergrenze des Einkommens, bis zu der Beiträge berechnet werden.",
         "Häufige Fragen",
         "Soll ich mein vollständiges Brutto eingeben?",
-        "Nur wenn es die geltende Beitragsbemessungsgrenze nicht überschreitet. Andernfalls gib die begrenzte Bemessungsgrundlage ein.",
+        "Ja. Einkommen oberhalb von 5.812,50 Euro im Monat wird für 2026 automatisch begrenzt.",
         "Ist der Arbeitnehmeranteil immer genau die Hälfte?",
         "Der Rechner verwendet diese Grundannahme. Individuelle Sonderregeln sind nicht enthalten.",
         "Passende Rechner für den nächsten Schritt",
@@ -8608,9 +8691,9 @@
         "GKV-Zusatzbeitrag vergleichen",
         "Monatliche und jährliche Mehrkosten zwischen zwei Zusatzbeitragssätzen berechnen.",
         "Pflegeversicherungsbeitrag",
-        "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
+        "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
         "Krankengeld-Schätzung",
-        "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen.",
+        "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -8683,12 +8766,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -8703,13 +8780,13 @@
         {
           "element": "a",
           "labels": [
-            "Pflegeversicherungsbeitrag Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen."
+            "Pflegeversicherungsbeitrag Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen."
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Krankengeld-Schätzung Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen."
+            "Krankengeld-Schätzung Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen."
           ]
         },
         {
@@ -8741,35 +8818,30 @@
         "category": "Versicherung",
         "fields": [
           {
-            "label": "Beitragspflichtiges Monatseinkommen",
+            "label": "Monatsbrutto",
             "type": "number",
             "unit": "€",
-            "explanation": "Monatseinkommen, auf das Beiträge berechnet werden. Einkommen oberhalb der Beitragsbemessungsgrenze muss vorher begrenzt werden.",
+            "explanation": "Monatsbrutto vor Abzügen. Der Rechner begrenzt es automatisch auf die Beitragsbemessungsgrenze 2026.",
+            "advanced": false,
             "options": []
           },
           {
-            "label": "Allgemeiner Beitragssatz",
+            "label": "Zusatzbeitrag der Krankenkasse",
             "type": "number",
             "unit": "%",
-            "explanation": "Allgemeiner Beitragssatz der gesetzlichen Krankenversicherung ohne Zusatzbeitrag.",
-            "options": []
-          },
-          {
-            "label": "Zusatzbeitrag",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Kassenindividueller Zusatzbeitrag deiner Krankenkasse.",
+            "explanation": "Kassenindividueller Zusatzbeitrag. Voreingestellt ist der Durchschnitt für 2026.",
+            "advanced": true,
             "options": []
           }
         ],
         "defaultResult": {
-          "primaryLabel": "Gesamtbeitrag pro Monat",
-          "primaryValue": "787,50 €",
+          "primaryLabel": "Eigener Beitrag pro Monat",
+          "primaryValue": "393,75 €",
           "metrics": [
             {
-              "label": "Arbeitnehmeranteil",
-              "value": "393,75 €",
-              "tone": "accent"
+              "label": "Gesamtbeitrag",
+              "value": "787,50 €",
+              "tone": ""
             },
             {
               "label": "Arbeitgeberanteil",
@@ -8777,12 +8849,12 @@
               "tone": ""
             },
             {
-              "label": "Gesamtbeitragssatz",
-              "value": "17,5 %",
-              "tone": ""
+              "label": "Berechnetes Einkommen",
+              "value": "4.500,00 €",
+              "tone": "accent"
             }
           ],
-          "explanation": "4.500,00 € × 17,5 % = 787,50 €."
+          "explanation": "17,5 % auf höchstens 5.812,50 € Monatseinkommen."
         }
       }
     },
@@ -8823,17 +8895,16 @@
         "3",
         "Das Ergebnis zeigt die monatliche und jährliche Mehr- oder Minderbelastung.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Die Differenz der Beitragssätze wird auf das beitragspflichtige Einkommen gerechnet und bei Beschäftigten hälftig angesetzt.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Zusatzbeitrag",
@@ -8852,9 +8923,9 @@
         "GKV-Beitragsrechner",
         "Krankenversicherungsbeitrag aus beitragspflichtigem Einkommen und Zusatzbeitrag berechnen.",
         "Pflegeversicherungsbeitrag",
-        "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
+        "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
         "Krankengeld-Schätzung",
-        "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen.",
+        "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -8927,12 +8998,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -8947,13 +9012,13 @@
         {
           "element": "a",
           "labels": [
-            "Pflegeversicherungsbeitrag Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen."
+            "Pflegeversicherungsbeitrag Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen."
           ]
         },
         {
           "element": "a",
           "labels": [
-            "Krankengeld-Schätzung Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen."
+            "Krankengeld-Schätzung Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen."
           ]
         },
         {
@@ -8985,10 +9050,11 @@
         "category": "Versicherung",
         "fields": [
           {
-            "label": "Beitragspflichtiges Monatseinkommen",
+            "label": "Monatsbrutto",
             "type": "number",
             "unit": "€",
-            "explanation": "Einkommen, auf das der Zusatzbeitrag tatsächlich berechnet wird.",
+            "explanation": "Monatsbrutto vor Abzügen. Der Rechner berücksichtigt automatisch die Beitragsbemessungsgrenze 2026.",
+            "advanced": false,
             "options": []
           },
           {
@@ -8996,6 +9062,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Bisheriger Zusatzbeitrag deiner Krankenkasse in Prozent.",
+            "advanced": false,
             "options": []
           },
           {
@@ -9003,6 +9070,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Neuer oder zum Vergleich verwendeter Zusatzbeitrag in Prozent.",
+            "advanced": false,
             "options": []
           },
           {
@@ -9010,6 +9078,7 @@
             "type": "number",
             "unit": "%",
             "explanation": "Anteil des Unterschieds, den du selbst trägst. Bei hälftiger Teilung sind das 50 Prozent.",
+            "advanced": true,
             "options": []
           }
         ],
@@ -9028,12 +9097,12 @@
               "tone": ""
             },
             {
-              "label": "Eigener Anteil",
-              "value": "50 %",
+              "label": "Berechnetes Einkommen",
+              "value": "4.500,00 €",
               "tone": ""
             }
           ],
-          "explanation": "4.500,00 € × 1 % × 50 %."
+          "explanation": "1 % Unterschied auf höchstens 5.812,50 € Monatseinkommen."
         }
       }
     },
@@ -9041,9 +9110,9 @@
       "route": "/rechner/pflegeversicherung-rechner/",
       "title": "Pflegeversicherungsbeitrag – kostenlos online berechnen",
       "metadata": {
-        "description": "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
+        "description": "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
         "og:title": "Pflegeversicherungsbeitrag",
-        "og:description": "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen."
+        "og:description": "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen."
       },
       "content": [
         "Pflegeversicherungsbeitrag – kostenlos online berechnen",
@@ -9062,30 +9131,29 @@
         "Pflegeversicherungsbeitrag",
         "Versicherung",
         "Pflegeversicherungsbeitrag",
-        "Berechne Pflegebeitrag, Arbeitgeberanteil und einen möglichen persönlichen Zuschlag getrennt.",
+        "Trage Einkommen und Kinderzahl ein. Beitragssatz, Kinderlosenzuschlag, Abschläge und Beitragsgrenze für 2026 werden automatisch berücksichtigt.",
         "Sofort im Browser berechnet",
         "Keine Anmeldung, keine Speicherung und keine Übertragung.",
         "So berechnest du Pflegeversicherungsbeitrag",
         "Folge diesen drei Schritten und trage anschließend deine Werte ein.",
         "1",
-        "Trage das beitragspflichtige Monatseinkommen ein.",
+        "Trage dein Monatsbrutto ein und wähle die Zahl der berücksichtigten Kinder unter 25.",
         "2",
-        "Übernimm Gesamt-Grundbeitrag, Arbeitgeberanteil und deinen persönlichen Zuschlag.",
+        "Wähle Sachsen nur, wenn dort dein Beschäftigungsort liegt.",
         "3",
-        "Der Rechner trennt Gesamtbeitrag, Arbeitgeberanteil und deinen eigenen Anteil.",
+        "Der Rechner setzt Beitragsgrenze, Kinderlosenzuschlag und Kinderabschläge für 2026 ein.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Grundbeitrag und Arbeitgeberanteil werden auf das beitragspflichtige Einkommen gerechnet. Ein persönlicher Zuschlag wird vollständig dem eigenen Anteil zugerechnet.",
-        "Kinderzahl, Alter, Bundesland und aktuelle Beitragssätze können den tatsächlichen Beitrag verändern. Die Eingabewerte bleiben deshalb offen.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Der Beitrag wird bis zur Beitragsbemessungsgrenze 2026 gerechnet. Kinderlose zahlen einen Zuschlag; ab dem zweiten berücksichtigten Kind unter 25 sinkt der eigene Satz schrittweise.",
+        "Für Sachsen gilt ein anderer Arbeitgeberanteil. Diese Abweichung lässt sich unter den weiteren Einstellungen wählen.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Grundbeitrag",
@@ -9095,10 +9163,10 @@
         "Arbeitgeberanteil",
         "Teil des Beitrags, den der Arbeitgeber trägt.",
         "Häufige Fragen",
-        "Warum muss ich die Sätze selbst eintragen?",
-        "Alter, Kinderzahl, Bundesland und Rechtsstand können den tatsächlichen Beitrag verändern.",
-        "Ist der persönliche Zuschlag im Grundbeitrag enthalten?",
-        "Nein. Er wird in diesem Rechner getrennt eingetragen und vollständig dem eigenen Anteil zugerechnet.",
+        "Wie wird Kinderlosigkeit berücksichtigt?",
+        "Bei keiner berücksichtigten Kinderzahl wird der Kinderlosenzuschlag von 0,6 Prozentpunkten eingesetzt.",
+        "Warum gibt es eine Auswahl für Sachsen?",
+        "Dort ist die Aufteilung zwischen Arbeitgeber und Beschäftigten anders als in den übrigen Bundesländern.",
         "Passende Rechner für den nächsten Schritt",
         "Alle Rechner ansehen",
         "GKV-Beitragsrechner",
@@ -9106,7 +9174,7 @@
         "GKV-Zusatzbeitrag vergleichen",
         "Monatliche und jährliche Mehrkosten zwischen zwei Zusatzbeitragssätzen berechnen.",
         "Krankengeld-Schätzung",
-        "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen.",
+        "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -9176,12 +9244,6 @@
           "element": "button",
           "labels": [
             "Ergebnis kopieren"
-          ]
-        },
-        {
-          "element": "button",
-          "labels": [
-            "Berechnen"
           ]
         },
         {
@@ -9205,7 +9267,7 @@
         {
           "element": "a",
           "labels": [
-            "Krankengeld-Schätzung Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen."
+            "Krankengeld-Schätzung Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen."
           ]
         },
         {
@@ -9237,32 +9299,79 @@
         "category": "Versicherung",
         "fields": [
           {
-            "label": "Beitragspflichtiges Monatseinkommen",
+            "label": "Monatsbrutto",
             "type": "number",
             "unit": "€",
-            "explanation": "Monatseinkommen innerhalb der geltenden Beitragsbemessungsgrenze.",
+            "explanation": "Monatsbrutto vor Abzügen. Der Rechner begrenzt es automatisch auf die Beitragsbemessungsgrenze 2026.",
+            "advanced": false,
             "options": []
           },
           {
-            "label": "Gesamt-Grundbeitrag",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Gesamter Grundbeitrag zur Pflegeversicherung vor einem persönlichen Zuschlag.",
-            "options": []
+            "label": "Kinder unter 25",
+            "type": "select",
+            "unit": "",
+            "explanation": "Berücksichtigte Kinder unter 25. Ab dem zweiten Kind sinkt der eigene Beitrag schrittweise.",
+            "advanced": false,
+            "options": [
+              [
+                "0",
+                "Keine"
+              ],
+              [
+                "1",
+                "1 Kind"
+              ],
+              [
+                "2",
+                "2 Kinder"
+              ],
+              [
+                "3",
+                "3 Kinder"
+              ],
+              [
+                "4",
+                "4 Kinder"
+              ],
+              [
+                "5",
+                "5 oder mehr"
+              ]
+            ]
           },
           {
-            "label": "Arbeitgeberanteil",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Prozentsatz, den der Arbeitgeber in deinem Fall übernimmt.",
-            "options": []
+            "label": "Kinderlosenzuschlag",
+            "type": "select",
+            "unit": "",
+            "explanation": "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+            "advanced": true,
+            "options": [
+              [
+                "yes",
+                "Gilt für mich"
+              ],
+              [
+                "no",
+                "Gilt für mich nicht"
+              ]
+            ]
           },
           {
-            "label": "Persönlicher Zuschlag",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Zusätzlicher Beitrag, der persönlich bei dir anfällt, zum Beispiel ein Zuschlag für Kinderlose.",
-            "options": []
+            "label": "Arbeitsort Sachsen",
+            "type": "select",
+            "unit": "",
+            "explanation": "In Sachsen ist der Arbeitgeberanteil niedriger und der eigene Anteil entsprechend höher.",
+            "advanced": true,
+            "options": [
+              [
+                "",
+                "Nein"
+              ],
+              [
+                "yes",
+                "Ja"
+              ]
+            ]
           }
         ],
         "defaultResult": {
@@ -9285,7 +9394,7 @@
               "tone": ""
             }
           ],
-          "explanation": "Grundbeitrag 3,6 %, davon Arbeitgeber 1,8 %, persönlicher Zuschlag 0,6 %."
+          "explanation": "Berechnet auf 4.500,00 € mit den Beitragssätzen für 2026."
         }
       }
     },
@@ -9293,9 +9402,9 @@
       "route": "/rechner/krankengeldrechner/",
       "title": "Krankengeld-Schätzung – kostenlos online berechnen",
       "metadata": {
-        "description": "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen.",
+        "description": "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen.",
         "og:title": "Krankengeld-Schätzung",
-        "og:description": "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen."
+        "og:description": "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen."
       },
       "content": [
         "Krankengeld-Schätzung – kostenlos online berechnen",
@@ -9314,30 +9423,29 @@
         "Krankengeld-Schätzung",
         "Versicherung",
         "Krankengeld-Schätzung",
-        "Berechne den niedrigeren Wert aus 70 Prozent vom Brutto und 90 Prozent vom Netto sowie den ungefähren Zahlbetrag.",
+        "Trage dein Brutto ein. Das nötige Netto und die Abzüge vom Krankengeld werden aus den Angaben für 2026 geschätzt.",
         "Sofort im Browser berechnet",
         "Keine Anmeldung, keine Speicherung und keine Übertragung.",
         "So berechnest du Krankengeld-Schätzung",
         "Folge diesen drei Schritten und trage anschließend deine Werte ein.",
         "1",
-        "Trage dein regelmäßiges Monatsbrutto und Monatsnetto ein.",
+        "Trage dein regelmäßiges Monatsbrutto ein und wähle Steuerklasse sowie Kinderzahl.",
         "2",
-        "Ergänze den geschätzten Prozentsatz der Abzüge, die vom Krankengeld einbehalten werden.",
+        "Ergänze Kirchensteuer oder einen abweichenden Zusatzbeitrag nur bei Bedarf.",
         "3",
-        "Der Rechner vergleicht 70 Prozent vom Brutto mit 90 Prozent vom Netto und verwendet den niedrigeren Wert.",
+        "Der Rechner schätzt zuerst dein Netto und daraus Krankengeld sowie verbleibenden Zahlbetrag.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Die Rechnung nimmt den niedrigeren der beiden Ausgangswerte. Anschließend werden die eingetragenen prozentualen Sozialabgaben abgezogen.",
+        "Die Rechnung verwendet den niedrigeren Wert aus 70 Prozent des begrenzten Bruttos und 90 Prozent des geschätzten Nettos. Renten-, Arbeitslosen- und Pflegebeitrag werden anschließend abgezogen.",
         "Bemessungsgrenzen, Einmalzahlungen, individuelle Versicherungsverhältnisse und die Berechnung deiner Krankenkasse können abweichen.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Brutto-Krankengeld",
@@ -9358,7 +9466,7 @@
         "GKV-Zusatzbeitrag vergleichen",
         "Monatliche und jährliche Mehrkosten zwischen zwei Zusatzbeitragssätzen berechnen.",
         "Pflegeversicherungsbeitrag",
-        "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
+        "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -9431,12 +9539,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -9457,7 +9559,7 @@
         {
           "element": "a",
           "labels": [
-            "Pflegeversicherungsbeitrag Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen."
+            "Pflegeversicherungsbeitrag Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen."
           ]
         },
         {
@@ -9493,44 +9595,131 @@
             "type": "number",
             "unit": "€",
             "explanation": "Regelmäßiges Bruttoarbeitsentgelt pro Monat vor allen Abzügen.",
+            "advanced": false,
             "options": []
           },
           {
-            "label": "Regelmäßiges Monatsnetto",
-            "type": "number",
-            "unit": "€",
-            "explanation": "Regelmäßiger Auszahlungsbetrag pro Monat nach den üblichen Abzügen.",
-            "options": []
+            "label": "Steuerklasse",
+            "type": "select",
+            "unit": "",
+            "explanation": "Steuerklasse auf deiner Lohnabrechnung. Diese Näherung unterstützt I, III und IV.",
+            "advanced": false,
+            "options": [
+              [
+                "1",
+                "I"
+              ],
+              [
+                "3",
+                "III"
+              ],
+              [
+                "4",
+                "IV"
+              ]
+            ]
           },
           {
-            "label": "Abzüge vom Krankengeld",
+            "label": "Kinder unter 25",
+            "type": "select",
+            "unit": "",
+            "explanation": "Kinder unter 25, die beim Pflegeversicherungsbeitrag berücksichtigt werden.",
+            "advanced": false,
+            "options": [
+              [
+                "0",
+                "Keine"
+              ],
+              [
+                "1",
+                "1 Kind"
+              ],
+              [
+                "2",
+                "2 Kinder"
+              ],
+              [
+                "3",
+                "3 Kinder"
+              ],
+              [
+                "4",
+                "4 Kinder"
+              ],
+              [
+                "5",
+                "5 oder mehr"
+              ]
+            ]
+          },
+          {
+            "label": "Kirchensteuer",
+            "type": "select",
+            "unit": "",
+            "explanation": "Kirchensteuersatz deines Bundeslands oder Keine.",
+            "advanced": true,
+            "options": [
+              [
+                "0",
+                "Keine"
+              ],
+              [
+                "8",
+                "8 %"
+              ],
+              [
+                "9",
+                "9 %"
+              ]
+            ]
+          },
+          {
+            "label": "Kinderlosenzuschlag zur Pflegeversicherung",
+            "type": "select",
+            "unit": "",
+            "explanation": "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+            "advanced": true,
+            "options": [
+              [
+                "yes",
+                "Gilt für mich"
+              ],
+              [
+                "no",
+                "Gilt für mich nicht"
+              ]
+            ]
+          },
+          {
+            "label": "Zusatzbeitrag der Krankenkasse",
             "type": "number",
             "unit": "%",
-            "explanation": "Geschätzter Gesamtanteil der Sozialversicherungsbeiträge, die vom Brutto-Krankengeld abgehen.",
+            "explanation": "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026.",
+            "advanced": true,
             "options": []
           }
         ],
         "defaultResult": {
           "primaryLabel": "Geschätzter Zahlbetrag",
-          "primaryValue": "1.815,39 €",
+          "primaryValue": "1.838,94 €",
           "metrics": [
             {
+              "label": "Geschätztes bisheriges Netto",
+              "value": "2.348,58 €",
+              "tone": ""
+            },
+            {
               "label": "Krankengeld vor Abzügen",
-              "value": "2.070,00 €",
+              "value": "2.113,73 €",
               "tone": ""
             },
             {
               "label": "Pro Kalendertag",
-              "value": "60,51 €",
+              "value": "61,30 €",
               "tone": "accent"
-            },
-            {
-              "label": "Abzüge",
-              "value": "254,61 €",
-              "tone": ""
             }
           ],
-          "explanation": "Niedrigerer Wert aus 70 % Brutto und 90 % Netto, danach 12,3 % Abzüge."
+          "explanation": "Vom Brutto-Krankengeld werden hier 13 % für Rente, Arbeitslosigkeit und Pflege abgezogen."
         }
       }
     },
@@ -9538,9 +9727,9 @@
       "route": "/rechner/firmenwagenrechner/",
       "title": "Firmenwagen-Sachbezug – kostenlos online berechnen",
       "metadata": {
-        "description": "Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen.",
+        "description": "Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen.",
         "og:title": "Firmenwagen-Sachbezug",
-        "og:description": "Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen."
+        "og:description": "Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen."
       },
       "content": [
         "Firmenwagen-Sachbezug – kostenlos online berechnen",
@@ -9559,30 +9748,29 @@
         "Firmenwagen-Sachbezug",
         "Arbeit",
         "Firmenwagen-Sachbezug",
-        "Berechne pauschalen Fahrzeugvorteil und Arbeitsweg mit sichtbaren, frei änderbaren Prozentsätzen.",
+        "Wähle die Fahrzeugart und trage Listenpreis sowie Arbeitsweg ein. Die üblichen pauschalen Ansätze setzt der Rechner selbst ein.",
         "Sofort im Browser berechnet",
         "Keine Anmeldung, keine Speicherung und keine Übertragung.",
         "So berechnest du Firmenwagen-Sachbezug",
         "Folge diesen drei Schritten und trage anschließend deine Werte ein.",
         "1",
-        "Trage Bruttolistenpreis und den monatlichen Fahrzeugansatz ein.",
+        "Trage den Bruttolistenpreis ein und wähle die passende Fahrzeugart.",
         "2",
-        "Ergänze einfache Entfernung, Entfernungssatz und deinen geschätzten Grenzabgabensatz.",
+        "Ergänze die einfache Entfernung zur ersten Tätigkeitsstätte.",
         "3",
-        "Das Ergebnis zeigt geldwerten Vorteil und eine grobe monatliche Nettobelastung.",
+        "Das Ergebnis zeigt den geldwerten Vorteil für Fahrzeugnutzung und Arbeitsweg.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Listenpreis mal Fahrzeug-Prozentsatz ergibt den monatlichen Fahrzeugvorteil. Für den Arbeitsweg kommt Listenpreis mal Entfernung mal Entfernungssatz hinzu.",
-        "Sonderregeln für Elektrofahrzeuge, Fahrtenbuch, einzelne Fahrtage und steuerliche Details müssen im Einzelfall geprüft werden.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Je nach Fahrzeugart werden 1, 0,5 oder 0,25 Prozent des Listenpreises angesetzt. Für den Arbeitsweg kommen monatlich 0,03 Prozent je Entfernungskilometer hinzu.",
+        "Ob ein Elektro- oder Hybridfahrzeug die Voraussetzungen für einen ermäßigten Ansatz erfüllt, muss anhand von Fahrzeug, Anschaffungszeitpunkt und geltendem Recht geprüft werden.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Bruttolistenpreis",
@@ -9595,7 +9783,7 @@
         "Kann ich den tatsächlichen Kaufpreis eingeben?",
         "Für die pauschale Methode wird normalerweise der maßgebliche Bruttolistenpreis verwendet, nicht der Kaufpreis.",
         "Sind Elektroauto-Sonderregeln enthalten?",
-        "Nicht automatisch. Du kannst einen abweichenden Fahrzeugansatz eintragen, musst seine Anwendbarkeit aber selbst prüfen.",
+        "Die üblichen ermäßigten Ansätze sind auswählbar. Ob dein Fahrzeug die Voraussetzungen erfüllt, musst du anhand des konkreten Fahrzeugs prüfen.",
         "Passende Rechner für den nächsten Schritt",
         "Alle Rechner ansehen",
         "Urlaubsanspruch umrechnen",
@@ -9603,7 +9791,7 @@
         "Stundenlohn aus Monatsgehalt",
         "Stundenlohn, Jahresgehalt und Monatsstunden aus Gehalt und Wochenarbeitszeit berechnen.",
         "Arbeitgeberkostenrechner",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -9676,12 +9864,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -9702,7 +9884,7 @@
         {
           "element": "a",
           "labels": [
-            "Arbeitgeberkostenrechner Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+            "Arbeitgeberkostenrechner Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -9738,34 +9920,36 @@
             "type": "number",
             "unit": "€",
             "explanation": "Offizieller Bruttolistenpreis des Fahrzeugs bei Erstzulassung, nicht der tatsächliche Kaufpreis.",
+            "advanced": false,
             "options": []
           },
           {
-            "label": "Monatlicher Fahrzeugansatz",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Monatlicher Prozentsatz des Listenpreises für die private Nutzung.",
-            "options": []
+            "label": "Fahrzeugart",
+            "type": "select",
+            "unit": "",
+            "explanation": "Wähle den pauschalen Ansatz, dessen Voraussetzungen dein Fahrzeug tatsächlich erfüllt.",
+            "advanced": false,
+            "options": [
+              [
+                "1",
+                "Verbrenner oder regulärer Ansatz"
+              ],
+              [
+                "0.5",
+                "begünstigtes Elektro- oder Hybridfahrzeug"
+              ],
+              [
+                "0.25",
+                "begünstigtes Elektrofahrzeug mit Viertelansatz"
+              ]
+            ]
           },
           {
             "label": "Einfache Entfernung zur Arbeit",
             "type": "number",
             "unit": "km",
             "explanation": "Einfache Strecke zwischen Wohnung und erster Tätigkeitsstätte.",
-            "options": []
-          },
-          {
-            "label": "Ansatz je Entfernungskilometer",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Monatlicher Prozentsatz des Listenpreises je Entfernungskilometer.",
-            "options": []
-          },
-          {
-            "label": "Persönlicher Grenzabgabensatz",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Geschätzter Anteil aus Steuern und Abgaben, der auf einen zusätzlichen Euro Einkommen entfällt.",
+            "advanced": false,
             "options": []
           }
         ],
@@ -9774,7 +9958,7 @@
           "primaryValue": "720,00 €",
           "metrics": [
             {
-              "label": "Fahrzeug",
+              "label": "Private Fahrzeugnutzung",
               "value": "450,00 €",
               "tone": ""
             },
@@ -9784,12 +9968,12 @@
               "tone": ""
             },
             {
-              "label": "Grobe Nettobelastung",
-              "value": "252,00 €",
+              "label": "Pro Jahr",
+              "value": "8.640,00 €",
               "tone": "accent"
             }
           ],
-          "explanation": "Nettobelastung als Schätzung mit 35 % persönlichem Grenzabgabensatz."
+          "explanation": "1 % des Listenpreises plus 0,03 % je Entfernungskilometer."
         }
       }
     },
@@ -9797,9 +9981,9 @@
       "route": "/rechner/pendlerpauschale-rechner/",
       "title": "Pendlerpauschale berechnen – kostenlos online berechnen",
       "metadata": {
-        "description": "Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen.",
+        "description": "Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen.",
         "og:title": "Pendlerpauschale berechnen",
-        "og:description": "Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen."
+        "og:description": "Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen."
       },
       "content": [
         "Pendlerpauschale berechnen – kostenlos online berechnen",
@@ -9826,22 +10010,21 @@
         "1",
         "Trage die einfache Entfernung zur ersten Tätigkeitsstätte und deine Arbeitstage ein.",
         "2",
-        "Prüfe Schwelle und Kilometersätze und passe sie an den geltenden Stand an.",
+        "Der Rechner verwendet automatisch 38 Cent ab dem ersten Kilometer für 2026.",
         "3",
         "Der Rechner zeigt den jährlichen Werbungskostenbetrag, nicht die Steuererstattung.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Gezählt wird die einfache Entfernung. Bis zur eingetragenen Schwelle gilt Satz eins, darüber Satz zwei.",
+        "Gezählt wird die einfache Entfernung. Seit 1. Januar 2026 gelten 38 Cent ab dem ersten Entfernungskilometer.",
         "Der Rechner zeigt den abziehbaren Betrag, nicht die direkte Steuererstattung. Gesetzliche Höchstbeträge und Sonderfälle sind nicht vollständig abgebildet.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Entfernungspauschale",
@@ -9862,7 +10045,7 @@
         "Stundenlohn aus Monatsgehalt",
         "Stundenlohn, Jahresgehalt und Monatsstunden aus Gehalt und Wochenarbeitszeit berechnen.",
         "Arbeitgeberkostenrechner",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -9935,12 +10118,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -9961,7 +10138,7 @@
         {
           "element": "a",
           "labels": [
-            "Arbeitgeberkostenrechner Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+            "Arbeitgeberkostenrechner Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
           ]
         },
         {
@@ -9997,6 +10174,7 @@
             "type": "number",
             "unit": "km",
             "explanation": "Nur die einfache Strecke zwischen Wohnung und erster Tätigkeitsstätte, nicht Hin- und Rückweg.",
+            "advanced": false,
             "options": []
           },
           {
@@ -10004,51 +10182,31 @@
             "type": "number",
             "unit": "",
             "explanation": "Tage im Jahr, an denen du diese Strecke tatsächlich zur Arbeit zurücklegst.",
-            "options": []
-          },
-          {
-            "label": "Schwelle für höheren Satz",
-            "type": "number",
-            "unit": "km",
-            "explanation": "Entfernung, ab der für weitere Kilometer ein höherer Satz verwendet wird.",
-            "options": []
-          },
-          {
-            "label": "Satz bis zur Schwelle",
-            "type": "number",
-            "unit": "€/km",
-            "explanation": "Betrag je Entfernungskilometer bis zur eingetragenen Schwelle.",
-            "options": []
-          },
-          {
-            "label": "Satz oberhalb der Schwelle",
-            "type": "number",
-            "unit": "€/km",
-            "explanation": "Betrag je Entfernungskilometer oberhalb der Schwelle.",
+            "advanced": false,
             "options": []
           }
         ],
         "defaultResult": {
           "primaryLabel": "Entfernungspauschale pro Jahr",
-          "primaryValue": "2.574,00 €",
+          "primaryValue": "2.926,00 €",
           "metrics": [
             {
               "label": "Pro Arbeitstag",
-              "value": "11,70 €",
+              "value": "13,30 €",
               "tone": "accent"
             },
             {
-              "label": "Strecke mit Satz 1",
-              "value": "20 km",
+              "label": "Einfache Entfernung",
+              "value": "35 km",
               "tone": ""
             },
             {
-              "label": "Strecke mit Satz 2",
-              "value": "15 km",
+              "label": "Kilometersatz 2026",
+              "value": "0,38 €",
               "tone": ""
             }
           ],
-          "explanation": "220 Tage × (20 km × 0,30 € + 15 km × 0,38 €)."
+          "explanation": "220 Tage × 35 km × 0,38 €."
         }
       }
     },
@@ -10077,30 +10235,29 @@
         "GKV- und PKV-Kosten vergleichen",
         "Versicherung",
         "GKV- und PKV-Kosten vergleichen",
-        "Vergleiche einen selbst berechneten GKV-Anteil mit einem konkreten PKV-Angebot und dessen Arbeitgeberzuschuss.",
+        "Trage Einkommen und den Gesamtbeitrag eines konkreten PKV-Angebots ein. GKV-Anteil, Beitragsgrenze und möglicher Arbeitgeberzuschuss werden automatisch berechnet.",
         "Sofort im Browser berechnet",
         "Keine Anmeldung, keine Speicherung und keine Übertragung.",
         "So berechnest du GKV- und PKV-Kosten vergleichen",
         "Folge diesen drei Schritten und trage anschließend deine Werte ein.",
         "1",
-        "Trage dein beitragspflichtiges GKV-Einkommen und den verwendeten GKV-Gesamtbeitrag ein.",
+        "Trage dein Monatsbrutto und den Gesamtbeitrag eines konkreten PKV-Angebots ein.",
         "2",
-        "Übernimm ein konkretes PKV-Angebot, Arbeitgeberzuschuss und erwarteten jährlichen Selbstbehalt.",
+        "Wähle die berücksichtigte Kinderzahl; ergänze Selbstbehalt oder abweichenden Zusatzbeitrag nur bei Bedarf.",
         "3",
         "Vergleiche nur die eigenen Kosten. Leistungen und langfristige Beitragsentwicklung gehören in eine separate Entscheidung.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
-        "Der GKV-Anteil wird aus beitragspflichtigem Einkommen und hälftigem Gesamtbeitrag berechnet. Bei der PKV wird der eingetragene Arbeitgeberzuschuss abgezogen.",
+        "Der GKV-Anteil wird mit den Beitragswerten und der Beitragsgrenze für 2026 berechnet. Der PKV-Arbeitgeberzuschuss wird auf die Hälfte des Beitrags und den gesetzlichen Höchstzuschuss begrenzt.",
         "Das ist kein Tarifvergleich. Leistungen, Alterungsrückstellungen, Selbstbehalt, Familienversicherung und Beitragsentwicklung gehören in eine echte Versicherungsentscheidung.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Selbstbehalt",
@@ -10121,7 +10278,7 @@
         "GKV-Zusatzbeitrag vergleichen",
         "Monatliche und jährliche Mehrkosten zwischen zwei Zusatzbeitragssätzen berechnen.",
         "Pflegeversicherungsbeitrag",
-        "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
+        "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
         "A",
         "Andersen Web Tools",
         "von Andersen Webworks",
@@ -10194,12 +10351,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -10220,7 +10371,7 @@
         {
           "element": "a",
           "labels": [
-            "Pflegeversicherungsbeitrag Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen."
+            "Pflegeversicherungsbeitrag Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen."
           ]
         },
         {
@@ -10252,17 +10403,11 @@
         "category": "Versicherung",
         "fields": [
           {
-            "label": "Beitragspflichtiges GKV-Einkommen",
+            "label": "Monatsbrutto",
             "type": "number",
             "unit": "€",
-            "explanation": "Monatseinkommen, auf das der GKV-Beitrag in diesem Szenario berechnet wird.",
-            "options": []
-          },
-          {
-            "label": "GKV-Gesamtbeitrag",
-            "type": "number",
-            "unit": "%",
-            "explanation": "Gesamter Krankenversicherungsbeitrag einschließlich Zusatzbeitrag, ohne Pflegeversicherung.",
+            "explanation": "Monatsbrutto vor Abzügen. Für die GKV werden die Beitragsgrenzen 2026 automatisch angewendet.",
+            "advanced": false,
             "options": []
           },
           {
@@ -10270,13 +10415,65 @@
             "type": "number",
             "unit": "€",
             "explanation": "Monatlicher Gesamtbeitrag des konkreten privaten Angebots einschließlich Pflegepflichtversicherung.",
+            "advanced": false,
             "options": []
           },
           {
-            "label": "Arbeitgeberzuschuss PKV",
+            "label": "Kinder unter 25",
+            "type": "select",
+            "unit": "",
+            "explanation": "Kinder unter 25, die den eigenen Pflegeversicherungsbeitrag beeinflussen.",
+            "advanced": false,
+            "options": [
+              [
+                "0",
+                "Keine"
+              ],
+              [
+                "1",
+                "1 Kind"
+              ],
+              [
+                "2",
+                "2 Kinder"
+              ],
+              [
+                "3",
+                "3 Kinder"
+              ],
+              [
+                "4",
+                "4 Kinder"
+              ],
+              [
+                "5",
+                "5 oder mehr"
+              ]
+            ]
+          },
+          {
+            "label": "Kinderlosenzuschlag zur Pflegeversicherung",
+            "type": "select",
+            "unit": "",
+            "explanation": "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+            "advanced": true,
+            "options": [
+              [
+                "yes",
+                "Gilt für mich"
+              ],
+              [
+                "no",
+                "Gilt für mich nicht"
+              ]
+            ]
+          },
+          {
+            "label": "Zusatzbeitrag der Krankenkasse",
             "type": "number",
-            "unit": "€",
-            "explanation": "Monatlicher Zuschuss, den der Arbeitgeber zum PKV-Beitrag voraussichtlich übernimmt.",
+            "unit": "%",
+            "explanation": "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026.",
+            "advanced": true,
             "options": []
           },
           {
@@ -10284,30 +10481,31 @@
             "type": "number",
             "unit": "€",
             "explanation": "Betrag pro Jahr, den du voraussichtlich selbst für Leistungen tragen musst, bevor oder weil der Tarif nicht zahlt.",
+            "advanced": true,
             "options": []
           }
         ],
         "defaultResult": {
           "primaryLabel": "Monatlicher Unterschied",
-          "primaryValue": "81,25 €",
+          "primaryValue": "-76,75 €",
           "metrics": [
             {
               "label": "Eigener GKV-Anteil",
-              "value": "393,75 €",
+              "value": "501,75 €",
               "tone": ""
             },
             {
-              "label": "PKV plus Selbstbehalt",
-              "value": "475,00 €",
+              "label": "Eigene PKV-Kosten",
+              "value": "425,00 €",
               "tone": ""
             },
             {
-              "label": "Unterschied pro Jahr",
-              "value": "975,00 €",
+              "label": "Berechneter PKV-Zuschuss",
+              "value": "425,00 €",
               "tone": "accent"
             }
           ],
-          "explanation": "PKV-Szenario teurer: 81,25 € pro Monat."
+          "explanation": "PKV-Szenario günstiger: 76,75 € pro Monat, Leistungen nicht verglichen."
         }
       }
     },
@@ -10348,17 +10546,16 @@
         "3",
         "Der Rechner zeigt freien Betrag, Sparquote, Ausgabenquote und jährliches Sparpotenzial.",
         "Deine Angaben",
-        "Was du für die Rechnung brauchst",
+        "Werte eingeben",
         "Kostenlos und privat",
         "Ergebnis",
-        "Noch kein Ergebnis",
-        "Trage deine Werte ein und starte die Berechnung.",
+        "Eingabe unvollständig",
+        "Das Ergebnis erscheint, sobald die nötigen Werte eingetragen sind.",
         "Zurücksetzen",
         "Ergebnis kopieren",
-        "Berechnen",
         "So rechnet das Werkzeug",
         "Vom Nettoeinkommen werden Fixkosten, variable Ausgaben und bereits geplantes Sparen abgezogen. Die Sparquote bezieht den Sparbetrag auf das Nettoeinkommen.",
-        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen der Seite beginnt die Rechnung wieder leer.",
+        "Die Eingaben und Ergebnisse bleiben auf deinem Gerät. Beim Neuladen werden die Ausgangswerte wieder eingesetzt.",
         "Begriffe aus dieser Rechnung",
         "Diese Wörter werden in den Eingaben, im Rechenweg oder im Ergebnis verwendet.",
         "Fixkosten",
@@ -10452,12 +10649,6 @@
           ]
         },
         {
-          "element": "button",
-          "labels": [
-            "Berechnen"
-          ]
-        },
-        {
           "element": "a",
           "labels": [
             "Alle Rechner ansehen"
@@ -10514,6 +10705,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Alle Einnahmen, die dir in einem normalen Monat tatsächlich zur Verfügung stehen.",
+            "advanced": false,
             "options": []
           },
           {
@@ -10521,6 +10713,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Regelmäßige, weitgehend feste Zahlungen wie Miete, Versicherungen und Abos.",
+            "advanced": false,
             "options": []
           },
           {
@@ -10528,6 +10721,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Veränderliche Ausgaben wie Lebensmittel, Freizeit, Kleidung oder Tanken.",
+            "advanced": false,
             "options": []
           },
           {
@@ -10535,6 +10729,7 @@
             "type": "number",
             "unit": "€",
             "explanation": "Betrag, den du im Monat bewusst zurücklegen oder investieren möchtest.",
+            "advanced": false,
             "options": []
           }
         ],
@@ -10884,7 +11079,7 @@
         "PDF-Dateigröße für E-Mail, Bewerbung oder Upload reduzieren.",
         "Wähle die PDF von deinem Gerät aus.",
         "Entscheide zwischen erhaltener Dokumentstruktur und stärkerer Verkleinerung als Seitenbilder.",
-        "Prüfe Größe und Qualität und lade die neue PDF herunter.",
+        "Die verkleinerte PDF wird automatisch vorbereitet. Prüfe Größe und Qualität und lade sie herunter.",
         "Dokumentstruktur",
         "Auswählbarer Text, Links, Formulare und andere technische Bestandteile einer PDF.",
         "Auflösung",
@@ -10907,7 +11102,7 @@
         "Bilder verkleinern, umwandeln und eingebettete Metadaten entfernen.",
         "Wähle ein oder mehrere Bilder aus.",
         "Lege Dateiformat, Qualität und bei Bedarf eine maximale Bildgröße fest.",
-        "Vergleiche Original und Ergebnis und lade einzelne Bilder oder alle als ZIP herunter.",
+        "Die Ergebnisse erscheinen automatisch. Vergleiche sie mit den Originalen und lade einzelne Bilder oder alle als ZIP herunter.",
         "Pixelmaß",
         "Breite und Höhe eines Bildes in Bildpunkten, zum Beispiel 2.000 × 1.500 Pixel.",
         "Bildqualität",
@@ -10930,7 +11125,7 @@
         "iPhone-Fotos in weit verbreitete JPG-Dateien umwandeln.",
         "Wähle deine HEIC- oder HEIF-Fotos aus.",
         "Stelle JPG-Qualität und bei Bedarf eine maximale Breite ein.",
-        "Lade ein einzelnes JPG oder mehrere Ergebnisse gemeinsam als ZIP herunter.",
+        "Die JPG-Dateien werden automatisch vorbereitet. Lade ein einzelnes Ergebnis oder mehrere gemeinsam als ZIP herunter.",
         "HEIC",
         "Platzsparendes Bildformat, das vor allem von iPhones verwendet wird, aber nicht von jedem Programm geöffnet werden kann.",
         "JPG",
@@ -10953,7 +11148,7 @@
         "Mehrere PDF-Dateien in einer frei gewählten Reihenfolge verbinden.",
         "Wähle alle PDF-Dateien aus, die in das neue Dokument gehören.",
         "Bringe die Dateien per Ziehen in die richtige Reihenfolge.",
-        "Vergib einen Dateinamen, verbinde die PDFs und lade das Ergebnis herunter.",
+        "Die verbundene PDF wird automatisch neu erstellt, sobald Auswahl oder Reihenfolge stimmen. Lade sie anschließend herunter.",
         "Dateireihenfolge",
         "Reihenfolge der vollständigen Quelldateien im neuen PDF-Dokument.",
         "Geschützte PDF",
@@ -10976,7 +11171,7 @@
         "Bilder zu einer PDF verbinden oder PDF-Seiten als JPG speichern.",
         "Wähle oben die gewünschte Richtung: Bilder zu PDF oder PDF zu JPG.",
         "Lade die Ausgangsdateien und stelle Seitengröße, Rand oder Bildauflösung ein.",
-        "Starte die Umwandlung und lade die fertige PDF oder die JPG-Seiten herunter.",
+        "Die Umwandlung beginnt automatisch. Lade die fertige PDF oder die JPG-Seiten herunter.",
         "Seitengröße",
         "Papierformat der neuen PDF-Seite, zum Beispiel A4.",
         "Rand",
@@ -10999,7 +11194,7 @@
         "Eine gezeichnete oder hochgeladene Unterschrift sichtbar in eine PDF einsetzen.",
         "Wähle die PDF und öffne die Seite, auf der unterschrieben werden soll.",
         "Zeichne deine Unterschrift oder lade ein Bild davon hoch.",
-        "Setze Position und Größe fest und lade die neu erzeugte PDF herunter.",
+        "Setze Position und Größe fest. Die neue PDF wird automatisch vorbereitet und kann danach heruntergeladen werden.",
         "Sichtbare Unterschrift",
         "Bild der Unterschrift, das auf einer PDF-Seite platziert wird.",
         "Digitale Signatur",
@@ -11045,7 +11240,7 @@
         "Nettoarbeitszeit, Pause, Dezimalstunden, Sollsaldo oder Feierabend berechnen.",
         "Wähle Arbeitsdauer oder Feierabend als gewünschte Rechnung.",
         "Trage Beginn, Ende beziehungsweise gewünschte Arbeitszeit und Pause ein.",
-        "Lies Uhrzeit, Nettozeit, Dezimalstunden und bei Bedarf den Sollsaldo ab.",
+        "Uhrzeit, Nettozeit, Dezimalstunden und Sollsaldo ändern sich sofort mit deinen Eingaben.",
         "Nettoarbeitszeit",
         "Anwesenheitszeit nach Abzug der Pause.",
         "Dezimalstunden",
@@ -11066,9 +11261,9 @@
         "IBAN prüfen und SEPA-QR erstellen",
         "Geschäft",
         "IBAN-Format kontrollieren und Überweisungsdaten als Banking-QR-Code ausgeben.",
-        "Trage die IBAN ein und prüfe zuerst Format und Prüfziffer.",
+        "Trage die IBAN ein; Format und Prüfziffer werden während der Eingabe geprüft.",
         "Ergänze Empfänger, Betrag und bei Bedarf BIC sowie Verwendungszweck.",
-        "Erzeuge den SEPA-QR-Code und kontrolliere alle Daten erneut in deiner Banking-App.",
+        "Der SEPA-QR-Code erscheint, sobald die nötigen Angaben vollständig sind. Kontrolliere die Daten erneut in deiner Banking-App.",
         "IBAN-Prüfziffer",
         "Zwei Ziffern, mit denen viele Tippfehler in einer IBAN mathematisch erkannt werden können.",
         "BIC",
@@ -11091,7 +11286,7 @@
         "Dauerhafte QR-Codes für Links, Text, WLAN oder Kontaktdaten erzeugen.",
         "Wähle Link, Text, WLAN oder Kontakt als Inhaltstyp.",
         "Trage die Informationen ein und stelle Größe, Farben und Fehlerkorrektur ein.",
-        "Prüfe den Code mit einem Handy und lade ihn als PNG oder SVG herunter.",
+        "Der Code aktualisiert sich mit jeder Eingabe. Prüfe ihn mit einem Handy und lade ihn als PNG oder SVG herunter.",
         "Fehlerkorrektur",
         "Zusätzliche Daten im QR-Code, durch die er trotz kleiner Beschädigungen noch lesbar sein kann.",
         "PNG",
@@ -11137,7 +11332,7 @@
         "Seitentitel, Beschreibung, Canonical und Social-Media-Vorschau erstellen.",
         "Trage Seitenadresse, Seitentitel und eine konkrete Beschreibung der Seite ein.",
         "Prüfe Suchergebnis und Social-Vorschau und ergänze bei Bedarf Website-Name und Bildadresse.",
-        "Kopiere den erzeugten HTML-Block in den Kopfbereich oder die SEO-Einstellungen der Zielseite.",
+        "Der HTML-Block wird während der Eingabe aktualisiert. Kopiere ihn in den Kopfbereich oder die SEO-Einstellungen der Zielseite.",
         "Meta-Description",
         "Kurze Seitenbeschreibung, die Suchmaschinen als Text im Suchergebnis verwenden können.",
         "Canonical",
@@ -11549,15 +11744,15 @@
       "route": "/werkzeuge.json#arbeitgeberkostenrechner",
       "title": "Arbeitgeberkostenrechner",
       "metadata": {
-        "description": "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen."
+        "description": "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen."
       },
       "content": [
         "Arbeitgeberkostenrechner",
         "Arbeit",
-        "Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "Trage das monatliche Bruttogehalt ein.",
-        "Übernimm die für dich passenden Arbeitgeberanteile, Umlagen und festen Zusatzkosten.",
-        "Das Ergebnis schätzt die gesamten Monats- und Jahreskosten.",
+        "Öffne die weiteren Einstellungen nur, wenn betriebliche Umlagen oder feste Zusatzkosten abweichen.",
+        "Das Ergebnis zeigt Brutto, Sozialversicherung und gesamte Monats- und Jahreskosten.",
         "Lohnnebenkosten",
         "Zusätzliche Arbeitgeberkosten neben dem Bruttogehalt.",
         "Arbeitgeberanteil",
@@ -11566,12 +11761,12 @@
         "Arbeitgeberbeiträge zu Ausgleichsverfahren, zum Beispiel bei Krankheit oder Mutterschaft.",
         "Monatsbrutto",
         "Bruttogehalt des Beschäftigten vor persönlichen Abzügen.",
-        "Arbeitgeberanteile Sozialversicherung",
-        "Zusammengefasster prozentualer Arbeitgeberanteil an den Sozialversicherungen.",
-        "Umlagen und Unfallversicherung",
+        "Betriebliche Umlagen und Unfallversicherung",
         "Weitere prozentuale Arbeitgeberkosten wie Umlagen und Unfallversicherung.",
         "Weitere feste Monatskosten",
-        "Feste monatliche Zusatzkosten, etwa Zuschüsse, Ausstattung oder pauschal angesetzte Verwaltungskosten."
+        "Feste monatliche Zusatzkosten, etwa Zuschüsse, Ausstattung oder pauschal angesetzte Verwaltungskosten.",
+        "Zusatzbeitrag der Krankenkasse",
+        "Zusatzbeitrag der Krankenkasse. Der Arbeitgeber trägt bei Beschäftigten grundsätzlich die Hälfte."
       ],
       "controls": [],
       "interactionState": null
@@ -11586,8 +11781,8 @@
         "Minijob-Arbeitszeitrechner",
         "Arbeit",
         "Mögliche Monatsstunden, Wochenstunden und Rentenbeitrag bei einem Minijob berechnen.",
-        "Trage die aktuell für dich geltende monatliche Verdienstgrenze ein.",
-        "Ergänze deinen Stundenlohn und bei Bedarf den eigenen Rentenbeitrag.",
+        "Trage deinen vereinbarten Stundenlohn ein.",
+        "Ändere Verdienstgrenze oder Rentenbeitrag nur, wenn sie in deinem Fall vom eingesetzten Wert abweichen.",
         "Du erhältst die rechnerisch möglichen Monats- und Wochenstunden sowie den Rentenabzug.",
         "Verdienstgrenze",
         "Höchster regelmäßiger Monatsverdienst für die betrachtete Minijob-Grenze.",
@@ -11595,10 +11790,10 @@
         "Bruttoverdienst für eine Arbeitsstunde.",
         "Rentenbeitrag",
         "Eigener Beitrag zur gesetzlichen Rentenversicherung.",
-        "Monatliche Verdienstgrenze",
-        "Maximaler regelmäßiger Monatsverdienst, bis zu dem deine Beschäftigung als Minijob behandelt werden soll.",
         "Stundenlohn",
         "Vereinbarter Bruttoverdienst für eine Arbeitsstunde.",
+        "Monatliche Verdienstgrenze",
+        "Maximaler regelmäßiger Monatsverdienst, bis zu dem deine Beschäftigung als Minijob behandelt werden soll.",
         "Eigener Rentenbeitrag",
         "Prozentualer Eigenanteil zur Rentenversicherung, sofern er bei dir anfällt."
       ],
@@ -11609,15 +11804,15 @@
       "route": "/werkzeuge.json#brutto-netto-schaetzer",
       "title": "Brutto-Netto-Schätzer",
       "metadata": {
-        "description": "Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen."
+        "description": "Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen."
       },
       "content": [
         "Brutto-Netto-Schätzer",
         "Arbeit",
-        "Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen.",
-        "Trage dein Monatsbrutto und das beitragspflichtige Brutto ein.",
-        "Übernimm bekannte Steuerbeträge, Sozialabgaben und weitere Abzüge aus einer Abrechnung oder Schätzung.",
-        "Der Rechner zieht alle Angaben sichtbar ab und zeigt das geschätzte Netto.",
+        "Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen.",
+        "Trage dein Monatsbrutto ein und wähle Steuerklasse sowie Kinderzahl.",
+        "Ergänze Kirchensteuer oder einen abweichenden Krankenkassen-Zusatzbeitrag nur bei Bedarf.",
+        "Der Rechner setzt Tarif und Beitragsgrenzen für 2026 ein und zeigt Steuern, Sozialabgaben und Netto.",
         "Beitragspflichtiges Brutto",
         "Einkommen, auf das Sozialversicherungsbeiträge berechnet werden.",
         "Lohnsteuer",
@@ -11626,14 +11821,16 @@
         "Betrag nach den eingetragenen Steuern, Sozialabgaben und weiteren Abzügen.",
         "Monatsbrutto",
         "Gesamtes Monatsgehalt vor allen Abzügen.",
-        "Beitragspflichtiges Brutto",
-        "Teil des Bruttogehalts, auf den Sozialabgaben berechnet werden. Er kann durch Beitragsgrenzen niedriger sein.",
-        "Lohnsteuer pro Monat",
-        "Monatliche Lohnsteuer als Eurobetrag, nicht als Prozentsatz.",
-        "Kirchensteuer pro Monat",
-        "Monatliche Kirchensteuer als Eurobetrag. Wenn keine anfällt, trage 0 ein.",
-        "Eigene Sozialabgaben gesamt",
-        "Eigener Gesamtanteil für Kranken-, Pflege-, Renten- und Arbeitslosenversicherung in Prozent.",
+        "Steuerklasse",
+        "Steuerklasse auf deiner Lohnabrechnung. Diese Näherung unterstützt I, III und IV.",
+        "Kinder unter 25",
+        "Kinder unter 25, die beim Pflegeversicherungsbeitrag berücksichtigt werden.",
+        "Kirchensteuer",
+        "Kirchensteuersatz deines Bundeslands. Wenn du keine Kirchensteuer zahlst, bleibt die Auswahl auf Keine.",
+        "Kinderlosenzuschlag zur Pflegeversicherung",
+        "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+        "Zusatzbeitrag der Krankenkasse",
+        "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026.",
         "Weitere Abzüge",
         "Weitere monatliche Abzüge, zum Beispiel ein eigener Zusatzbeitrag oder eine Pfändung."
       ],
@@ -11650,8 +11847,8 @@
         "GKV-Beitragsrechner",
         "Versicherung",
         "Krankenversicherungsbeitrag aus beitragspflichtigem Einkommen und Zusatzbeitrag berechnen.",
-        "Trage dein bereits begrenztes beitragspflichtiges Monatseinkommen ein.",
-        "Übernimm allgemeinen Beitragssatz und Zusatzbeitrag aus den aktuellen Angaben deiner Krankenkasse.",
+        "Trage dein vollständiges Monatsbrutto ein.",
+        "Ändere den voreingestellten Zusatzbeitrag nur, wenn du den Satz deiner Krankenkasse kennst.",
         "Der Rechner zeigt Gesamtbeitrag sowie den rechnerisch hälftigen Anteil beider Seiten.",
         "Beitragspflichtiges Einkommen",
         "Einkommen, das für die Beitragsberechnung berücksichtigt wird.",
@@ -11659,12 +11856,10 @@
         "Von der Krankenkasse festgelegter Beitrag zusätzlich zum allgemeinen Satz.",
         "Beitragsbemessungsgrenze",
         "Obergrenze des Einkommens, bis zu der Beiträge berechnet werden.",
-        "Beitragspflichtiges Monatseinkommen",
-        "Monatseinkommen, auf das Beiträge berechnet werden. Einkommen oberhalb der Beitragsbemessungsgrenze muss vorher begrenzt werden.",
-        "Allgemeiner Beitragssatz",
-        "Allgemeiner Beitragssatz der gesetzlichen Krankenversicherung ohne Zusatzbeitrag.",
-        "Zusatzbeitrag",
-        "Kassenindividueller Zusatzbeitrag deiner Krankenkasse."
+        "Monatsbrutto",
+        "Monatsbrutto vor Abzügen. Der Rechner begrenzt es automatisch auf die Beitragsbemessungsgrenze 2026.",
+        "Zusatzbeitrag der Krankenkasse",
+        "Kassenindividueller Zusatzbeitrag. Voreingestellt ist der Durchschnitt für 2026."
       ],
       "controls": [],
       "interactionState": null
@@ -11688,8 +11883,8 @@
         "Teil des Beitragsunterschieds, der bei dir selbst ankommt.",
         "Beitragspflichtiges Einkommen",
         "Einkommen innerhalb der geltenden Beitragsgrenzen.",
-        "Beitragspflichtiges Monatseinkommen",
-        "Einkommen, auf das der Zusatzbeitrag tatsächlich berechnet wird.",
+        "Monatsbrutto",
+        "Monatsbrutto vor Abzügen. Der Rechner berücksichtigt automatisch die Beitragsbemessungsgrenze 2026.",
         "Bisheriger Zusatzbeitrag",
         "Bisheriger Zusatzbeitrag deiner Krankenkasse in Prozent.",
         "Neuer Zusatzbeitrag",
@@ -11704,29 +11899,29 @@
       "route": "/werkzeuge.json#pflegeversicherung-rechner",
       "title": "Pflegeversicherungsbeitrag",
       "metadata": {
-        "description": "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen."
+        "description": "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen."
       },
       "content": [
         "Pflegeversicherungsbeitrag",
         "Versicherung",
-        "Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
-        "Trage das beitragspflichtige Monatseinkommen ein.",
-        "Übernimm Gesamt-Grundbeitrag, Arbeitgeberanteil und deinen persönlichen Zuschlag.",
-        "Der Rechner trennt Gesamtbeitrag, Arbeitgeberanteil und deinen eigenen Anteil.",
+        "Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
+        "Trage dein Monatsbrutto ein und wähle die Zahl der berücksichtigten Kinder unter 25.",
+        "Wähle Sachsen nur, wenn dort dein Beschäftigungsort liegt.",
+        "Der Rechner setzt Beitragsgrenze, Kinderlosenzuschlag und Kinderabschläge für 2026 ein.",
         "Grundbeitrag",
         "Allgemeiner Beitrag zur Pflegeversicherung vor persönlichen Zu- oder Abschlägen.",
         "Persönlicher Zuschlag",
         "Zusätzlicher Beitragsanteil, der nur bei bestimmten persönlichen Voraussetzungen anfällt.",
         "Arbeitgeberanteil",
         "Teil des Beitrags, den der Arbeitgeber trägt.",
-        "Beitragspflichtiges Monatseinkommen",
-        "Monatseinkommen innerhalb der geltenden Beitragsbemessungsgrenze.",
-        "Gesamt-Grundbeitrag",
-        "Gesamter Grundbeitrag zur Pflegeversicherung vor einem persönlichen Zuschlag.",
-        "Arbeitgeberanteil",
-        "Prozentsatz, den der Arbeitgeber in deinem Fall übernimmt.",
-        "Persönlicher Zuschlag",
-        "Zusätzlicher Beitrag, der persönlich bei dir anfällt, zum Beispiel ein Zuschlag für Kinderlose."
+        "Monatsbrutto",
+        "Monatsbrutto vor Abzügen. Der Rechner begrenzt es automatisch auf die Beitragsbemessungsgrenze 2026.",
+        "Kinder unter 25",
+        "Berücksichtigte Kinder unter 25. Ab dem zweiten Kind sinkt der eigene Beitrag schrittweise.",
+        "Kinderlosenzuschlag",
+        "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+        "Arbeitsort Sachsen",
+        "In Sachsen ist der Arbeitgeberanteil niedriger und der eigene Anteil entsprechend höher."
       ],
       "controls": [],
       "interactionState": null
@@ -11735,15 +11930,15 @@
       "route": "/werkzeuge.json#krankengeldrechner",
       "title": "Krankengeld-Schätzung",
       "metadata": {
-        "description": "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen."
+        "description": "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen."
       },
       "content": [
         "Krankengeld-Schätzung",
         "Versicherung",
-        "Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen.",
-        "Trage dein regelmäßiges Monatsbrutto und Monatsnetto ein.",
-        "Ergänze den geschätzten Prozentsatz der Abzüge, die vom Krankengeld einbehalten werden.",
-        "Der Rechner vergleicht 70 Prozent vom Brutto mit 90 Prozent vom Netto und verwendet den niedrigeren Wert.",
+        "Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen.",
+        "Trage dein regelmäßiges Monatsbrutto ein und wähle Steuerklasse sowie Kinderzahl.",
+        "Ergänze Kirchensteuer oder einen abweichenden Zusatzbeitrag nur bei Bedarf.",
+        "Der Rechner schätzt zuerst dein Netto und daraus Krankengeld sowie verbleibenden Zahlbetrag.",
         "Brutto-Krankengeld",
         "Ausgangsbetrag vor den noch abzuführenden Sozialversicherungsbeiträgen.",
         "Zahlbetrag",
@@ -11752,10 +11947,16 @@
         "Üblicher monatlicher Auszahlungsbetrag vor Beginn der Arbeitsunfähigkeit.",
         "Regelmäßiges Monatsbrutto",
         "Regelmäßiges Bruttoarbeitsentgelt pro Monat vor allen Abzügen.",
-        "Regelmäßiges Monatsnetto",
-        "Regelmäßiger Auszahlungsbetrag pro Monat nach den üblichen Abzügen.",
-        "Abzüge vom Krankengeld",
-        "Geschätzter Gesamtanteil der Sozialversicherungsbeiträge, die vom Brutto-Krankengeld abgehen."
+        "Steuerklasse",
+        "Steuerklasse auf deiner Lohnabrechnung. Diese Näherung unterstützt I, III und IV.",
+        "Kinder unter 25",
+        "Kinder unter 25, die beim Pflegeversicherungsbeitrag berücksichtigt werden.",
+        "Kirchensteuer",
+        "Kirchensteuersatz deines Bundeslands oder Keine.",
+        "Kinderlosenzuschlag zur Pflegeversicherung",
+        "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+        "Zusatzbeitrag der Krankenkasse",
+        "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026."
       ],
       "controls": [],
       "interactionState": null
@@ -11764,15 +11965,15 @@
       "route": "/werkzeuge.json#firmenwagenrechner",
       "title": "Firmenwagen-Sachbezug",
       "metadata": {
-        "description": "Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen."
+        "description": "Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen."
       },
       "content": [
         "Firmenwagen-Sachbezug",
         "Arbeit",
-        "Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen.",
-        "Trage Bruttolistenpreis und den monatlichen Fahrzeugansatz ein.",
-        "Ergänze einfache Entfernung, Entfernungssatz und deinen geschätzten Grenzabgabensatz.",
-        "Das Ergebnis zeigt geldwerten Vorteil und eine grobe monatliche Nettobelastung.",
+        "Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen.",
+        "Trage den Bruttolistenpreis ein und wähle die passende Fahrzeugart.",
+        "Ergänze die einfache Entfernung zur ersten Tätigkeitsstätte.",
+        "Das Ergebnis zeigt den geldwerten Vorteil für Fahrzeugnutzung und Arbeitsweg.",
         "Bruttolistenpreis",
         "Unverbindlicher Listenpreis des Neuwagens einschließlich Umsatzsteuer und Sonderausstattung.",
         "Geldwerter Vorteil",
@@ -11781,14 +11982,10 @@
         "Geschätzter Anteil von Steuern und Abgaben auf zusätzliches Einkommen.",
         "Bruttolistenpreis",
         "Offizieller Bruttolistenpreis des Fahrzeugs bei Erstzulassung, nicht der tatsächliche Kaufpreis.",
-        "Monatlicher Fahrzeugansatz",
-        "Monatlicher Prozentsatz des Listenpreises für die private Nutzung.",
+        "Fahrzeugart",
+        "Wähle den pauschalen Ansatz, dessen Voraussetzungen dein Fahrzeug tatsächlich erfüllt.",
         "Einfache Entfernung zur Arbeit",
-        "Einfache Strecke zwischen Wohnung und erster Tätigkeitsstätte.",
-        "Ansatz je Entfernungskilometer",
-        "Monatlicher Prozentsatz des Listenpreises je Entfernungskilometer.",
-        "Persönlicher Grenzabgabensatz",
-        "Geschätzter Anteil aus Steuern und Abgaben, der auf einen zusätzlichen Euro Einkommen entfällt."
+        "Einfache Strecke zwischen Wohnung und erster Tätigkeitsstätte."
       ],
       "controls": [],
       "interactionState": null
@@ -11797,14 +11994,14 @@
       "route": "/werkzeuge.json#pendlerpauschale-rechner",
       "title": "Pendlerpauschale berechnen",
       "metadata": {
-        "description": "Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen."
+        "description": "Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen."
       },
       "content": [
         "Pendlerpauschale berechnen",
         "Arbeit",
-        "Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen.",
+        "Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen.",
         "Trage die einfache Entfernung zur ersten Tätigkeitsstätte und deine Arbeitstage ein.",
-        "Prüfe Schwelle und Kilometersätze und passe sie an den geltenden Stand an.",
+        "Der Rechner verwendet automatisch 38 Cent ab dem ersten Kilometer für 2026.",
         "Der Rechner zeigt den jährlichen Werbungskostenbetrag, nicht die Steuererstattung.",
         "Entfernungspauschale",
         "Steuerlich ansetzbarer Betrag für Wege zur ersten Tätigkeitsstätte.",
@@ -11815,13 +12012,7 @@
         "Einfache Entfernung",
         "Nur die einfache Strecke zwischen Wohnung und erster Tätigkeitsstätte, nicht Hin- und Rückweg.",
         "Arbeitstage im Jahr",
-        "Tage im Jahr, an denen du diese Strecke tatsächlich zur Arbeit zurücklegst.",
-        "Schwelle für höheren Satz",
-        "Entfernung, ab der für weitere Kilometer ein höherer Satz verwendet wird.",
-        "Satz bis zur Schwelle",
-        "Betrag je Entfernungskilometer bis zur eingetragenen Schwelle.",
-        "Satz oberhalb der Schwelle",
-        "Betrag je Entfernungskilometer oberhalb der Schwelle."
+        "Tage im Jahr, an denen du diese Strecke tatsächlich zur Arbeit zurücklegst."
       ],
       "controls": [],
       "interactionState": null
@@ -11836,8 +12027,8 @@
         "GKV- und PKV-Kosten vergleichen",
         "Versicherung",
         "Eigene monatliche Kosten einer gesetzlichen und privaten Krankenversicherung als Szenario vergleichen.",
-        "Trage dein beitragspflichtiges GKV-Einkommen und den verwendeten GKV-Gesamtbeitrag ein.",
-        "Übernimm ein konkretes PKV-Angebot, Arbeitgeberzuschuss und erwarteten jährlichen Selbstbehalt.",
+        "Trage dein Monatsbrutto und den Gesamtbeitrag eines konkreten PKV-Angebots ein.",
+        "Wähle die berücksichtigte Kinderzahl; ergänze Selbstbehalt oder abweichenden Zusatzbeitrag nur bei Bedarf.",
         "Vergleiche nur die eigenen Kosten. Leistungen und langfristige Beitragsentwicklung gehören in eine separate Entscheidung.",
         "Selbstbehalt",
         "Gesundheitskosten, die du pro Jahr zunächst oder vollständig selbst trägst.",
@@ -11845,14 +12036,16 @@
         "Anteil, den der Arbeitgeber zum privaten Krankenversicherungsbeitrag beisteuert.",
         "Szenariovergleich",
         "Rechnerischer Kostenvergleich mit deinen Eingaben, kein Tarif- oder Leistungsvergleich.",
-        "Beitragspflichtiges GKV-Einkommen",
-        "Monatseinkommen, auf das der GKV-Beitrag in diesem Szenario berechnet wird.",
-        "GKV-Gesamtbeitrag",
-        "Gesamter Krankenversicherungsbeitrag einschließlich Zusatzbeitrag, ohne Pflegeversicherung.",
+        "Monatsbrutto",
+        "Monatsbrutto vor Abzügen. Für die GKV werden die Beitragsgrenzen 2026 automatisch angewendet.",
         "PKV-Beitrag einschließlich Pflege",
         "Monatlicher Gesamtbeitrag des konkreten privaten Angebots einschließlich Pflegepflichtversicherung.",
-        "Arbeitgeberzuschuss PKV",
-        "Monatlicher Zuschuss, den der Arbeitgeber zum PKV-Beitrag voraussichtlich übernimmt.",
+        "Kinder unter 25",
+        "Kinder unter 25, die den eigenen Pflegeversicherungsbeitrag beeinflussen.",
+        "Kinderlosenzuschlag zur Pflegeversicherung",
+        "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+        "Zusatzbeitrag der Krankenkasse",
+        "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026.",
         "Erwarteter Selbstbehalt pro Jahr",
         "Betrag pro Jahr, den du voraussichtlich selbst für Leistungen tragen musst, bevor oder weil der Tarif nicht zahlt."
       ],
@@ -11929,15 +12122,15 @@
         "- [Skonto- und Zahlungszielrechner](https://andersenwebworks.github.io/andersen-web-tools/rechner/skontorechner/): Skontobetrag, Zahlbetrag sowie Skonto- und Fälligkeitsdatum berechnen.",
         "- [Stückpreisvergleich](https://andersenwebworks.github.io/andersen-web-tools/rechner/stueckpreisvergleich/): Zwei Packungsgrößen über ihren Preis pro Einheit direkt vergleichen.",
         "- [Stundenlohn aus Monatsgehalt](https://andersenwebworks.github.io/andersen-web-tools/rechner/stundenlohnrechner/): Stundenlohn, Jahresgehalt und Monatsstunden aus Gehalt und Wochenarbeitszeit berechnen.",
-        "- [Arbeitgeberkostenrechner](https://andersenwebworks.github.io/andersen-web-tools/rechner/arbeitgeberkostenrechner/): Gesamte Arbeitgeberkosten aus Bruttogehalt, Lohnnebenkosten und festen Monatskosten schätzen.",
+        "- [Arbeitgeberkostenrechner](https://andersenwebworks.github.io/andersen-web-tools/rechner/arbeitgeberkostenrechner/): Arbeitgeberkosten aus Bruttogehalt und den Sozialversicherungswerten für 2026 schätzen.",
         "- [Minijob-Arbeitszeitrechner](https://andersenwebworks.github.io/andersen-web-tools/rechner/minijob-rechner/): Mögliche Monatsstunden, Wochenstunden und Rentenbeitrag bei einem Minijob berechnen.",
-        "- [Brutto-Netto-Schätzer](https://andersenwebworks.github.io/andersen-web-tools/rechner/brutto-netto-schaetzer/): Netto aus Brutto mit sichtbaren Steuerbeträgen und frei änderbaren Sozialabgaben überschlagen.",
+        "- [Brutto-Netto-Schätzer](https://andersenwebworks.github.io/andersen-web-tools/rechner/brutto-netto-schaetzer/): Monatsnetto aus Brutto, Steuerklasse und den Sozialversicherungswerten für 2026 schätzen.",
         "- [GKV-Beitragsrechner](https://andersenwebworks.github.io/andersen-web-tools/rechner/gkv-beitragsrechner/): Krankenversicherungsbeitrag aus beitragspflichtigem Einkommen und Zusatzbeitrag berechnen.",
         "- [GKV-Zusatzbeitrag vergleichen](https://andersenwebworks.github.io/andersen-web-tools/rechner/zusatzbeitrag-vergleich/): Monatliche und jährliche Mehrkosten zwischen zwei Zusatzbeitragssätzen berechnen.",
-        "- [Pflegeversicherungsbeitrag](https://andersenwebworks.github.io/andersen-web-tools/rechner/pflegeversicherung-rechner/): Gesamtbeitrag und eigenen Anteil zur Pflegeversicherung mit frei wählbaren Sätzen berechnen.",
-        "- [Krankengeld-Schätzung](https://andersenwebworks.github.io/andersen-web-tools/rechner/krankengeldrechner/): Krankengeld aus regelmäßigem Brutto und Netto sowie frei änderbaren Abzügen überschlagen.",
-        "- [Firmenwagen-Sachbezug](https://andersenwebworks.github.io/andersen-web-tools/rechner/firmenwagenrechner/): Monatlichen geldwerten Vorteil und grobe Nettobelastung eines Firmenwagens berechnen.",
-        "- [Pendlerpauschale berechnen](https://andersenwebworks.github.io/andersen-web-tools/rechner/pendlerpauschale-rechner/): Entfernungspauschale aus Arbeitstagen, einfacher Strecke und frei änderbaren Kilometersätzen berechnen.",
+        "- [Pflegeversicherungsbeitrag](https://andersenwebworks.github.io/andersen-web-tools/rechner/pflegeversicherung-rechner/): Eigenen Pflegeversicherungsbeitrag aus Monatsbrutto, Kinderzahl und den Werten für 2026 berechnen.",
+        "- [Krankengeld-Schätzung](https://andersenwebworks.github.io/andersen-web-tools/rechner/krankengeldrechner/): Krankengeld aus Monatsbrutto und wenigen persönlichen Angaben für 2026 schätzen.",
+        "- [Firmenwagen-Sachbezug](https://andersenwebworks.github.io/andersen-web-tools/rechner/firmenwagenrechner/): Monatlichen geldwerten Vorteil eines Firmenwagens nach Fahrzeugart und Arbeitsweg berechnen.",
+        "- [Pendlerpauschale berechnen](https://andersenwebworks.github.io/andersen-web-tools/rechner/pendlerpauschale-rechner/): Entfernungspauschale 2026 aus Arbeitstagen und einfacher Strecke berechnen.",
         "- [GKV- und PKV-Kosten vergleichen](https://andersenwebworks.github.io/andersen-web-tools/rechner/gkv-pkv-vergleich/): Eigene monatliche Kosten einer gesetzlichen und privaten Krankenversicherung als Szenario vergleichen.",
         "- [Monatsbudget und Sparquote](https://andersenwebworks.github.io/andersen-web-tools/rechner/monatsbudget-rechner/): Freien Monatsbetrag, Sparquote und jährliches Sparpotenzial aus Einnahmen und Ausgaben berechnen."
       ],

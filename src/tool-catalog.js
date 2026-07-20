@@ -7,7 +7,7 @@ export const browserTools = [
     steps: [
       "Wähle die PDF von deinem Gerät aus.",
       "Entscheide zwischen erhaltener Dokumentstruktur und stärkerer Verkleinerung als Seitenbilder.",
-      "Prüfe Größe und Qualität und lade die neue PDF herunter."
+      "Die verkleinerte PDF wird automatisch vorbereitet. Prüfe Größe und Qualität und lade sie herunter."
     ],
     terms: [
       ["Dokumentstruktur", "Auswählbarer Text, Links, Formulare und andere technische Bestandteile einer PDF."],
@@ -23,7 +23,7 @@ export const browserTools = [
     steps: [
       "Wähle ein oder mehrere Bilder aus.",
       "Lege Dateiformat, Qualität und bei Bedarf eine maximale Bildgröße fest.",
-      "Vergleiche Original und Ergebnis und lade einzelne Bilder oder alle als ZIP herunter."
+      "Die Ergebnisse erscheinen automatisch. Vergleiche sie mit den Originalen und lade einzelne Bilder oder alle als ZIP herunter."
     ],
     terms: [
       ["Pixelmaß", "Breite und Höhe eines Bildes in Bildpunkten, zum Beispiel 2.000 × 1.500 Pixel."],
@@ -39,7 +39,7 @@ export const browserTools = [
     steps: [
       "Wähle deine HEIC- oder HEIF-Fotos aus.",
       "Stelle JPG-Qualität und bei Bedarf eine maximale Breite ein.",
-      "Lade ein einzelnes JPG oder mehrere Ergebnisse gemeinsam als ZIP herunter."
+      "Die JPG-Dateien werden automatisch vorbereitet. Lade ein einzelnes Ergebnis oder mehrere gemeinsam als ZIP herunter."
     ],
     terms: [
       ["HEIC", "Platzsparendes Bildformat, das vor allem von iPhones verwendet wird, aber nicht von jedem Programm geöffnet werden kann."],
@@ -55,7 +55,7 @@ export const browserTools = [
     steps: [
       "Wähle alle PDF-Dateien aus, die in das neue Dokument gehören.",
       "Bringe die Dateien per Ziehen in die richtige Reihenfolge.",
-      "Vergib einen Dateinamen, verbinde die PDFs und lade das Ergebnis herunter."
+      "Die verbundene PDF wird automatisch neu erstellt, sobald Auswahl oder Reihenfolge stimmen. Lade sie anschließend herunter."
     ],
     terms: [
       ["Dateireihenfolge", "Reihenfolge der vollständigen Quelldateien im neuen PDF-Dokument."],
@@ -71,7 +71,7 @@ export const browserTools = [
     steps: [
       "Wähle oben die gewünschte Richtung: Bilder zu PDF oder PDF zu JPG.",
       "Lade die Ausgangsdateien und stelle Seitengröße, Rand oder Bildauflösung ein.",
-      "Starte die Umwandlung und lade die fertige PDF oder die JPG-Seiten herunter."
+      "Die Umwandlung beginnt automatisch. Lade die fertige PDF oder die JPG-Seiten herunter."
     ],
     terms: [
       ["Seitengröße", "Papierformat der neuen PDF-Seite, zum Beispiel A4."],
@@ -87,7 +87,7 @@ export const browserTools = [
     steps: [
       "Wähle die PDF und öffne die Seite, auf der unterschrieben werden soll.",
       "Zeichne deine Unterschrift oder lade ein Bild davon hoch.",
-      "Setze Position und Größe fest und lade die neu erzeugte PDF herunter."
+      "Setze Position und Größe fest. Die neue PDF wird automatisch vorbereitet und kann danach heruntergeladen werden."
     ],
     terms: [
       ["Sichtbare Unterschrift", "Bild der Unterschrift, das auf einer PDF-Seite platziert wird."],
@@ -119,7 +119,7 @@ export const browserTools = [
     steps: [
       "Wähle Arbeitsdauer oder Feierabend als gewünschte Rechnung.",
       "Trage Beginn, Ende beziehungsweise gewünschte Arbeitszeit und Pause ein.",
-      "Lies Uhrzeit, Nettozeit, Dezimalstunden und bei Bedarf den Sollsaldo ab."
+      "Uhrzeit, Nettozeit, Dezimalstunden und Sollsaldo ändern sich sofort mit deinen Eingaben."
     ],
     terms: [
       ["Nettoarbeitszeit", "Anwesenheitszeit nach Abzug der Pause."],
@@ -133,9 +133,9 @@ export const browserTools = [
     title: "IBAN prüfen und SEPA-QR erstellen",
     description: "IBAN-Format kontrollieren und Überweisungsdaten als Banking-QR-Code ausgeben.",
     steps: [
-      "Trage die IBAN ein und prüfe zuerst Format und Prüfziffer.",
+      "Trage die IBAN ein; Format und Prüfziffer werden während der Eingabe geprüft.",
       "Ergänze Empfänger, Betrag und bei Bedarf BIC sowie Verwendungszweck.",
-      "Erzeuge den SEPA-QR-Code und kontrolliere alle Daten erneut in deiner Banking-App."
+      "Der SEPA-QR-Code erscheint, sobald die nötigen Angaben vollständig sind. Kontrolliere die Daten erneut in deiner Banking-App."
     ],
     terms: [
       ["IBAN-Prüfziffer", "Zwei Ziffern, mit denen viele Tippfehler in einer IBAN mathematisch erkannt werden können."],
@@ -151,7 +151,7 @@ export const browserTools = [
     steps: [
       "Wähle Link, Text, WLAN oder Kontakt als Inhaltstyp.",
       "Trage die Informationen ein und stelle Größe, Farben und Fehlerkorrektur ein.",
-      "Prüfe den Code mit einem Handy und lade ihn als PNG oder SVG herunter."
+      "Der Code aktualisiert sich mit jeder Eingabe. Prüfe ihn mit einem Handy und lade ihn als PNG oder SVG herunter."
     ],
     terms: [
       ["Fehlerkorrektur", "Zusätzliche Daten im QR-Code, durch die er trotz kleiner Beschädigungen noch lesbar sein kann."],
@@ -183,7 +183,7 @@ export const browserTools = [
     steps: [
       "Trage Seitenadresse, Seitentitel und eine konkrete Beschreibung der Seite ein.",
       "Prüfe Suchergebnis und Social-Vorschau und ergänze bei Bedarf Website-Name und Bildadresse.",
-      "Kopiere den erzeugten HTML-Block in den Kopfbereich oder die SEO-Einstellungen der Zielseite."
+      "Der HTML-Block wird während der Eingabe aktualisiert. Kopiere ihn in den Kopfbereich oder die SEO-Einstellungen der Zielseite."
     ],
     terms: [
       ["Meta-Description", "Kurze Seitenbeschreibung, die Suchmaschinen als Text im Suchergebnis verwenden können."],

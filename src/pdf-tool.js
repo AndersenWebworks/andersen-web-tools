@@ -33,6 +33,7 @@ let items = [];
 let currentOutput = null;
 let counter = 0;
 let draggedId = null;
+let mergeTimer = 0;
 
 function setError(message = "") {
   elements.error.querySelector("span").textContent = message;
@@ -88,6 +89,7 @@ async function addFiles(fileList) {
   renderItems();
   if (problems.length) setError(problems.join(" "));
   elements.input.value = "";
+  scheduleMerge();
 }
 
 function moveItem(id, direction) {
@@ -99,6 +101,7 @@ function moveItem(id, direction) {
   items[target] = moving;
   clearOutput();
   renderItems();
+  scheduleMerge();
 }
 
 function removeItem(id) {
@@ -107,6 +110,7 @@ function removeItem(id) {
   items.splice(index, 1);
   clearOutput();
   renderItems();
+  scheduleMerge();
 }
 
 function reorderByDrop(targetId) {
@@ -118,6 +122,14 @@ function reorderByDrop(targetId) {
   items.splice(to, 0, moving);
   clearOutput();
   renderItems();
+  scheduleMerge();
+}
+
+function scheduleMerge() {
+  window.clearTimeout(mergeTimer);
+  clearOutput();
+  if (items.length < 2) return;
+  mergeTimer = window.setTimeout(mergePdfs, 280);
 }
 
 function renderItems() {
@@ -267,7 +279,7 @@ elements.dropzone.addEventListener("drop", (event) => {
   elements.dropzone.dataset.active = "false";
   addFiles(event.dataTransfer.files);
 });
-elements.name.addEventListener("input", clearOutput);
+elements.name.addEventListener("input", scheduleMerge);
 elements.merge.addEventListener("click", mergePdfs);
 elements.reset.addEventListener("click", resetAll);
 elements.download.addEventListener("click", () => {

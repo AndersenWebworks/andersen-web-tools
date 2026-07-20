@@ -57,6 +57,8 @@ let pdfOutput = null;
 let sourcePdfFile = null;
 let sourcePdf = null;
 let imageResults = [];
+let toPdfTimer = 0;
+let toImageTimer = 0;
 
 function setError(element, message = "") {
   element.querySelector("span").textContent = message;
@@ -103,6 +105,7 @@ function renderImageFiles() {
       imageFiles.splice(index, 1);
       clearPdfOutput();
       renderImageFiles();
+      schedulePdfCreation();
     });
     elements.toPdfList.append(row);
   });
@@ -119,6 +122,7 @@ function moveImage(index, direction) {
   imageFiles.splice(nextIndex, 0, file);
   clearPdfOutput();
   renderImageFiles();
+  schedulePdfCreation();
 }
 
 function addImageFiles(fileList) {
@@ -143,6 +147,21 @@ function addImageFiles(fileList) {
   }
   elements.toPdfInput.value = "";
   renderImageFiles();
+  schedulePdfCreation();
+}
+
+function schedulePdfCreation() {
+  window.clearTimeout(toPdfTimer);
+  clearPdfOutput();
+  if (!imageFiles.length) return;
+  toPdfTimer = window.setTimeout(createPdfFromImages, 280);
+}
+
+function scheduleImageCreation() {
+  window.clearTimeout(toImageTimer);
+  clearImageResults();
+  if (!sourcePdf) return;
+  toImageTimer = window.setTimeout(createImagesFromPdf, 320);
 }
 
 async function imageForPdf(file) {
@@ -257,6 +276,7 @@ async function selectPdf(file) {
     elements.toImagePages.textContent = String(sourcePdf.numPages);
     elements.toImageFile.hidden = false;
     elements.toImageProcess.disabled = false;
+    scheduleImageCreation();
   } catch (error) {
     await destroyPdf(sourcePdf);
     sourcePdf = null;
@@ -371,8 +391,8 @@ elements.toPdfDropzone.addEventListener("drop", (event) => {
   elements.toPdfDropzone.dataset.active = "false";
   addImageFiles(event.dataTransfer.files);
 });
-elements.toPdfPageSize.addEventListener("change", clearPdfOutput);
-elements.toPdfMargin.addEventListener("change", clearPdfOutput);
+elements.toPdfPageSize.addEventListener("change", schedulePdfCreation);
+elements.toPdfMargin.addEventListener("change", schedulePdfCreation);
 elements.toPdfProcess.addEventListener("click", createPdfFromImages);
 elements.toPdfReset.addEventListener("click", resetImagesToPdf);
 elements.toPdfDownload.addEventListener("click", () => {
@@ -393,9 +413,9 @@ elements.toImageDropzone.addEventListener("drop", (event) => {
 });
 elements.toImageQuality.addEventListener("input", () => {
   elements.toImageQualityValue.textContent = `${elements.toImageQuality.value} %`;
-  clearImageResults();
+  scheduleImageCreation();
 });
-elements.toImageDpi.addEventListener("change", clearImageResults);
+elements.toImageDpi.addEventListener("change", scheduleImageCreation);
 elements.toImageProcess.addEventListener("click", createImagesFromPdf);
 elements.toImageReset.addEventListener("click", resetPdfToImages);
 elements.toImageDownloadAll.addEventListener("click", downloadImageZip);

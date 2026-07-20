@@ -13,6 +13,7 @@ const resetButton = document.querySelector("[data-calculator-reset]");
 const copyButton = document.querySelector("[data-calculator-copy]");
 const inputs = new Map();
 let currentSummary = "";
+let calculationFrame = 0;
 
 function element(tagName, className, text) {
   const node = document.createElement(tagName);
@@ -40,6 +41,10 @@ function updateFieldVisibility() {
   });
 }
 
+function fieldValue(field) {
+  return field.valueProvider ? field.valueProvider() : field.value;
+}
+
 function createInput(field) {
   const wrapper = element("div", "form-field");
   wrapper.dataset.calculatorField = field.id;
@@ -54,13 +59,13 @@ function createInput(field) {
     field.options.forEach(([value, optionLabel]) => {
       const option = element("option", "", optionLabel);
       option.value = value;
-      option.selected = value === field.value;
+      option.selected = String(value) === String(fieldValue(field));
       input.append(option);
     });
   } else {
     input = element("input", "text-input");
     input.type = field.type;
-    input.value = field.value;
+    input.value = fieldValue(field);
     if (field.type === "number") input.inputMode = "decimal";
     if (field.min !== undefined) input.min = String(field.min);
     if (field.max !== undefined) input.max = String(field.max);
@@ -117,14 +122,15 @@ function renderResult(calculation) {
   currentSummary = `${calculation.primaryLabel}: ${calculation.primaryValue}. ${calculation.metrics.map((item) => `${item.label}: ${item.value}`).join(". ")}`;
 }
 
-function calculate() {
+function calculate(reportInvalid = false) {
   setError();
   try {
     const activeInputs = [...inputs.values()].filter((input) => !input.closest("[data-calculator-field]").hidden);
     const invalidInput = activeInputs.find((input) => !input.checkValidity());
     if (invalidInput) {
-      invalidInput.reportValidity();
-      throw new Error("Prüfe bitte die markierte Eingabe.");
+      if (reportInvalid) invalidInput.reportValidity();
+      clearResult();
+      return;
     }
     renderResult(calculator.calculate(currentValues()));
   } catch (error) {
@@ -135,30 +141,47 @@ function calculate() {
 
 function reset() {
   calculator.fields.forEach((field) => {
-    inputs.get(field.id).value = field.value;
+    inputs.get(field.id).value = fieldValue(field);
   });
   updateFieldVisibility();
-  clearResult();
+  calculate();
+}
+
+function scheduleCalculation() {
+  cancelAnimationFrame(calculationFrame);
+  calculationFrame = requestAnimationFrame(() => calculate());
 }
 
 if (!calculator || !form || !fieldsRoot) {
   document.body.textContent = "Dieser Rechner konnte nicht geladen werden.";
 } else {
-  calculator.fields.forEach((field) => fieldsRoot.append(createInput(field)));
+  const regularFields = calculator.fields.filter((field) => !field.advanced);
+  const advancedFields = calculator.fields.filter((field) => field.advanced);
+  regularFields.forEach((field) => fieldsRoot.append(createInput(field)));
+  if (advancedFields.length) {
+    const details = element("details", "calculator-advanced");
+    const summary = element("summary", "", "Weitere Einstellungen");
+    const advancedGrid = element("div", "form-grid calculator-advanced__grid");
+    advancedFields.forEach((field) => advancedGrid.append(createInput(field)));
+    details.append(summary, advancedGrid);
+    fieldsRoot.append(details);
+  }
   updateFieldVisibility();
 
   inputs.forEach((input) => input.addEventListener("input", () => {
     updateFieldVisibility();
-    clearResult();
+    scheduleCalculation();
   }));
+  inputs.forEach((input) => input.addEventListener("change", scheduleCalculation));
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    calculate();
+    calculate(true);
   });
   resetButton.addEventListener("click", reset);
   copyButton.addEventListener("click", async () => {
     await copyText(currentSummary);
     showToast("Ergebnis kopiert.");
   });
+  calculate();
   refreshIcons();
 }

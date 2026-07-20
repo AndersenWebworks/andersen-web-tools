@@ -37,6 +37,7 @@ const elements = {
 let sourceItems = [];
 let outputItems = [];
 let itemCounter = 0;
+let processTimer = 0;
 
 function setError(message = "") {
   const text = elements.error.querySelector("span");
@@ -137,6 +138,7 @@ async function addFiles(fileList) {
   clearOutputs();
   if (problems.length) setError(problems.join(" "));
   elements.input.value = "";
+  scheduleProcessing();
 }
 
 function renderSourceItems() {
@@ -188,6 +190,14 @@ function removeSourceItem(id) {
   sourceItems.splice(index, 1);
   renderSourceItems();
   clearOutputs();
+  scheduleProcessing();
+}
+
+function scheduleProcessing() {
+  window.clearTimeout(processTimer);
+  clearOutputs();
+  if (!sourceItems.length) return;
+  processTimer = window.setTimeout(processImages, 320);
 }
 
 function clearOutputs() {
@@ -413,7 +423,11 @@ elements.dropzone.addEventListener("drop", (event) => {
 });
 elements.quality.addEventListener("input", () => {
   elements.qualityValue.textContent = `${elements.quality.value} %`;
+  scheduleProcessing();
 });
+elements.format.addEventListener("change", scheduleProcessing);
+elements.width.addEventListener("input", scheduleProcessing);
+elements.height.addEventListener("input", scheduleProcessing);
 elements.process.addEventListener("click", processImages);
 elements.reset.addEventListener("click", resetAll);
 elements.downloadAll.addEventListener("click", downloadAll);

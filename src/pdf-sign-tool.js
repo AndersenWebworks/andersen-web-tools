@@ -53,6 +53,7 @@ let signaturePosition = { x: 0.72, y: 0.82 };
 let drawing = false;
 let hasInk = false;
 let currentOutput = null;
+let signingTimer = 0;
 
 function setError(message = "") {
   elements.error.querySelector("span").textContent = message;
@@ -118,6 +119,14 @@ async function setSignature(blob) {
   clearResult();
   updateReadyState();
   drawSignaturePreview();
+  scheduleSigning();
+}
+
+function scheduleSigning() {
+  window.clearTimeout(signingTimer);
+  clearResult();
+  if (!sourceBytes || !sourceFile || !signatureBlob) return;
+  signingTimer = window.setTimeout(signPdf, 300);
 }
 
 async function loadSignatureImage(file) {
@@ -235,6 +244,7 @@ async function selectPdf(file) {
     setError(error instanceof Error ? error.message : "Die PDF konnte nicht gelesen werden.");
   }
   updateReadyState();
+  scheduleSigning();
 }
 
 function placeSignature(event) {
@@ -246,6 +256,7 @@ function placeSignature(event) {
   };
   clearResult();
   drawSignaturePreview();
+  scheduleSigning();
 }
 
 async function signPdf() {
@@ -329,24 +340,28 @@ elements.page.addEventListener("change", () => {
   selectedPage = Number(elements.page.value);
   clearResult();
   renderSelectedPage();
+  scheduleSigning();
 });
 elements.previousPage.addEventListener("click", () => {
   if (selectedPage <= 1) return;
   selectedPage -= 1;
   clearResult();
   renderSelectedPage();
+  scheduleSigning();
 });
 elements.nextPage.addEventListener("click", () => {
   if (!previewPdf || selectedPage >= previewPdf.numPages) return;
   selectedPage += 1;
   clearResult();
   renderSelectedPage();
+  scheduleSigning();
 });
 elements.previewFrame.addEventListener("click", placeSignature);
 elements.width.addEventListener("input", () => {
   elements.widthValue.textContent = `${elements.width.value} %`;
   clearResult();
   drawSignaturePreview();
+  scheduleSigning();
 });
 elements.process.addEventListener("click", signPdf);
 elements.reset.addEventListener("click", resetAll);

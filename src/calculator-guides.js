@@ -285,14 +285,14 @@ export const calculatorGuides = {
   arbeitgeberkostenrechner: {
     steps: [
       "Trage das monatliche Bruttogehalt ein.",
-      "Übernimm die für dich passenden Arbeitgeberanteile, Umlagen und festen Zusatzkosten.",
-      "Das Ergebnis schätzt die gesamten Monats- und Jahreskosten."
+      "Öffne die weiteren Einstellungen nur, wenn betriebliche Umlagen oder feste Zusatzkosten abweichen.",
+      "Das Ergebnis zeigt Brutto, Sozialversicherung und gesamte Monats- und Jahreskosten."
     ],
     fieldHelp: {
       gross: "Bruttogehalt des Beschäftigten vor persönlichen Abzügen.",
-      socialRate: "Zusammengefasster prozentualer Arbeitgeberanteil an den Sozialversicherungen.",
       levies: "Weitere prozentuale Arbeitgeberkosten wie Umlagen und Unfallversicherung.",
-      fixed: "Feste monatliche Zusatzkosten, etwa Zuschüsse, Ausstattung oder pauschal angesetzte Verwaltungskosten."
+      fixed: "Feste monatliche Zusatzkosten, etwa Zuschüsse, Ausstattung oder pauschal angesetzte Verwaltungskosten.",
+      additionalRate: "Zusatzbeitrag der Krankenkasse. Der Arbeitgeber trägt bei Beschäftigten grundsätzlich die Hälfte."
     },
     terms: [
       ["Lohnnebenkosten", "Zusätzliche Arbeitgeberkosten neben dem Bruttogehalt."],
@@ -306,8 +306,8 @@ export const calculatorGuides = {
   },
   "minijob-rechner": {
     steps: [
-      "Trage die aktuell für dich geltende monatliche Verdienstgrenze ein.",
-      "Ergänze deinen Stundenlohn und bei Bedarf den eigenen Rentenbeitrag.",
+      "Trage deinen vereinbarten Stundenlohn ein.",
+      "Ändere Verdienstgrenze oder Rentenbeitrag nur, wenn sie in deinem Fall vom eingesetzten Wert abweichen.",
       "Du erhältst die rechnerisch möglichen Monats- und Wochenstunden sowie den Rentenabzug."
     ],
     fieldHelp: {
@@ -321,22 +321,23 @@ export const calculatorGuides = {
       ["Rentenbeitrag", "Eigener Beitrag zur gesetzlichen Rentenversicherung."]
     ],
     faq: [
-      ["Warum muss ich die Verdienstgrenze selbst eintragen?", "Die Grenze kann sich ändern. So bleibt sichtbar, mit welchem Wert gerechnet wird."],
+      ["Welche Verdienstgrenze ist eingesetzt?", "Für 2026 sind 603 Euro im Monat eingesetzt."],
       ["Prüft der Rechner mehrere Minijobs?", "Nein. Mehrfachbeschäftigung und schwankende Verdienste brauchen eine individuelle Prüfung."]
     ]
   },
   "brutto-netto-schaetzer": {
     steps: [
-      "Trage dein Monatsbrutto und das beitragspflichtige Brutto ein.",
-      "Übernimm bekannte Steuerbeträge, Sozialabgaben und weitere Abzüge aus einer Abrechnung oder Schätzung.",
-      "Der Rechner zieht alle Angaben sichtbar ab und zeigt das geschätzte Netto."
+      "Trage dein Monatsbrutto ein und wähle Steuerklasse sowie Kinderzahl.",
+      "Ergänze Kirchensteuer oder einen abweichenden Krankenkassen-Zusatzbeitrag nur bei Bedarf.",
+      "Der Rechner setzt Tarif und Beitragsgrenzen für 2026 ein und zeigt Steuern, Sozialabgaben und Netto."
     ],
     fieldHelp: {
       gross: "Gesamtes Monatsgehalt vor allen Abzügen.",
-      socialGross: "Teil des Bruttogehalts, auf den Sozialabgaben berechnet werden. Er kann durch Beitragsgrenzen niedriger sein.",
-      wageTax: "Monatliche Lohnsteuer als Eurobetrag, nicht als Prozentsatz.",
-      churchTax: "Monatliche Kirchensteuer als Eurobetrag. Wenn keine anfällt, trage 0 ein.",
-      socialRate: "Eigener Gesamtanteil für Kranken-, Pflege-, Renten- und Arbeitslosenversicherung in Prozent.",
+      taxClass: "Steuerklasse auf deiner Lohnabrechnung. Diese Näherung unterstützt I, III und IV.",
+      children: "Kinder unter 25, die beim Pflegeversicherungsbeitrag berücksichtigt werden.",
+      churchRate: "Kirchensteuersatz deines Bundeslands. Wenn du keine Kirchensteuer zahlst, bleibt die Auswahl auf Keine.",
+      childlessSurcharge: "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+      additionalRate: "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026.",
       other: "Weitere monatliche Abzüge, zum Beispiel ein eigener Zusatzbeitrag oder eine Pfändung."
     },
     terms: [
@@ -345,20 +346,19 @@ export const calculatorGuides = {
       ["Netto", "Betrag nach den eingetragenen Steuern, Sozialabgaben und weiteren Abzügen."]
     ],
     faq: [
-      ["Warum ist das kein normaler Brutto-Netto-Rechner mit Steuerklasse?", "Der Rechner macht keine amtliche Steuerberechnung, sondern zeigt eine transparente Schätzung mit deinen bekannten Abzügen."],
-      ["Wo finde ich die benötigten Werte?", "Am zuverlässigsten auf einer vorhandenen Lohnabrechnung oder in einer fachlich geprüften Abrechnungsvorschau."]
+      ["Warum ist das Ergebnis eine Schätzung?", "Eine echte Lohnabrechnung berücksichtigt mehr persönliche Merkmale, Freibeträge, Einmalzahlungen und amtliche Rundungsregeln."],
+      ["Warum fehlen Steuerklassen V und VI?", "Dafür wäre eine vereinfachte Näherung zu unzuverlässig. Diese Fälle gehören in einen amtlichen oder fachlich geprüften Lohnsteuerrechner."]
     ]
   },
   "gkv-beitragsrechner": {
     steps: [
-      "Trage dein bereits begrenztes beitragspflichtiges Monatseinkommen ein.",
-      "Übernimm allgemeinen Beitragssatz und Zusatzbeitrag aus den aktuellen Angaben deiner Krankenkasse.",
+      "Trage dein vollständiges Monatsbrutto ein.",
+      "Ändere den voreingestellten Zusatzbeitrag nur, wenn du den Satz deiner Krankenkasse kennst.",
       "Der Rechner zeigt Gesamtbeitrag sowie den rechnerisch hälftigen Anteil beider Seiten."
     ],
     fieldHelp: {
-      income: "Monatseinkommen, auf das Beiträge berechnet werden. Einkommen oberhalb der Beitragsbemessungsgrenze muss vorher begrenzt werden.",
-      generalRate: "Allgemeiner Beitragssatz der gesetzlichen Krankenversicherung ohne Zusatzbeitrag.",
-      additionalRate: "Kassenindividueller Zusatzbeitrag deiner Krankenkasse."
+      income: "Monatsbrutto vor Abzügen. Der Rechner begrenzt es automatisch auf die Beitragsbemessungsgrenze 2026.",
+      additionalRate: "Kassenindividueller Zusatzbeitrag. Voreingestellt ist der Durchschnitt für 2026."
     },
     terms: [
       ["Beitragspflichtiges Einkommen", "Einkommen, das für die Beitragsberechnung berücksichtigt wird."],
@@ -366,7 +366,7 @@ export const calculatorGuides = {
       ["Beitragsbemessungsgrenze", "Obergrenze des Einkommens, bis zu der Beiträge berechnet werden."]
     ],
     faq: [
-      ["Soll ich mein vollständiges Brutto eingeben?", "Nur wenn es die geltende Beitragsbemessungsgrenze nicht überschreitet. Andernfalls gib die begrenzte Bemessungsgrundlage ein."],
+      ["Soll ich mein vollständiges Brutto eingeben?", "Ja. Einkommen oberhalb von 5.812,50 Euro im Monat wird für 2026 automatisch begrenzt."],
       ["Ist der Arbeitnehmeranteil immer genau die Hälfte?", "Der Rechner verwendet diese Grundannahme. Individuelle Sonderregeln sind nicht enthalten."]
     ]
   },
@@ -377,7 +377,7 @@ export const calculatorGuides = {
       "Das Ergebnis zeigt die monatliche und jährliche Mehr- oder Minderbelastung."
     ],
     fieldHelp: {
-      income: "Einkommen, auf das der Zusatzbeitrag tatsächlich berechnet wird.",
+      income: "Monatsbrutto vor Abzügen. Der Rechner berücksichtigt automatisch die Beitragsbemessungsgrenze 2026.",
       oldRate: "Bisheriger Zusatzbeitrag deiner Krankenkasse in Prozent.",
       newRate: "Neuer oder zum Vergleich verwendeter Zusatzbeitrag in Prozent.",
       employeeShare: "Anteil des Unterschieds, den du selbst trägst. Bei hälftiger Teilung sind das 50 Prozent."
@@ -394,15 +394,15 @@ export const calculatorGuides = {
   },
   "pflegeversicherung-rechner": {
     steps: [
-      "Trage das beitragspflichtige Monatseinkommen ein.",
-      "Übernimm Gesamt-Grundbeitrag, Arbeitgeberanteil und deinen persönlichen Zuschlag.",
-      "Der Rechner trennt Gesamtbeitrag, Arbeitgeberanteil und deinen eigenen Anteil."
+      "Trage dein Monatsbrutto ein und wähle die Zahl der berücksichtigten Kinder unter 25.",
+      "Wähle Sachsen nur, wenn dort dein Beschäftigungsort liegt.",
+      "Der Rechner setzt Beitragsgrenze, Kinderlosenzuschlag und Kinderabschläge für 2026 ein."
     ],
     fieldHelp: {
-      income: "Monatseinkommen innerhalb der geltenden Beitragsbemessungsgrenze.",
-      baseRate: "Gesamter Grundbeitrag zur Pflegeversicherung vor einem persönlichen Zuschlag.",
-      employerRate: "Prozentsatz, den der Arbeitgeber in deinem Fall übernimmt.",
-      surcharge: "Zusätzlicher Beitrag, der persönlich bei dir anfällt, zum Beispiel ein Zuschlag für Kinderlose."
+      income: "Monatsbrutto vor Abzügen. Der Rechner begrenzt es automatisch auf die Beitragsbemessungsgrenze 2026.",
+      children: "Berücksichtigte Kinder unter 25. Ab dem zweiten Kind sinkt der eigene Beitrag schrittweise.",
+      childlessSurcharge: "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+      saxony: "In Sachsen ist der Arbeitgeberanteil niedriger und der eigene Anteil entsprechend höher."
     },
     terms: [
       ["Grundbeitrag", "Allgemeiner Beitrag zur Pflegeversicherung vor persönlichen Zu- oder Abschlägen."],
@@ -410,20 +410,23 @@ export const calculatorGuides = {
       ["Arbeitgeberanteil", "Teil des Beitrags, den der Arbeitgeber trägt."]
     ],
     faq: [
-      ["Warum muss ich die Sätze selbst eintragen?", "Alter, Kinderzahl, Bundesland und Rechtsstand können den tatsächlichen Beitrag verändern."],
-      ["Ist der persönliche Zuschlag im Grundbeitrag enthalten?", "Nein. Er wird in diesem Rechner getrennt eingetragen und vollständig dem eigenen Anteil zugerechnet."]
+      ["Wie wird Kinderlosigkeit berücksichtigt?", "Bei keiner berücksichtigten Kinderzahl wird der Kinderlosenzuschlag von 0,6 Prozentpunkten eingesetzt."],
+      ["Warum gibt es eine Auswahl für Sachsen?", "Dort ist die Aufteilung zwischen Arbeitgeber und Beschäftigten anders als in den übrigen Bundesländern."]
     ]
   },
   krankengeldrechner: {
     steps: [
-      "Trage dein regelmäßiges Monatsbrutto und Monatsnetto ein.",
-      "Ergänze den geschätzten Prozentsatz der Abzüge, die vom Krankengeld einbehalten werden.",
-      "Der Rechner vergleicht 70 Prozent vom Brutto mit 90 Prozent vom Netto und verwendet den niedrigeren Wert."
+      "Trage dein regelmäßiges Monatsbrutto ein und wähle Steuerklasse sowie Kinderzahl.",
+      "Ergänze Kirchensteuer oder einen abweichenden Zusatzbeitrag nur bei Bedarf.",
+      "Der Rechner schätzt zuerst dein Netto und daraus Krankengeld sowie verbleibenden Zahlbetrag."
     ],
     fieldHelp: {
       gross: "Regelmäßiges Bruttoarbeitsentgelt pro Monat vor allen Abzügen.",
-      net: "Regelmäßiger Auszahlungsbetrag pro Monat nach den üblichen Abzügen.",
-      deductionRate: "Geschätzter Gesamtanteil der Sozialversicherungsbeiträge, die vom Brutto-Krankengeld abgehen."
+      taxClass: "Steuerklasse auf deiner Lohnabrechnung. Diese Näherung unterstützt I, III und IV.",
+      children: "Kinder unter 25, die beim Pflegeversicherungsbeitrag berücksichtigt werden.",
+      churchRate: "Kirchensteuersatz deines Bundeslands oder Keine.",
+      childlessSurcharge: "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+      additionalRate: "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026."
     },
     terms: [
       ["Brutto-Krankengeld", "Ausgangsbetrag vor den noch abzuführenden Sozialversicherungsbeiträgen."],
@@ -437,16 +440,14 @@ export const calculatorGuides = {
   },
   firmenwagenrechner: {
     steps: [
-      "Trage Bruttolistenpreis und den monatlichen Fahrzeugansatz ein.",
-      "Ergänze einfache Entfernung, Entfernungssatz und deinen geschätzten Grenzabgabensatz.",
-      "Das Ergebnis zeigt geldwerten Vorteil und eine grobe monatliche Nettobelastung."
+      "Trage den Bruttolistenpreis ein und wähle die passende Fahrzeugart.",
+      "Ergänze die einfache Entfernung zur ersten Tätigkeitsstätte.",
+      "Das Ergebnis zeigt den geldwerten Vorteil für Fahrzeugnutzung und Arbeitsweg."
     ],
     fieldHelp: {
       listPrice: "Offizieller Bruttolistenpreis des Fahrzeugs bei Erstzulassung, nicht der tatsächliche Kaufpreis.",
-      vehicleRate: "Monatlicher Prozentsatz des Listenpreises für die private Nutzung.",
+      vehicleType: "Wähle den pauschalen Ansatz, dessen Voraussetzungen dein Fahrzeug tatsächlich erfüllt.",
       distance: "Einfache Strecke zwischen Wohnung und erster Tätigkeitsstätte.",
-      commuteRate: "Monatlicher Prozentsatz des Listenpreises je Entfernungskilometer.",
-      taxRate: "Geschätzter Anteil aus Steuern und Abgaben, der auf einen zusätzlichen Euro Einkommen entfällt."
     },
     terms: [
       ["Bruttolistenpreis", "Unverbindlicher Listenpreis des Neuwagens einschließlich Umsatzsteuer und Sonderausstattung."],
@@ -455,21 +456,18 @@ export const calculatorGuides = {
     ],
     faq: [
       ["Kann ich den tatsächlichen Kaufpreis eingeben?", "Für die pauschale Methode wird normalerweise der maßgebliche Bruttolistenpreis verwendet, nicht der Kaufpreis."],
-      ["Sind Elektroauto-Sonderregeln enthalten?", "Nicht automatisch. Du kannst einen abweichenden Fahrzeugansatz eintragen, musst seine Anwendbarkeit aber selbst prüfen."]
+      ["Sind Elektroauto-Sonderregeln enthalten?", "Die üblichen ermäßigten Ansätze sind auswählbar. Ob dein Fahrzeug die Voraussetzungen erfüllt, musst du anhand des konkreten Fahrzeugs prüfen."]
     ]
   },
   "pendlerpauschale-rechner": {
     steps: [
       "Trage die einfache Entfernung zur ersten Tätigkeitsstätte und deine Arbeitstage ein.",
-      "Prüfe Schwelle und Kilometersätze und passe sie an den geltenden Stand an.",
+      "Der Rechner verwendet automatisch 38 Cent ab dem ersten Kilometer für 2026.",
       "Der Rechner zeigt den jährlichen Werbungskostenbetrag, nicht die Steuererstattung."
     ],
     fieldHelp: {
       distance: "Nur die einfache Strecke zwischen Wohnung und erster Tätigkeitsstätte, nicht Hin- und Rückweg.",
-      days: "Tage im Jahr, an denen du diese Strecke tatsächlich zur Arbeit zurücklegst.",
-      threshold: "Entfernung, ab der für weitere Kilometer ein höherer Satz verwendet wird.",
-      rateOne: "Betrag je Entfernungskilometer bis zur eingetragenen Schwelle.",
-      rateTwo: "Betrag je Entfernungskilometer oberhalb der Schwelle."
+      days: "Tage im Jahr, an denen du diese Strecke tatsächlich zur Arbeit zurücklegst."
     },
     terms: [
       ["Entfernungspauschale", "Steuerlich ansetzbarer Betrag für Wege zur ersten Tätigkeitsstätte."],
@@ -483,15 +481,16 @@ export const calculatorGuides = {
   },
   "gkv-pkv-vergleich": {
     steps: [
-      "Trage dein beitragspflichtiges GKV-Einkommen und den verwendeten GKV-Gesamtbeitrag ein.",
-      "Übernimm ein konkretes PKV-Angebot, Arbeitgeberzuschuss und erwarteten jährlichen Selbstbehalt.",
+      "Trage dein Monatsbrutto und den Gesamtbeitrag eines konkreten PKV-Angebots ein.",
+      "Wähle die berücksichtigte Kinderzahl; ergänze Selbstbehalt oder abweichenden Zusatzbeitrag nur bei Bedarf.",
       "Vergleiche nur die eigenen Kosten. Leistungen und langfristige Beitragsentwicklung gehören in eine separate Entscheidung."
     ],
     fieldHelp: {
-      income: "Monatseinkommen, auf das der GKV-Beitrag in diesem Szenario berechnet wird.",
-      gkvRate: "Gesamter Krankenversicherungsbeitrag einschließlich Zusatzbeitrag, ohne Pflegeversicherung.",
+      income: "Monatsbrutto vor Abzügen. Für die GKV werden die Beitragsgrenzen 2026 automatisch angewendet.",
       pkv: "Monatlicher Gesamtbeitrag des konkreten privaten Angebots einschließlich Pflegepflichtversicherung.",
-      pkvEmployer: "Monatlicher Zuschuss, den der Arbeitgeber zum PKV-Beitrag voraussichtlich übernimmt.",
+      children: "Kinder unter 25, die den eigenen Pflegeversicherungsbeitrag beeinflussen.",
+      childlessSurcharge: "Der Zuschlag gilt grundsätzlich für kinderlose Versicherte ab 23 Jahren. Unter 23 oder bei einer gesetzlichen Ausnahme wählst du Gilt für mich nicht.",
+      additionalRate: "Zusatzbeitrag deiner Krankenkasse. Voreingestellt ist der Durchschnitt für 2026.",
       selfPay: "Betrag pro Jahr, den du voraussichtlich selbst für Leistungen tragen musst, bevor oder weil der Tarif nicht zahlt."
     },
     terms: [

@@ -2,10 +2,10 @@
   "version": 1,
   "status": "approved",
   "project": "andersen-web-tools",
-  "surfaceHash": "bb64d632f3ff295d45731e49063d7332bef8d49a60a7867282da3964169472d1",
+  "surfaceHash": "80bd776c7b5063207606f8f9273ffdd51e637ecc7f082f4fb969cabbd5f6c8d9",
   "briefHash": "1e12a8a49cb696eecb8b8f256021c5f9c5c6057ab311756b9dd92188f759e9ec",
   "pageCount": 80,
-  "reviewedAt": "2026-07-18T17:30:04.666Z",
+  "reviewedAt": "2026-07-18T19:53:16.225Z",
   "reviewer": {
     "source": "codex_cli",
     "model": "gpt-5.3-codex-spark",

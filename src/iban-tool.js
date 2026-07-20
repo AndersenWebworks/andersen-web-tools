@@ -36,6 +36,8 @@ const elements = {
 let normalizedIban = "";
 let currentPayload = "";
 let currentSvg = "";
+let validationTimer = 0;
+let generationTimer = 0;
 
 function setError(message = "") {
   elements.error.querySelector("span").textContent = message;
@@ -148,6 +150,27 @@ async function generateSepaQr() {
   }
 }
 
+function scheduleValidation() {
+  window.clearTimeout(validationTimer);
+  window.clearTimeout(generationTimer);
+  elements.validation.hidden = true;
+  elements.copy.disabled = true;
+  clearQr();
+  if (electronicFormatIBAN(elements.iban.value)?.length < 4) return;
+  validationTimer = window.setTimeout(() => {
+    const valid = validateCurrentIban();
+    if (valid) scheduleQrGeneration();
+  }, 220);
+}
+
+function scheduleQrGeneration() {
+  window.clearTimeout(generationTimer);
+  clearQr();
+  setError();
+  if (!normalizedIban || !isValidIBAN(normalizedIban) || !elements.recipient.value.trim() || !elements.amount.value.trim()) return;
+  generationTimer = window.setTimeout(generateSepaQr, 260);
+}
+
 function resetAll() {
   normalizedIban = "";
   elements.iban.value = "";
@@ -162,16 +185,12 @@ function resetAll() {
 }
 
 elements.validate.addEventListener("click", validateCurrentIban);
-elements.iban.addEventListener("input", () => {
-  elements.validation.hidden = true;
-  elements.copy.disabled = true;
-  clearQr();
-});
+elements.iban.addEventListener("input", scheduleValidation);
 elements.copy.addEventListener("click", async () => {
   await copyText(friendlyFormatIBAN(normalizedIban));
   showToast("IBAN kopiert.");
 });
-document.querySelectorAll("[data-sepa-recipient], [data-sepa-bic], [data-sepa-amount], [data-sepa-purpose]").forEach((input) => input.addEventListener("input", clearQr));
+document.querySelectorAll("[data-sepa-recipient], [data-sepa-bic], [data-sepa-amount], [data-sepa-purpose]").forEach((input) => input.addEventListener("input", scheduleQrGeneration));
 elements.generate.addEventListener("click", generateSepaQr);
 elements.reset.addEventListener("click", resetAll);
 elements.downloadPng.addEventListener("click", () => {

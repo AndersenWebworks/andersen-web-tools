@@ -118,7 +118,7 @@ export async function writePublicCopySurface(outputDirectory, targetPath = resol
   for (const route of [...PUBLIC_ROUTES, "/404/"]) {
     const htmlPath = route === "/404/" ? resolve(outputDirectory, "404.html") : routeFile(outputDirectory, route);
     const html = await readFile(htmlPath, "utf8");
-    const page = collectPage(parse(html));
+    const page = collectPage(parse(html, { scriptingEnabled: false }));
     pages.push({
       route,
       ...page,

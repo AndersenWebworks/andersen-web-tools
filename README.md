@@ -49,7 +49,7 @@ npm run dev
 
 Die Entwicklungsvorschau läuft standardmäßig unter `http://127.0.0.1:4178/`.
 
-## GitHub Pages
+## Produktionsbuild
 
 Öffentliche Copy besitzt einen eigenen fail-closed Freigabeschritt. Planung, Roadmap und Arbeitsnotizen werden nicht an den Reviewer gegeben; geprüft wird nur die tatsächlich gebaute Besucherfläche.
 
@@ -59,36 +59,36 @@ npm run public-copy:review
 npm run public-copy:verify
 ```
 
-Die Freigabe ist an Zielgruppe, öffentlichen Zweck, alle 42 HTML-Flächen einschließlich Fehlerseite sowie `werkzeuge.json`, `llms.txt` und den exakten Hash der sichtbaren Copy gebunden. Jede Text- oder Routenänderung verlangt einen neuen unabhängigen Review. `npm run build` und `npm run release` prüfen die Freigabe automatisch und brechen bei einem fehlenden oder veralteten Stand ab.
+Die Freigabe ist an Zielgruppe, öffentlichen Zweck, alle 80 öffentlichen Routen einschließlich Fehlerseite sowie `werkzeuge.json`, `llms.txt` und den exakten Hash der sichtbaren Copy gebunden. Jede Text- oder Routenänderung verlangt einen neuen unabhängigen Review. `npm run build` und `npm run release` prüfen die Freigabe automatisch und brechen bei einem fehlenden oder veralteten Stand ab.
 
 ```powershell
 npm run build
 npm run preview
 ```
 
-Ohne weitere Konfiguration baut die Anwendung für:
+Ohne weitere Konfiguration baut die Anwendung für die primäre Portaladresse:
 
 ```text
-https://andersenwebworks.github.io/andersen-web-tools/
+https://tools.andersen-webworks.de/
 ```
 
 `npm run build` erzeugt `pages-output/`. Ein vorhandener Ausgabeordner wird nicht überschrieben; der Build bricht stattdessen geschlossen ab. In einem frischen GitHub-Actions-Checkout ist das Ziel immer leer.
 
-Pushes auf `main` starten `.github/workflows/deploy-pages.yml`. Der Workflow installiert die festgeschriebenen Abhängigkeiten, baut die Mehrseiten-App, lädt ausschließlich `pages-output/` als Pages-Artefakt hoch und veröffentlicht diesen Stand.
+Pushes auf `main` starten weiterhin `.github/workflows/deploy-pages.yml`. Der Workflow installiert die festgeschriebenen Abhängigkeiten, baut die Mehrseiten-App und veröffentlicht den Stand zusätzlich über GitHub Pages. Canonicals, Sitemap und interne Links weisen dabei auf die primäre Subdomain.
 
 Im GitHub-Repository muss unter **Settings > Pages > Build and deployment** einmalig **GitHub Actions** als Quelle gewählt werden. Danach läuft die Veröffentlichung mit jedem Push auf `main`.
 
-## Eigene Domain
+## Alternatives Buildziel
 
-Für eine spätere Andersen-Webworks-Domain werden Zieladresse und Basispfad beim Build gesetzt:
+Für ein abweichendes Ziel werden Zieladresse und Basispfad beim Build gesetzt:
 
 ```powershell
-$env:SITE_URL='https://tools.andersen-webworks.de'
-$env:BASE_PATH='/'
+$env:SITE_URL='https://andersenwebworks.github.io/andersen-web-tools'
+$env:BASE_PATH='/andersen-web-tools/'
 npm run build
 ```
 
-`SITE_URL` steuert Canonical-URLs, strukturierte Daten, Sitemap und `robots.txt`. `BASE_PATH` steuert interne Links und Assets. Ohne diese Variablen wird der GitHub-Pages-Projektpfad verwendet.
+`SITE_URL` steuert Canonical-URLs, strukturierte Daten, Sitemap und `robots.txt`. `BASE_PATH` steuert interne Links und Assets. Ohne diese Variablen wird `https://tools.andersen-webworks.de/` verwendet.
 
 ## Versioniertes Release
 
@@ -98,15 +98,15 @@ npm run release
 
 Dieser Befehl erzeugt unter `releases/` einen neuen, eindeutig benannten Ordner mit vollständigem Webroot, ZIP-Archiv und `release.json`. Vorhandene Releases werden weder geleert noch überschrieben.
 
-## Vor dem Livegang
+## Veröffentlichung
 
-1. Eigenes GitHub-Repository anlegen und `main` pushen.
-2. GitHub Actions als Pages-Quelle aktivieren.
-3. Den ersten Workflow-Lauf und die öffentliche Pages-Adresse prüfen.
-4. Startseite, Rechner-Hub, alle zwölf Werkzeuge, alle 24 Rechner, `sitemap.xml`, `robots.txt`, Impressum und Datenschutz über die öffentliche URL prüfen.
-5. Erst danach bei Bedarf die eigene Domain anbinden und die Sitemap einreichen.
+1. Public-Copy-Fläche für die Produktionsdomain vorbereiten, unabhängig prüfen und die Hash-Freigabe verifizieren.
+2. Einen additiven Produktionsbuild oder ein versioniertes Release erzeugen.
+3. Den Webspace-Upload für `tools.andersen-webworks.de` ausdrücklich freigeben und über den zentral hinterlegten FTP-Zugang ausführen.
+4. Startseite, Rechner-Hub, alle zwölf Werkzeuge, alle 24 Rechner, `sitemap.xml`, `robots.txt`, Impressum und Datenschutz über die Subdomain prüfen.
+5. Danach die Sitemap bei den vorgesehenen Suchmaschinen einreichen.
 
-GitHub Pages behält die Deployment-Historie des Workflows. Für unabhängige Archivstände bleibt zusätzlich der versionierte Release-Befehl verfügbar.
+GitHub Pages behält die Deployment-Historie des Workflows. Für unabhängige Archivstände bleibt zusätzlich der versionierte Release-Befehl verfügbar. Der FTP-Zugang und der serverseitige Zielpfad werden nicht in diesem Repository gespeichert.
 
 Werden später Analyse, externe Schriftarten, Zahlungsanbieter oder eingebettete Inhalte ergänzt, müssen Content-Security-Policy und Datenschutzerklärung vor der Veröffentlichung angepasst werden.
 

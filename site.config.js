@@ -1,7 +1,7 @@
 import { calculatorRoutes } from "./src/calculator-catalog.js";
 
 export const SITE_NAME = "Andersen Web Tools";
-const DEFAULT_SITE_URL = "https://andersenwebworks.github.io/andersen-web-tools";
+const DEFAULT_SITE_URL = "https://tools.andersen-webworks.de";
 
 function removeTrailingSlashes(value) {
   let normalized = value;

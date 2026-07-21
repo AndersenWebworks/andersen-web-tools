@@ -18,10 +18,11 @@
 
 ## Deployment
 
-- Standardziel ist GitHub Pages unter `https://andersenwebworks.github.io/andersen-web-tools/`.
+- Primäres Liveziel ist `https://tools.andersen-webworks.de/`.
+- Der Standardbuild verwendet diese Subdomain mit dem Basispfad `/`; `SITE_URL` und `BASE_PATH` dürfen für klar benannte alternative Ziele überschrieben werden.
 - `npm run build` erzeugt einmalig `pages-output/` und überschreibt keinen vorhandenen Build.
-- Pushes auf `main` werden durch `.github/workflows/deploy-pages.yml` gebaut und veröffentlicht.
-- Eine spätere eigene Domain wird über `SITE_URL`, `BASE_PATH` und die GitHub-Pages-Domainkonfiguration angebunden.
+- Pushes auf `main` werden weiterhin durch `.github/workflows/deploy-pages.yml` gebaut und als vorhandener GitHub-Pages-Stand veröffentlicht; die Subdomain ist die kanonische Portaladresse.
+- Der Webspace-Upload ist ein eigener, ausdrücklich freizugebender Schritt. FTP-Zugang und Zielpfad bleiben außerhalb dieses Repositories in der zentralen Credential-SSOT.
 
 ## Sicherheit
 

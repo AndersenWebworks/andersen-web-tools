@@ -57,7 +57,6 @@ export function renderStaticToolGuide(tool, basePath) {
     '  <div class="container glossary-layout">',
     "    <div>",
     '      <h2 id="terms-heading">Begriffe aus diesem Werkzeug</h2>',
-    "      <p>Diese Wörter werden in den Einstellungen oder im Ergebnis verwendet.</p>",
     "    </div>",
     `    <dl class="glossary-list">${renderTerms(tool.terms)}</dl>`,
     "  </div>",

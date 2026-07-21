@@ -25,7 +25,7 @@ Die Grundlage aus Version 3 bleibt vollständig enthalten:
 
 Die bestehenden Werkzeuge aus Version 2 bleiben vollständig enthalten:
 
-- PDF-Dateien mit wählbarer Qualität verkleinern
+- PDF-Dateien mit qpdf-WASM strukturell optimieren und bei Bedarf mit wählbarer Bildqualität verkleinern
 - Bilder komprimieren, skalieren und in JPG, PNG, WebP oder AVIF umwandeln
 - HEIC- und HEIF-Fotos in JPG umwandeln
 - PDF-Dateien sortieren und zusammenfügen
@@ -110,4 +110,4 @@ GitHub Pages behält die Deployment-Historie des Workflows. Für unabhängige Ar
 
 Werden später Analyse, externe Schriftarten, Zahlungsanbieter oder eingebettete Inhalte ergänzt, müssen Content-Security-Policy und Datenschutzerklärung vor der Veröffentlichung angepasst werden.
 
-Die sichtbare PDF-Unterschrift ist ein eingefügtes Bild und keine qualifizierte oder zertifikatbasierte elektronische Signatur. Die IBAN-Prüfung kontrolliert Format und Prüfziffer, nicht die Existenz oder den Inhaber des Kontos. Die rasternden PDF-Werkzeuge entfernen interaktive PDF-Strukturen wie Textauswahl, Links, Formulare und vorhandene digitale Signaturen; die Oberfläche weist vor der Verarbeitung darauf hin.
+Die sichtbare PDF-Unterschrift ist ein eingefügtes Bild und keine qualifizierte oder zertifikatbasierte elektronische Signatur. Die IBAN-Prüfung kontrolliert Format und Prüfziffer, nicht die Existenz oder den Inhaber des Kontos. Der PDF-Kompressor versucht zuerst eine strukturerhaltende Optimierung mit qpdf-WASM und bietet niemals eine größere Ersatzdatei an. Ein Neuaufbau der Seiten als Bilder wird nur verwendet, wenn er stärker verkleinert; digital signierte PDFs werden nicht verändert.

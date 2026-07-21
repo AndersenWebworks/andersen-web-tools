@@ -1,0 +1,42 @@
+const iconsBySlug = {
+  "pdf-verkleinern": "file-down",
+  "bilder-komprimieren": "image-down",
+  "heic-in-jpg": "image-plus",
+  "pdf-zusammenfuegen": "files",
+  "jpg-pdf-umwandeln": "arrow-left-right",
+  "pdf-unterschreiben": "file-signature",
+  "woerter-zeichen-zaehlen": "type",
+  arbeitszeitrechner: "clock-3",
+  "iban-pruefen-sepa-qr": "landmark",
+  "qr-code-erstellen": "qr-code",
+  "farbkontrast-pruefen": "contrast",
+  "meta-tags-erstellen": "scan-search",
+  prozentrechner: "percent",
+  mehrwertsteuerrechner: "receipt-text",
+  rabattrechner: "badge-percent",
+  margenrechner: "chart-no-axes-combined",
+  zinseszinsrechner: "piggy-bank",
+  zahlungsgebuehrenrechner: "credit-card",
+  fahrtkostenrechner: "fuel",
+  stromkostenrechner: "zap",
+  "urlaubsanspruch-rechner": "calendar-days",
+  zeitspannenrechner: "calendar-range",
+  skontorechner: "badge-dollar-sign",
+  stueckpreisvergleich: "scale",
+  stundenlohnrechner: "banknote",
+  arbeitgeberkostenrechner: "briefcase-business",
+  "minijob-rechner": "coins",
+  "brutto-netto-schaetzer": "wallet-cards",
+  "gkv-beitragsrechner": "heart-pulse",
+  "zusatzbeitrag-vergleich": "chart-spline",
+  "pflegeversicherung-rechner": "shield-check",
+  krankengeldrechner: "hand-coins",
+  firmenwagenrechner: "car",
+  "pendlerpauschale-rechner": "route",
+  "gkv-pkv-vergleich": "arrow-left-right",
+  "monatsbudget-rechner": "wallet-minimal"
+};
+
+export function toolIcon(slug) {
+  return iconsBySlug[slug] || "calculator";
+}

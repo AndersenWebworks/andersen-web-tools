@@ -4218,3 +4218,147 @@ h3 {
     overflow-wrap: anywhere;
   }
 }
+
+/* The generated directories share one stable row layout. */
+.tool-grid,
+.calculator-grid,
+.portal-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 24px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.tool-card,
+.calculator-card,
+.portal-card {
+  display: grid;
+  min-height: 116px;
+  grid-template-columns: 42px minmax(0, 1fr) 20px;
+  grid-template-rows: none;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 0;
+  border-right: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.tool-card:nth-child(even),
+.calculator-card:nth-child(even),
+.portal-card:nth-child(even) {
+  border-right: 0;
+}
+
+.tool-card:hover,
+.calculator-card:hover,
+.portal-card:hover {
+  border-color: var(--line-strong);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--ink);
+  transform: none;
+}
+
+.directory-card__icon,
+.tool-card__icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--brand-dark);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-small);
+  background: var(--paper) !important;
+}
+
+.directory-card__icon svg,
+.tool-card__icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.directory-card__content,
+.tool-card > span:not(.tool-card__icon) {
+  min-width: 0;
+}
+
+.directory-card__eyebrow {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--brand-dark);
+  font-size: 11px;
+  font-weight: 760;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.tool-card h3,
+.calculator-card h3,
+.portal-card h3 {
+  margin: 0;
+  font-family: "Avenir Next", "Segoe UI", Tahoma, sans-serif;
+  font-size: 17px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.tool-card p,
+.calculator-card p,
+.portal-card p {
+  margin: 4px 0 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.tool-card > svg,
+.calculator-card > svg,
+.portal-card > svg {
+  width: 18px;
+  height: 18px;
+  align-self: center;
+  justify-self: end;
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .tool-grid,
+  .calculator-grid,
+  .portal-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tool-card,
+  .calculator-card,
+  .portal-card,
+  .tool-card:nth-child(even),
+  .calculator-card:nth-child(even),
+  .portal-card:nth-child(even) {
+    min-height: 104px;
+    grid-template-columns: 40px minmax(0, 1fr) 18px;
+    gap: 13px;
+    padding: 16px 2px;
+    border-right: 0;
+  }
+
+  .directory-card__icon,
+  .tool-card__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tool-card h3,
+  .calculator-card h3,
+  .portal-card h3 {
+    font-size: 16px;
+  }
+
+  .tool-card p,
+  .calculator-card p,
+  .portal-card p {
+    font-size: 13px;
+  }
+}

@@ -5,6 +5,7 @@ import { BASE_PATH, PUBLIC_ROUTES, SITE_NAME, SITE_URL } from "../site.config.js
 import { calculators } from "../src/calculator-catalog.js";
 import { escapeHtml, renderGuideSteps, renderGuideTerms } from "../src/public-content.js";
 import { browserTools } from "../src/tool-catalog.js";
+import { toolIcon } from "../src/tool-icons.js";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const modulePath = fileURLToPath(import.meta.url);
@@ -26,8 +27,8 @@ function escapeXml(value) {
 function calculatorCards() {
   return calculators.map((calculator) => [
     `<a class="calculator-card" href="${BASE_PATH}rechner/${calculator.slug}/" data-calculator-category="${escapeHtml(calculator.category)}">`,
-    `  <span class="calculator-card__meta"><span>${escapeHtml(calculator.category)}</span><span>Kostenlos</span></span>`,
-    `  <span><h3>${escapeHtml(calculator.title)}</h3><p>${escapeHtml(calculator.description)}</p></span>`,
+    `  <span class="directory-card__icon" aria-hidden="true"><i data-lucide="${toolIcon(calculator.slug)}"></i></span>`,
+    `  <span class="directory-card__content"><span class="directory-card__eyebrow">${escapeHtml(calculator.category)}</span><h3>${escapeHtml(calculator.title)}</h3><p>${escapeHtml(calculator.description)}</p></span>`,
     '  <i data-lucide="arrow-right"></i>',
     "</a>"
   ].join("\n")).join("\n");
@@ -126,8 +127,8 @@ function portalCard(item, type) {
   const href = type === "Rechner" ? calculatorPath(item) : `${BASE_PATH}${item.slug}/`;
   return [
     `<a class="portal-card" href="${href}">`,
-    `  <span class="portal-card__type">${escapeHtml(type)}</span>`,
-    `  <span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.description)}</p></span>`,
+    `  <span class="directory-card__icon" aria-hidden="true"><i data-lucide="${toolIcon(item.slug)}"></i></span>`,
+    `  <span class="directory-card__content"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.description)}</p></span>`,
     '  <i data-lucide="arrow-right"></i>',
     "</a>"
   ].join("\n");

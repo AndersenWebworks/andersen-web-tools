@@ -1,4 +1,8 @@
-import { PDFDocument } from "pdf-lib";
+import { PDFDocument, PDFSignature } from "pdf-lib";
+import { createQpdfRunner } from "qpdf-run";
+import qpdfWorkerUrl from "qpdf-run/worker?url";
+import qpdfJsUrl from "qpdf-run/qpdf.js?url";
+import qpdfWasmUrl from "qpdf-run/qpdf.wasm?url";
 import "./styles.css";
 import {
   downloadBlob,
@@ -53,6 +57,7 @@ let previewPdf = null;
 let activeProfile = "balanced";
 let currentOutput = null;
 let compressionTimer = 0;
+let compressionRun = 0;
 
 function setError(message = "") {
   elements.error.querySelector("span").textContent = message;
@@ -69,6 +74,8 @@ function isPdf(file) {
 }
 
 async function selectFile(file) {
+  window.clearTimeout(compressionTimer);
+  compressionRun += 1;
   setError();
   setNotice();
   clearResult();
@@ -127,25 +134,27 @@ function selectProfile(profile) {
   });
   clearResult();
   setNotice(profile === "structure"
-    ? "Dieser Modus bewahrt Text, Links und Formularfelder. Bei bereits gut optimierten PDFs kann die Datei gleich groß oder etwas größer werden."
-    : "Die Seiten werden als Bilder neu aufgebaut. Dadurch werden Textauswahl, Links, Formulare und vorhandene digitale Signaturen entfernt.");
+    ? "Dieser Modus bewahrt Text, Links und Formularfelder. Eine neue Datei wird nur angeboten, wenn sie wirklich kleiner ist."
+    : "Das Werkzeug versucht zuerst, die vorhandene PDF zu optimieren. Nur wenn ein Neuaufbau der Seiten stärker spart, werden Textauswahl, Links und Formulare entfernt.");
   scheduleCompression();
 }
 
 function scheduleCompression() {
   window.clearTimeout(compressionTimer);
+  compressionRun += 1;
   if (!sourceFile || !sourceBytes || !previewPdf) return;
-  compressionTimer = window.setTimeout(compressPdf, 220);
+  const scheduledRun = compressionRun;
+  compressionTimer = window.setTimeout(() => compressPdf(scheduledRun), 220);
 }
 
-async function rebuildWithImages(profile) {
+async function rebuildWithImages(profile, sourcePdf) {
   const result = await PDFDocument.create();
   result.setCreator("Andersen Web Tools");
   result.setProducer("Andersen Web Tools");
 
-  for (let pageNumber = 1; pageNumber <= previewPdf.numPages; pageNumber += 1) {
-    elements.progress.textContent = `Seite ${pageNumber} von ${previewPdf.numPages} wird verarbeitet …`;
-    const rendered = await renderPdfPage(previewPdf, pageNumber, {
+  for (let pageNumber = 1; pageNumber <= sourcePdf.numPages; pageNumber += 1) {
+    elements.progress.textContent = `Seite ${pageNumber} von ${sourcePdf.numPages} wird verarbeitet …`;
+    const rendered = await renderPdfPage(sourcePdf, pageNumber, {
       dpi: profile.dpi,
       maxPixels: 18_000_000
     });
@@ -166,49 +175,200 @@ async function rebuildWithImages(profile) {
   return result.save({ useObjectStreams: true });
 }
 
-async function preserveStructure() {
-  const result = await PDFDocument.load(sourceBytes.slice(), { updateMetadata: false });
-  result.setProducer("Andersen Web Tools");
-  return result.save({ useObjectStreams: true, addDefaultPage: false });
+async function hasDigitalSignature(bytes) {
+  const document = await PDFDocument.load(bytes.slice(), {
+    ignoreEncryption: true,
+    updateMetadata: false
+  });
+  return document.getForm().getFields().some((field) => field instanceof PDFSignature);
 }
 
-async function compressPdf() {
+async function optimizeStructure(bytes, { optimizeImages = false } = {}) {
+  const runner = await createQpdfRunner({
+    workerUrl: qpdfWorkerUrl,
+    qpdfJsUrl,
+    wasmUrl: qpdfWasmUrl,
+    timeoutMs: 120_000
+  });
+
+  try {
+    const inputName = "input.pdf";
+    const outputName = "output.pdf";
+    const args = [
+      "--object-streams=generate",
+      "--stream-data=compress",
+      "--recompress-flate",
+      "--compression-level=9"
+    ];
+    if (optimizeImages) {
+      args.push(
+        "--optimize-images",
+        "--oi-min-width=96",
+        "--oi-min-height=96",
+        "--oi-min-area=9216"
+      );
+    }
+    args.push("--", inputName, outputName);
+
+    return await runner.runOne({
+      input: bytes,
+      inputName,
+      outputName,
+      args
+    });
+  } finally {
+    await runner.destroy();
+  }
+}
+
+async function validateCandidate(bytes, sourcePdf) {
+  const candidate = await openPdf(bytes);
+  try {
+    if (candidate.numPages !== sourcePdf.numPages) return false;
+
+    const pagesToCheck = candidate.numPages === 1 ? [1] : [1, candidate.numPages];
+    for (const pageNumber of pagesToCheck) {
+      const [sourcePage, candidatePage] = await Promise.all([
+        sourcePdf.getPage(pageNumber),
+        candidate.getPage(pageNumber)
+      ]);
+      const sourceViewport = sourcePage.getViewport({ scale: 1 });
+      const candidateViewport = candidatePage.getViewport({ scale: 1 });
+      sourcePage.cleanup();
+      candidatePage.cleanup();
+
+      if (Math.abs(sourceViewport.width - candidateViewport.width) > 0.5) return false;
+      if (Math.abs(sourceViewport.height - candidateViewport.height) > 0.5) return false;
+    }
+    return true;
+  } finally {
+    await destroyPdf(candidate);
+  }
+}
+
+async function getCompressionCandidates(profileName, profile, bytes, sourcePdf, isCurrent) {
+  const candidates = [];
+  const canOptimizeImages = profileName === "balanced" || profileName === "compact";
+
+  elements.progress.textContent = "Dokumentstruktur wird optimiert …";
+  try {
+    candidates.push({
+      bytes: await optimizeStructure(bytes, { optimizeImages: canOptimizeImages }),
+      kind: "structure"
+    });
+  } catch (error) {
+    if (profileName === "structure") throw error;
+  }
+
+  if (!isCurrent()) return [];
+
+  if (profileName !== "structure") {
+    elements.progress.textContent = "Bildvariante wird geprüft …";
+    try {
+      candidates.push({
+        bytes: await rebuildWithImages(profile, sourcePdf),
+        kind: "raster"
+      });
+    } catch (error) {
+      if (!candidates.length) throw error;
+    }
+  }
+
+  if (!isCurrent()) return [];
+
+  const validated = [];
+  for (const candidate of candidates) {
+    try {
+      if (await validateCandidate(candidate.bytes, sourcePdf)) validated.push(candidate);
+    } catch {
+      // A broken candidate is discarded; another valid route may still succeed.
+    }
+  }
+  if (!validated.length && candidates.length) throw new Error("Keine gültige PDF-Ausgabe erzeugt.");
+  return validated.sort((first, second) => first.bytes.byteLength - second.bytes.byteLength);
+}
+
+function showNoOutput(profile, message) {
+  currentOutput = null;
+  elements.resultName.textContent = sourceFile.name;
+  elements.resultMeta.textContent = `${formatBytes(sourceFile.size)} · ${profile.label}`;
+  elements.resultStatus.textContent = message;
+  elements.resultStatus.dataset.state = "warning";
+  elements.download.hidden = true;
+  elements.resultPanel.hidden = false;
+  refreshIcons(elements.resultPanel);
+  elements.resultPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function compressPdf(scheduledRun = compressionRun) {
   if (!sourceFile || !sourceBytes || !previewPdf) return;
+  const runState = {
+    file: sourceFile,
+    bytes: sourceBytes,
+    pdf: previewPdf,
+    profileName: activeProfile,
+    profile: profiles[activeProfile]
+  };
+  const isCurrent = () => scheduledRun === compressionRun;
   setError();
   clearResult();
   elements.progress.textContent = "PDF wird vorbereitet …";
   setButtonLoading(elements.process, true, "PDF wird verkleinert");
 
   try {
-    const profile = profiles[activeProfile];
-    const bytes = activeProfile === "structure"
-      ? await preserveStructure()
-      : await rebuildWithImages(profile);
-    const fileName = `${sanitizeFileStem(sourceFile.name.slice(0, -4))}-verkleinert.pdf`;
+    if (await hasDigitalSignature(runState.bytes)) {
+      if (!isCurrent()) return;
+      showNoOutput(runState.profile, "Die PDF enthält eine digitale Signatur. Jede Änderung würde sie ungültig machen. Deshalb wurde keine neue Datei erzeugt.");
+      return;
+    }
+
+    const candidates = await getCompressionCandidates(
+      runState.profileName,
+      runState.profile,
+      runState.bytes,
+      runState.pdf,
+      isCurrent
+    );
+    if (!isCurrent()) return;
+
+    const candidate = candidates.find((item) => item.bytes.byteLength < runState.file.size);
+    if (!candidate) {
+      showNoOutput(runState.profile, "Das Original ist bereits kleiner als die geprüften Varianten. Es wurde keine größere Ersatzdatei erzeugt.");
+      return;
+    }
+
+    const bytes = candidate.bytes;
+    const fileName = `${sanitizeFileStem(runState.file.name.slice(0, -4))}-verkleinert.pdf`;
     const blob = new Blob([bytes], { type: "application/pdf" });
-    const savedBytes = sourceFile.size - blob.size;
-    const savedPercent = sourceFile.size > 0 ? Math.round((savedBytes / sourceFile.size) * 100) : 0;
+    const savedBytes = runState.file.size - blob.size;
+    const savedPercent = runState.file.size > 0 ? Math.round((savedBytes / runState.file.size) * 100) : 0;
     currentOutput = { blob, fileName };
 
     elements.resultName.textContent = fileName;
-    elements.resultMeta.textContent = `${formatBytes(sourceFile.size)} → ${formatBytes(blob.size)} · ${profile.label}`;
-    elements.resultStatus.textContent = savedBytes > 0
-      ? `${formatBytes(savedBytes)} gespart (${savedPercent} % kleiner).`
-      : "Diese Einstellung hat die Datei nicht verkleinert. Probiere „Ausgewogen“ oder „Möglichst klein“ – oder behalte das Original.";
-    elements.resultStatus.dataset.state = savedBytes > 0 ? "success" : "warning";
+    elements.resultMeta.textContent = `${formatBytes(runState.file.size)} → ${formatBytes(blob.size)} · ${runState.profile.label}`;
+    elements.resultStatus.textContent = candidate.kind === "structure"
+      ? `${formatBytes(savedBytes)} gespart (${savedPercent} % kleiner). Text, Links und Formularfelder bleiben erhalten.`
+      : `${formatBytes(savedBytes)} gespart (${savedPercent} % kleiner). Die Seiten wurden als Bilder neu aufgebaut.`;
+    elements.resultStatus.dataset.state = "success";
+    elements.download.hidden = false;
     elements.resultPanel.hidden = false;
     refreshIcons(elements.resultPanel);
     elements.resultPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   } catch {
-    setError("Die PDF konnte nicht verarbeitet werden. Geschützte, beschädigte oder sehr komplexe Dateien können den Browser überfordern.");
+    if (isCurrent()) {
+      setError("Die PDF konnte nicht verarbeitet werden. Geschützte, beschädigte oder sehr komplexe Dateien können den Browser überfordern.");
+    }
   } finally {
-    elements.progress.textContent = "";
-    setButtonLoading(elements.process, false);
+    if (isCurrent()) {
+      elements.progress.textContent = "";
+      setButtonLoading(elements.process, false);
+    }
   }
 }
 
 function clearResult() {
   currentOutput = null;
+  elements.download.hidden = true;
   elements.resultPanel.hidden = true;
 }
 
@@ -243,7 +403,7 @@ elements.dropzone.addEventListener("drop", (event) => {
   selectFile(event.dataTransfer.files[0]);
 });
 elements.modes.forEach((button) => button.addEventListener("click", () => selectProfile(button.dataset.compressMode)));
-elements.process.addEventListener("click", compressPdf);
+elements.process.addEventListener("click", () => compressPdf(compressionRun));
 elements.reset.addEventListener("click", resetAll);
 elements.download.addEventListener("click", () => {
   if (currentOutput) downloadBlob(currentOutput.blob, currentOutput.fileName);

@@ -2820,10 +2820,6 @@ h3 {
   border-radius: 50%;
 }
 
-.popular-list li:nth-child(3) .popular-list__icon {
-  background: var(--sun);
-}
-
 .popular-list__icon svg {
   width: 25px;
   height: 25px;
@@ -2877,6 +2873,14 @@ h3 {
 
 .section-heading > div:last-child {
   grid-column: 1 / -1;
+}
+
+.section-heading--catalog > div:last-child {
+  grid-column: auto;
+}
+
+.tool-directory > .container > .filter-bar {
+  margin-top: 44px;
 }
 
 .filter-bar {
@@ -4330,7 +4334,24 @@ h3 {
   color: var(--ink);
 }
 
+@media (min-width: 721px) {
+  #werkzeuge .tool-card {
+    min-height: 108px;
+    grid-template-columns: 36px minmax(0, 1fr) 18px;
+    padding: 20px 22px;
+  }
+
+  #werkzeuge .tool-card__icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 @media (max-width: 720px) {
+  .tool-directory > .container > .filter-bar {
+    margin-top: 28px;
+  }
+
   .tool-grid,
   .calculator-grid,
   .portal-grid {

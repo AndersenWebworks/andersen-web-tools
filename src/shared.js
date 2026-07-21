@@ -1,6 +1,7 @@
 import {
   ArrowLeftRight,
   ArrowRight,
+  ArrowUpRight,
   BadgeCheck,
   BadgeDollarSign,
   BadgePercent,
@@ -15,6 +16,7 @@ import {
   ChartSpline,
   Check,
   ChevronDown,
+  ChevronRight,
   ChevronUp,
   CircleCheck,
   CircleX,
@@ -86,6 +88,7 @@ import {
 const iconSet = {
   ArrowLeftRight,
   ArrowRight,
+  ArrowUpRight,
   BadgeCheck,
   BadgeDollarSign,
   BadgePercent,
@@ -100,6 +103,7 @@ const iconSet = {
   ChartSpline,
   Check,
   ChevronDown,
+  ChevronRight,
   ChevronUp,
   CircleCheck,
   CircleX,

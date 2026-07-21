@@ -1,4 +1,4 @@
-import heic2any from "heic2any";
+import { heicTo } from "heic-to/csp";
 import JSZip from "jszip";
 import "./styles.css";
 import {
@@ -121,10 +121,10 @@ function scheduleConversion() {
 }
 
 async function convertFile(file, fileIndex) {
-  const converted = await heic2any({
+  const converted = await heicTo({
     blob: file,
-    quality: Number(elements.quality.value) / 100,
-    toType: "image/jpeg"
+    type: "image/jpeg",
+    quality: Number(elements.quality.value) / 100
   });
   const convertedBlobs = Array.isArray(converted) ? converted : [converted];
   const output = [];

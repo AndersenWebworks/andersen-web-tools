@@ -183,13 +183,36 @@ async function hasDigitalSignature(bytes) {
   return document.getForm().getFields().some((field) => field instanceof PDFSignature);
 }
 
-async function optimizeStructure(bytes, { optimizeImages = false } = {}) {
-  const runner = await createQpdfRunner({
+async function createBoundedQpdfRunner() {
+  await WebAssembly.compile(new Uint8Array([0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00]));
+
+  const runnerPromise = createQpdfRunner({
     workerUrl: qpdfWorkerUrl,
     qpdfJsUrl,
     wasmUrl: qpdfWasmUrl,
     timeoutMs: 120_000
   });
+  let didTimeOut = false;
+  let timeoutId;
+  const timeoutPromise = new Promise((_, reject) => {
+    timeoutId = window.setTimeout(() => {
+      didTimeOut = true;
+      reject(new Error("Die PDF-Optimierung konnte nicht gestartet werden."));
+    }, 30_000);
+  });
+
+  try {
+    return await Promise.race([runnerPromise, timeoutPromise]);
+  } finally {
+    window.clearTimeout(timeoutId);
+    if (didTimeOut) {
+      runnerPromise.then((runner) => runner.destroy()).catch(() => {});
+    }
+  }
+}
+
+async function optimizeStructure(bytes, { optimizeImages = false } = {}) {
+  const runner = await createBoundedQpdfRunner();
 
   try {
     const inputName = "input.pdf";

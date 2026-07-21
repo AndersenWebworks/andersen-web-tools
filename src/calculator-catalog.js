@@ -228,7 +228,7 @@ const waveOne = [
       { id: "capital", label: "Startkapital", type: "number", value: 5000, min: 0, step: 10, unit: "€" },
       { id: "monthly", label: "Monatliche Sparrate", type: "number", value: 200, min: 0, step: 10, unit: "€" },
       { id: "rate", label: "Rendite pro Jahr", type: "number", value: 5, step: 0.01, unit: "%" },
-      { id: "years", label: "Laufzeit", type: "number", value: 10, min: 0.08, max: 100, step: 1, unit: "Jahre" }
+      { id: "years", label: "Laufzeit", type: "number", value: 10, min: 0.08, max: 100, step: 0.01, unit: "Jahre" }
     ],
     calculate(values) {
       const capital = positiveValue(values, "capital", "Das Startkapital", true);
@@ -431,7 +431,7 @@ const waveTwo = [
     explanation: "Die durchschnittlichen Monatsstunden ergeben sich aus Wochenstunden mal 52 geteilt durch 12.",
     fields: [
       { id: "monthly", label: "Monatsgehalt brutto", type: "number", value: 3500, min: 0, step: 10, unit: "€" },
-      { id: "weeklyHours", label: "Wochenarbeitszeit", type: "number", value: 40, min: 0.1, max: 100, step: 0.25, unit: "Std." },
+      { id: "weeklyHours", label: "Wochenarbeitszeit", type: "number", value: 40, min: 0.25, max: 100, step: 0.25, unit: "Std." },
       { id: "payments", label: "Gehälter pro Jahr", type: "number", value: 12, min: 1, max: 20, step: 0.5, advanced: true }
     ],
     calculate(values) {

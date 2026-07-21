@@ -66,6 +66,7 @@ function createInput(field) {
     input = element("input", "text-input");
     input.type = field.type;
     input.value = fieldValue(field);
+    input.required = true;
     if (field.type === "number") input.inputMode = "decimal";
     if (field.min !== undefined) input.min = String(field.min);
     if (field.max !== undefined) input.max = String(field.max);

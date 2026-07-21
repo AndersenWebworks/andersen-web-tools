@@ -4,14 +4,14 @@
   --ink-soft: #4e5b56;
   --paper: #ffffff;
   --surface: #f5f7f5;
-  --surface-strong: #e9eeeb;
+  --surface-strong: #e7eee9;
   --line: #d6ded9;
   --line-strong: #aebdb6;
   --brand: #0b725f;
   --brand-dark: #075345;
   --brand-soft: #dff1eb;
-  --sun: #d97964;
-  --sun-soft: #fae8e4;
+  --sun: #f2b134;
+  --sun-soft: #fff2c7;
   --coral: #c84f45;
   --coral-soft: #f9e5e2;
   --focus: #005fcc;
@@ -2390,18 +2390,18 @@ code {
   --ink-soft: #59635d;
   --paper: #ffffff;
   --surface: #f4f7f5;
-  --surface-strong: #e8eef0;
+  --surface-strong: #e7eee9;
   --line: #c8d0cb;
   --line-strong: #819087;
   --brand: #08735d;
   --brand-dark: #06261e;
   --brand-soft: #dfeee8;
-  --sun: #d97964;
-  --sun-soft: #fae8e4;
+  --sun: #f2b134;
+  --sun-soft: #fff2c7;
   --coral: #a63d32;
   --coral-soft: #f4dedb;
   --focus: #005fcc;
-  --shadow: 10px 10px 0 #e8eef0;
+  --shadow: 10px 10px 0 #dfe8e2;
   --content: 1240px;
   --reading: 760px;
   --radius: 4px;
@@ -2529,7 +2529,7 @@ h3 {
   bottom: 17px;
   left: 0;
   height: 2px;
-  background: var(--coral);
+  background: var(--sun);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -4234,7 +4234,7 @@ h3 {
 .portal-card {
   display: grid;
   min-height: 116px;
-  grid-template-columns: 42px minmax(0, 1fr) 20px;
+  grid-template-columns: 32px minmax(0, 1fr) 20px;
   grid-template-rows: none;
   align-items: center;
   gap: 16px;
@@ -4265,19 +4265,25 @@ h3 {
 .directory-card__icon,
 .tool-card__icon {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   place-items: center;
-  color: var(--brand-dark);
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-small);
-  background: var(--paper) !important;
+  color: var(--brand);
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.tool-card[data-tool-category] .tool-card__icon {
+  color: var(--brand);
+  background: transparent !important;
 }
 
 .directory-card__icon svg,
 .tool-card__icon svg {
-  width: 23px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
+  stroke-width: 1.9;
 }
 
 .directory-card__content,
@@ -4338,7 +4344,7 @@ h3 {
   .calculator-card:nth-child(even),
   .portal-card:nth-child(even) {
     min-height: 104px;
-    grid-template-columns: 40px minmax(0, 1fr) 18px;
+    grid-template-columns: 30px minmax(0, 1fr) 18px;
     gap: 13px;
     padding: 16px 2px;
     border-right: 0;
@@ -4346,8 +4352,8 @@ h3 {
 
   .directory-card__icon,
   .tool-card__icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 
   .tool-card h3,

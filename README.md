@@ -102,7 +102,7 @@ Dieser Befehl erzeugt unter `releases/` einen neuen, eindeutig benannten Ordner 
 
 1. Public-Copy-Fläche für die Produktionsdomain vorbereiten, unabhängig prüfen und die Hash-Freigabe verifizieren.
 2. Einen additiven Produktionsbuild oder ein versioniertes Release erzeugen.
-3. Den Webspace-Upload für `tools.andersen-webworks.de` ausdrücklich freigeben und über den zentral hinterlegten FTP-Zugang ausführen.
+3. Den Webspace-Upload für `tools.andersen-webworks.de` ausdrücklich freigeben und einmal mit `npm run ftp:deploy` ausführen. Das Skript wählt nur den neuesten vollständigen, sauberen Produktionsrelease und verwendet die zentral hinterlegten Zugangsdaten.
 4. Startseite, Rechner-Hub, alle zwölf Werkzeuge, alle 24 Rechner, `sitemap.xml`, `robots.txt`, Impressum und Datenschutz über die Subdomain prüfen.
 5. Danach die Sitemap bei den vorgesehenen Suchmaschinen einreichen.
 

@@ -11,7 +11,8 @@
     "public-copy:prepare": "node scripts/public-copy-review-build.mjs",
     "public-copy:review": "node ../ClautzGPT/scripts/public-copy-guard.js review --config public-copy.config.json",
     "public-copy:verify": "node scripts/public-copy-verify.mjs",
-    "preview": "vite preview --outDir pages-output --host 127.0.0.1"
+    "preview": "vite preview --outDir pages-output --host 127.0.0.1",
+    "ftp:deploy": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File ../ClautzGPT/scripts/invoke-project-ftp-deploy.ps1 -ProjectRoot . -Deploy"
   },
   "dependencies": {
     "heic-to": "^1.5.2",

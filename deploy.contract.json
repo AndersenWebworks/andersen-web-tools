@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 2,
+  "interface": "clautzgpt.ftp-deploy.v2",
+  "script": "upload.ps1",
+  "modes": ["Preflight", "Deploy"],
+  "credentials": "clautzgpt-root-env",
+  "requiredEnvironment": ["FTP_ANDERSEN_MAIN_HOST", "FTP_ANDERSEN_MAIN_USER", "FTP_ANDERSEN_MAIN_PASS", "FTP_ANDERSEN_MAIN_PORT", "FTP_ANDERSEN_TOOLS_PATH"],
+  "deployment": {
+    "client": "winscp-com",
+    "source": "versioned-release"
+  },
+  "uploadStrategy": "non-destructive",
+  "recovery": "documented"
+}

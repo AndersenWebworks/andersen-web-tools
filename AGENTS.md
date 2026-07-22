@@ -22,7 +22,7 @@
 - Der Standardbuild verwendet diese Subdomain mit dem Basispfad `/`; `SITE_URL` und `BASE_PATH` dürfen für klar benannte alternative Ziele überschrieben werden.
 - `npm run build` erzeugt einmalig `pages-output/` und überschreibt keinen vorhandenen Build.
 - Pushes auf `main` werden weiterhin durch `.github/workflows/deploy-pages.yml` gebaut und als vorhandener GitHub-Pages-Stand veröffentlicht; die Subdomain ist die kanonische Portaladresse.
-- Der Webspace-Upload ist ein eigener, ausdrücklich freizugebender Schritt. FTP-Zugang und Zielpfad bleiben außerhalb dieses Repositories in der zentralen Credential-SSOT.
+- Der Webspace-Upload ist ein eigener, ausdrücklich freizugebender Schritt. Er läuft ausschließlich über `npm run ftp:deploy`: der globale Runner lädt nur die im versionierten `deploy.contract.json` deklarierten Variablennamen aus der zentralen Credential-SSOT, prüft den neuesten sauberen Release lokal und startet genau einen festen WinSCP-Upload. FTP-Zugang und Zielpfad bleiben außerhalb dieses Repositories.
 
 ## Sicherheit
 

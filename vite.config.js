@@ -73,9 +73,49 @@ function replaceSiteUrl() {
   };
 }
 
+function findHead(node) {
+  if (node.tagName === "head") return node;
+  for (const child of node.childNodes || []) {
+    const head = findHead(child);
+    if (head) return head;
+  }
+  return null;
+}
+
+function attributeValue(node, name) {
+  return (node.attrs || []).find((attribute) => attribute.name === name)?.value;
+}
+
+function prioritizeStyles() {
+  return {
+    name: "prioritize-styles",
+    transformIndexHtml: {
+      order: "post",
+      handler(html) {
+        const document = parse(html, { sourceCodeLocationInfo: true });
+        const head = findHead(document);
+        const stylesheet = (head?.childNodes || []).find((node) => (
+          node.tagName === "link" && attributeValue(node, "rel") === "stylesheet"
+        ));
+        const firstModule = (head?.childNodes || []).find((node) => (
+          node.tagName === "script" && attributeValue(node, "type") === "module"
+        ));
+        const stylesheetLocation = stylesheet?.sourceCodeLocation;
+        const moduleLocation = firstModule?.sourceCodeLocation;
+
+        if (!stylesheetLocation || !moduleLocation || stylesheetLocation.startOffset < moduleLocation.startOffset) return html;
+
+        const stylesheetMarkup = html.slice(stylesheetLocation.startOffset, stylesheetLocation.endOffset);
+        const withoutStylesheet = `${html.slice(0, stylesheetLocation.startOffset)}${html.slice(stylesheetLocation.endOffset)}`;
+        return `${withoutStylesheet.slice(0, moduleLocation.startOffset)}${stylesheetMarkup}\n    ${withoutStylesheet.slice(moduleLocation.startOffset)}`;
+      }
+    }
+  };
+}
+
 export default defineConfig({
   base: BASE_PATH,
-  plugins: [enrichPublicPages(), replaceSiteUrl()],
+  plugins: [enrichPublicPages(), replaceSiteUrl(), prioritizeStyles()],
   build: {
     cssCodeSplit: false,
     outDir: "dist",

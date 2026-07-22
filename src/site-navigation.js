@@ -44,12 +44,18 @@ function renderLinkList(items, basePath, type) {
 }
 
 function renderGroups(groups, basePath, type) {
-  return groups.map((group) => [
-    '<div class="nav-directory__group">',
-    `  <p class="nav-directory__group-title">${escapeHtml(group.category)}</p>`,
-    `  <div class="nav-directory__group-list">${renderLinkList(group.items, basePath, type)}</div>`,
-    "</div>"
-  ].join("\n")).join("\n");
+  return groups.map((group, index) => {
+    const groupId = `nav-${type}-group-${index}`;
+    return [
+      `<div class="nav-directory__group" data-nav-group>`,
+      `  <button class="nav-directory__group-toggle" type="button" data-nav-group-toggle aria-expanded="false" aria-controls="${groupId}-items">`,
+      `    <span>${escapeHtml(group.category)}</span>`,
+      '    <i data-lucide="chevron-down" aria-hidden="true"></i>',
+      "  </button>",
+      `  <div class="nav-directory__group-list" id="${groupId}-items" data-nav-group-items hidden>${renderLinkList(group.items, basePath, type)}</div>`,
+      "</div>"
+    ].join("\n");
+  }).join("\n");
 }
 
 const browserGroups = [

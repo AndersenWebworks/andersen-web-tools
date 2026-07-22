@@ -2,14 +2,14 @@
   "version": 1,
   "status": "approved",
   "project": "andersen-web-tools",
-  "surfaceHash": "a489925955bf049e84654c8bdb3a01ffc5e6038bb0ca0c2388bf10b24d05a86d",
+  "surfaceHash": "034890604eed1f7ebbc0497cf63038319bea9ab769d92f6c1214e28c0f76765c",
   "briefHash": "1e12a8a49cb696eecb8b8f256021c5f9c5c6057ab311756b9dd92188f759e9ec",
   "pageCount": 80,
-  "reviewedAt": "2026-07-22T10:00:47.947Z",
+  "reviewedAt": "2026-07-22T10:40:13.426Z",
   "reviewer": {
     "source": "codex_cli",
     "model": "gpt-5.6-terra",
     "independentContext": true,
-    "batchCount": 22
+    "batchCount": 23
   }
 }

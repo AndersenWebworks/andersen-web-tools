@@ -285,6 +285,20 @@ function initNavigation() {
   if (!toggle || !navigation) return;
 
   const mobileNavigation = window.matchMedia("(max-width: 780px)");
+  const groupToggles = [...navigation.querySelectorAll("[data-nav-group-toggle]")];
+
+  function setGroupOpen(groupToggle, open) {
+    const group = groupToggle.closest("[data-nav-group]");
+    const items = group?.querySelector("[data-nav-group-items]");
+    if (!group || !items) return;
+    groupToggle.setAttribute("aria-expanded", String(open));
+    group.dataset.open = String(open);
+    items.hidden = !open;
+  }
+
+  function closeNavigationGroups() {
+    groupToggles.forEach((groupToggle) => setGroupOpen(groupToggle, false));
+  }
 
   function setToolDirectoryOpen(open, focusFirstLink = false) {
     if (!toolsToggle || !toolDirectory) return;
@@ -292,8 +306,9 @@ function initNavigation() {
     navigation.dataset.menuOpen = String(open);
     toolsToggle.querySelector("svg")?.setAttribute("data-lucide", open ? "chevron-up" : "chevron-down");
     refreshIcons(toolsToggle);
+    if (!open) closeNavigationGroups();
     if (open && focusFirstLink) {
-      window.requestAnimationFrame(() => toolDirectory.querySelector("a")?.focus());
+      window.requestAnimationFrame(() => toolDirectory.querySelector("[data-nav-group-toggle], a")?.focus());
     }
   }
 
@@ -320,6 +335,13 @@ function initNavigation() {
     if (event.key !== "ArrowDown") return;
     event.preventDefault();
     setToolDirectoryOpen(true, true);
+  });
+
+  groupToggles.forEach((groupToggle) => {
+    groupToggle.addEventListener("click", () => {
+      const open = groupToggle.getAttribute("aria-expanded") === "true";
+      setGroupOpen(groupToggle, !open);
+    });
   });
 
   navigation.querySelectorAll("a").forEach((link) => {

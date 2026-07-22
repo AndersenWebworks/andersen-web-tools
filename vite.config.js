@@ -1,11 +1,34 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parse } from "parse5";
 import { defineConfig } from "vite";
 import { BASE_PATH, PUBLIC_ROUTES, SITE_URL } from "./site.config.js";
 import { renderStaticToolGuide } from "./src/public-content.js";
+import { renderSiteNavigation } from "./src/site-navigation.js";
 import { browserToolBySlug } from "./src/tool-catalog.js";
 
 const root = dirname(fileURLToPath(import.meta.url));
+
+function findNavigation(node) {
+  if (node.tagName === "nav" && (node.attrs || []).some((attribute) => attribute.name === "data-navigation")) {
+    return node;
+  }
+  for (const child of node.childNodes || []) {
+    const navigation = findNavigation(child);
+    if (navigation) return navigation;
+  }
+  return null;
+}
+
+function replaceNavigation(html, path) {
+  const document = parse(html, { sourceCodeLocationInfo: true });
+  const navigation = findNavigation(document);
+  const location = navigation?.sourceCodeLocation;
+  if (!location && String(path || "").endsWith("/404.html")) return html;
+  if (!location) throw new Error(`Die Hauptnavigation fehlt in ${path || "einer HTML-Datei"}.`);
+  const markup = renderSiteNavigation(path, BASE_PATH);
+  return `${html.slice(0, location.startOffset)}${markup}${html.slice(location.endOffset)}`;
+}
 
 function enrichPublicPages() {
   return {
@@ -16,6 +39,8 @@ function enrichPublicPages() {
         let output = html
           .split('href="/#werkzeuge"').join('href="/alle-werkzeuge/"')
           .split("</head>").join(`  <link rel="alternate" type="application/json" title="Werkzeugkatalog" href="${BASE_PATH}werkzeuge.json">\n  </head>`);
+
+        output = replaceNavigation(output, context.path);
 
         const pathSegments = String(context.path || "").split("/").filter(Boolean);
         const tool = browserToolBySlug.get(pathSegments[0]);

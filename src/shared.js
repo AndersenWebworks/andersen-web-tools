@@ -280,14 +280,74 @@ export function setButtonLoading(button, loading, label) {
 function initNavigation() {
   const toggle = document.querySelector("[data-nav-toggle]");
   const navigation = document.querySelector("[data-navigation]");
+  const toolsToggle = document.querySelector("[data-tools-menu-toggle]");
+  const toolDirectory = document.querySelector("[data-tool-directory]");
   if (!toggle || !navigation) return;
+
+  const mobileNavigation = window.matchMedia("(max-width: 780px)");
+
+  function setToolDirectoryOpen(open, focusFirstLink = false) {
+    if (!toolsToggle || !toolDirectory) return;
+    toolsToggle.setAttribute("aria-expanded", String(open));
+    navigation.dataset.menuOpen = String(open);
+    toolsToggle.querySelector("svg")?.setAttribute("data-lucide", open ? "chevron-up" : "chevron-down");
+    refreshIcons(toolsToggle);
+    if (open && focusFirstLink) {
+      window.requestAnimationFrame(() => toolDirectory.querySelector("a")?.focus());
+    }
+  }
+
+  function setMobileNavigationOpen(open) {
+    toggle.setAttribute("aria-expanded", String(open));
+    navigation.dataset.open = String(open);
+    document.documentElement.classList.toggle("has-open-navigation", open && mobileNavigation.matches);
+    toggle.innerHTML = `<i data-lucide="${open ? "x" : "menu"}"></i><span class="sr-only">Menü ${open ? "schließen" : "öffnen"}</span>`;
+    refreshIcons(toggle);
+    if (!open) setToolDirectoryOpen(false);
+  }
 
   toggle.addEventListener("click", () => {
     const open = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!open));
-    navigation.dataset.open = String(!open);
-    toggle.innerHTML = `<i data-lucide="${open ? "menu" : "x"}"></i><span class="sr-only">Menü ${open ? "öffnen" : "schließen"}</span>`;
-    refreshIcons(toggle);
+    setMobileNavigationOpen(!open);
+  });
+
+  toolsToggle?.addEventListener("click", () => {
+    const open = toolsToggle.getAttribute("aria-expanded") === "true";
+    setToolDirectoryOpen(!open);
+  });
+
+  toolsToggle?.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowDown") return;
+    event.preventDefault();
+    setToolDirectoryOpen(true, true);
+  });
+
+  navigation.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      setToolDirectoryOpen(false);
+      setMobileNavigationOpen(false);
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (navigation.contains(event.target) || toggle.contains(event.target)) return;
+    setToolDirectoryOpen(false);
+    if (mobileNavigation.matches) setMobileNavigationOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const toolMenuWasOpen = toolsToggle?.getAttribute("aria-expanded") === "true";
+    const mobileMenuWasOpen = toggle.getAttribute("aria-expanded") === "true";
+    setToolDirectoryOpen(false);
+    setMobileNavigationOpen(false);
+    if (toolMenuWasOpen) toolsToggle?.focus();
+    else if (mobileMenuWasOpen) toggle.focus();
+  });
+
+  mobileNavigation.addEventListener("change", () => {
+    setToolDirectoryOpen(false);
+    setMobileNavigationOpen(false);
   });
 }
 
